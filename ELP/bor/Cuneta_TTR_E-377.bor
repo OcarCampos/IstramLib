@@ -1,23 +1,23 @@
 # BORDILLO : Cuneta_TTR_E-377.bor
 # Bordillos, Barreras_bordillo, Cunetas_bordillo, etc..
-#-------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
 # Version
-#-------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
   VER 1205
 #-------------------------------------------------------------------------------
 # El BORDILLO esta formado por superficies : Base y Tapa.
 # Puede aplicarse en horizontal, peraltado o con una inclinacion fija.
-# También puede aplicarse solamente en un rango de peraltes..
+# Tambiï¿½n puede aplicarse solamente en un rango de peraltes..
 #-------------------------------------------------------------------------------
 # BASE:
-# Es un vector que arranca en un punto(código) de la 67 y la sustituye hasta
+# Es un vector que arranca en un punto(cï¿½digo) de la 67 y la sustituye hasta
 # otro punto de entrega.
-# Los códigos de salida y entrega se definen en el cuadro de aplicación.
+# Los cï¿½digos de salida y entrega se definen en el cuadro de aplicaciï¿½n.
 # Esta base puede ser fija o estar posada en otra superficie(68), de la que no
 # puede bajar.
 # Las coordenadas son absolutas.
 # El primer punto es siempre (0.0,0.0)
-#  Número de puntos
+#  Nï¿½mero de puntos
 #-----------------------------
   NBAS    4
 # Puntos     X        Y
@@ -29,7 +29,7 @@
 #-------------------------------------------------------------------------------
 # TAPA:
 # Empieza y termina en los mismos puntos que base
-#  Número de puntos
+#  Nï¿½mero de puntos
 #-----------------------------
   NTAP    4
 # Puntos     X        Y
@@ -39,7 +39,7 @@
   PTAP    0.972    0.000
   PTAP    1.100    0.000
 #-------------------------------------------------------------------------------
-# Longitud del bordillo, para medición por undades
+# Longitud del bordillo, para mediciï¿½n por undades
 #------------------------------------------------
   LONG    1.500
 #-------------------------------------------------------------------------------
@@ -47,16 +47,16 @@
 # Todos los bordillos que se vayan a emplear en un preyecto,
 # se declaran previamente para el proyecto
 # Para que este pueda completar la tabla .dar de mediciones.
-# La medición puede ser Volumen, Líneal o número de unidades si doy la longitud.
+# La mediciï¿½n puede ser Volumen, Lï¿½neal o nï¿½mero de unidades si doy la longitud.
 #
 #
 #-------------------------------------------------------------------------------
-# Tipos de Línea para el BIM  y el Perfil. (2900) y Planta (2950)
+# Tipos de Lï¿½nea para el BIM  y el Perfil. (2900) y Planta (2950)
 # -----------------------
   TLIN  2924
   TLIP  2975
 #-------------------------------------------------------------------------------
-# Nombre de la medición
+# Nombre de la mediciï¿½n
 #------------------------
   MED  CUNETA_TTR_377
   MDR     1
