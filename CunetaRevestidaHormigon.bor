@@ -1,0 +1,73 @@
+# BORDILLO : CunetaRevestidaHormigon.bor
+# Bordillos, Barreras_bordillo, Cunetas_bordillo, etc..
+#-------------------------------------------------------------------------------
+# Version
+#-------------------------------------------------------------------------------
+  VER 1205
+#-------------------------------------------------------------------------------
+# El BORDILLO esta formado por superficies : Base y Tapa.
+# Puede aplicarse en horizontal, peraltado o con una inclinacion fija.
+# También puede aplicarse solamente en un rango de peraltes..
+#-------------------------------------------------------------------------------
+# BASE:
+# Es un vector que arranca en un punto(código) de la 67 y la sustituye hasta
+# otro punto de entrega.
+# Los códigos de salida y entrega se definen en el cuadro de aplicación.
+# Esta base puede ser fija o estar posada en otra superficie(68), de la que no
+# puede bajar.
+# Las coordenadas son absolutas.
+# El primer punto es siempre (0.0,0.0)
+#  Número de puntos
+#-----------------------------
+  NBAS    4
+# Puntos     X        Y
+#-----------------------------
+  PBAS    0.000    0.000
+  PBAS    0.000   -0.550
+  PBAS    0.690   -0.550
+  PBAS    0.690    0.000
+#-------------------------------------------------------------------------------
+# TAPA:
+# Empieza y termina en los mismos puntos que base
+#  Número de puntos
+#-----------------------------
+  NTAP    9
+# Puntos     X        Y
+#-----------------------------
+  PTAP    0.000    0.000
+  PTAP    0.040    0.150
+  PTAP    0.120    0.150
+  PTAP    0.120   -0.422
+  PTAP    0.148   -0.450
+  PTAP    0.542   -0.450
+  PTAP    0.570   -0.422
+  PTAP    0.570    0.000
+  PTAP    0.690    0.000
+#-------------------------------------------------------------------------------
+# Longitud del bordillo, para medición por undades
+#------------------------------------------------
+  LONG    1.500
+#-------------------------------------------------------------------------------
+#
+# Todos los bordillos que se vayan a emplear en un preyecto,
+# se declaran previamente para el proyecto
+# Para que este pueda completar la tabla .dar de mediciones.
+# La medición puede ser Volumen, Líneal o número de unidades si doy la longitud.
+#
+#
+#-------------------------------------------------------------------------------
+# Tipos de Línea para el BIM  y el Perfil. (2900) y Planta (2950)
+# -----------------------
+  TLIN  2924
+  TLIP  2975
+#-------------------------------------------------------------------------------
+# Nombre de la medición
+#------------------------
+  MED  CUNETA_REVES_H
+  MDR     1
+#-------------------------------------------------------------------------------
+# Nombre para el material
+#------------------------
+  MAT  MAT_200\MAT_200_031.3dm
+#-------------------------------------------------------------------------------
+  FIN

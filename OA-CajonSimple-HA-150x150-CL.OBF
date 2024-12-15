@@ -1,0 +1,388 @@
+# OBRA DE FABRICA : OA-CajonSimple-HA-150x150-CL.OBF
+#---------------------------------------------------------------------
+# Nombre
+#----------------
+  N MARCO DE 2 m
+  COLOR 230
+#---------------------------------------------------------------------
+# Rotular el nombre en la planta y/o el numero de dato
+#          Estilo Tam    TH TV Dis.D. Ang.rel.
+# -------  ------ ------ -- -- ------ --------
+   PN          24  2.000  0  4  5.000   0.000  Rotular el Nombre
+   PD          24  2.000  0  0  5.000   0.000  Rotular el Número
+#---------------------------------------------------------------------
+   PAH     1.500          Altura de la Obra de Fabrica
+   PM_ES   0.180          Espesor del marco
+   PM_LM   0.000          Longitud del modulo de marco
+   PM_HM   0.010          holgura del modulo de marco
+   PM_CM       1            Cortar ultimo modulo modulo de marco
+   PM_PER      0            Extremos de módulos perpendiculares a base
+   PI_ESE  0.200          Espesor Imp.Embo.
+   PI_ESD  0.200          Espesor IMp.Desa.
+   PI_ESVE  0.000         Espesor voladizo Imp.Embo.
+   PI_ESVD  0.000         Espesor voladizo IMp.Desa.
+   PI_TIE      0            Timpano Embo.
+   PI_TID      0            Timpano Desa.
+   PI_TTE  0.000          Talud Trasdos Timpano Embo.
+   PI_TTD  0.000          Talud Trasdos Timpano Desa.
+   PR_ESE  0.300          Espesor Sole.Embo.
+   PR_ESD  0.300          Espesor Sole.Desa.
+   PR_DSE  0.000          Desnivel Sole.Embo.
+   PR_DSD  0.000          Desnivel Sole.Desa.
+   PRT_PSE     1           Tipo Pendiente Sole.Embo.
+   PRT_PSD     1           Tipo Pendiente Sole.Desa.
+   PR_PSE  1.000          Pendiente Sole.Embo.
+   PR_PSD  1.000          Pendiente Sole.Desa.
+   PR_ERE  0.000          Espesor Ancho Rastillo Embo.
+   PR_ERD  0.000          Espesor Ancho Rastillo Desa.
+   PR_PRE  0.000          Espesor Profun Rastillo Embo.
+   PR_PRD  0.000          Espesor Profun Rastillo Desa.
+   PME_SIL 0  0.000  0.000  Silbato en Embocadura
+   PMD_SIL 0  0.000  0.000  Silbato en Desague
+   PA3_ED 0          Aleta triple
+   PA3_EI 0          Aleta triple
+   PA3_DD 0          Aleta triple
+   PA3_DI 0          Aleta triple
+   PAJ_ED 0   0.000   0.000  Ajuste int/ext y distancias
+   PAJ_EI 0   0.000   0.000  Ajuste int/ext y distancias
+   PAJ_DD 0   0.000   0.000  Ajuste int/ext y distancias
+   PAJ_DI 0   0.000   0.000  Ajuste int/ext y distancias
+   PAJ_TED 0  Flag de truncado en direccion de imposta
+   PAJ_TEI 0  Flag de truncado en direccion de imposta
+   PAJ_TDD 0  Flag de truncado en direccion de imposta
+   PAJ_TDI 0  Flag de truncado en direccion de imposta
+   PAX_ED  1.000          Altura Aleta
+   PAX_EI  0.600          Altura Aleta
+   PAX_DD  0.000          Altura Aleta
+   PAX_DI  0.000          Altura Aleta
+   PAX_ED1  0.000          Espesor Aleta
+   PAX_EI1  0.000          Espesor Aleta
+   PAX_DD1  0.000          Espesor Aleta
+   PAX_DI1  0.000          Espesor Aleta
+   PAX_ED2  0.000          Espesor Aleta
+   PAX_EI2  0.000          Espesor Aleta
+   PAX_DD2  0.000          Espesor Aleta
+   PAX_DI2  0.000          Espesor Aleta
+   PAX_ED3  0.000          Espesor Aleta
+   PAX_EI3  0.000          Espesor Aleta
+   PAX_DD3  0.000          Espesor Aleta
+   PAX_DI3  0.000          Espesor Aleta
+   PAE_ED  0.200          Espesor Aleta
+   PAE_EI  0.200          Espesor Aleta
+   PAE_DD  0.200          Espesor Aleta
+   PAE_DI  0.200          Espesor Aleta
+   PAE_ED1  1.000          Espesor Aleta
+   PAE_EI1  1.000          Espesor Aleta
+   PAE_DD1  0.250          Espesor Aleta
+   PAE_DI1  0.250          Espesor Aleta
+   PAE_ED2  0.200          Espesor Aleta
+   PAE_EI2  0.200          Espesor Aleta
+   PAE_DD2  0.200          Espesor Aleta
+   PAE_DI2  0.200          Espesor Aleta
+   PAE_ED3  0.150          Espesor Aleta
+   PAE_EI3  0.150          Espesor Aleta
+   PAE_DD3  0.150          Espesor Aleta
+   PAE_DI3  0.150          Espesor Aleta
+   PAE_ED4  0.100          Espesor Aleta
+   PAE_EI4  0.100          Espesor Aleta
+   PAE_DD4  0.100          Espesor Aleta
+   PAE_DI4  0.100          Espesor Aleta
+   PZE_ED  0.300          ancho ext zapata aleta
+   PZE_EI  0.300          ancho ext zapata aleta
+   PZE_DD  0.300          ancho ext zapata aleta
+   PZE_DI  0.300          ancho ext zapata aleta
+   PZE_ED1  0.000          ancho ext zapata aleta
+   PZE_EI1  0.000          ancho ext zapata aleta
+   PZE_DD1  0.200          ancho ext zapata aleta
+   PZE_DI1  0.200          ancho ext zapata aleta
+   PZE_ED2  0.200          ancho ext zapata aleta
+   PZE_EI2  0.200          ancho ext zapata aleta
+   PZE_DD2  0.200          ancho ext zapata aleta
+   PZE_DI2  0.200          ancho ext zapata aleta
+   PZE_ED3  0.200          ancho ext zapata aleta
+   PZE_EI3  0.200          ancho ext zapata aleta
+   PZE_DD3  0.200          ancho ext zapata aleta
+   PZE_DI3  0.200          ancho ext zapata aleta
+   PZE_ED4  0.200          ancho ext zapata aleta
+   PZE_EI4  0.200          ancho ext zapata aleta
+   PZE_DD4  0.200          ancho ext zapata aleta
+   PZE_DI4  0.200          ancho ext zapata aleta
+   PZE_ED5  0.000          ancho ext zapata aleta
+   PZE_EI5  0.000          ancho ext zapata aleta
+   PZE_DD5  0.200          ancho ext zapata aleta
+   PZE_DI5  0.200          ancho ext zapata aleta
+   PZI_ED  0.200          ancho int zapata aleta
+   PZI_EI  0.200          ancho int zapata aleta
+   PZI_DD  0.200          ancho int zapata aleta
+   PZI_DI  0.200          ancho int zapata aleta
+   PZI_ED1  0.000          ancho int zapata aleta
+   PZI_EI1  0.000          ancho int zapata aleta
+   PZI_DD1  0.000          ancho int zapata aleta
+   PZI_DI1  0.000          ancho int zapata aleta
+   PZI_ED2  0.000          ancho int zapata aleta
+   PZI_EI2  0.000          ancho int zapata aleta
+   PZI_DD2  0.000          ancho int zapata aleta
+   PZI_DI2  0.000          ancho int zapata aleta
+   PZI_ED3  0.000          ancho int zapata aleta
+   PZI_EI3  0.000          ancho int zapata aleta
+   PZI_DD3  0.000          ancho int zapata aleta
+   PZI_DI3  0.000          ancho int zapata aleta
+   PZI_ED4  0.000          ancho int zapata aleta
+   PZI_EI4  0.000          ancho int zapata aleta
+   PZI_DD4  0.000          ancho int zapata aleta
+   PZI_DI4  0.000          ancho int zapata aleta
+   PZI_ED5  0.000          ancho int zapata aleta
+   PZI_EI5  0.000          ancho int zapata aleta
+   PZI_DD5  0.000          ancho int zapata aleta
+   PZI_DI5  0.000          ancho int zapata aleta
+   PZH_ED  0.800          altura zapata aleta
+   PZH_EI  0.800          altura zapata aleta
+   PZH_DD  0.800          altura zapata aleta
+   PZH_DI  0.800          altura zapata aleta
+   PZH_ED1  0.000          altura zapata aleta
+   PZH_EI1  0.000          altura zapata aleta
+   PZH_DD1  0.200          altura zapata aleta
+   PZH_DI1  0.200          altura zapata aleta
+   PZH_ED2  0.200          altura zapata aleta
+   PZH_EI2  0.200          altura zapata aleta
+   PZH_DD2  0.200          altura zapata aleta
+   PZH_DI2  0.200          altura zapata aleta
+   PZH_ED3  0.200          altura zapata aleta
+   PZH_EI3  0.200          altura zapata aleta
+   PZH_DD3  0.200          altura zapata aleta
+   PZH_DI3  0.200          altura zapata aleta
+   PZH_ED4  0.200          altura zapata aleta
+   PZH_EI4  0.200          altura zapata aleta
+   PZH_DD4  0.200          altura zapata aleta
+   PZH_DI4  0.200          altura zapata aleta
+   PZR_ED  0.000          recubrimiento zapata aleta
+   PZR_EI  0.000          recubrimiento zapata aleta
+   PZR_DD  0.000          recubrimiento zapata aleta
+   PZR_DI  0.000          recubrimiento zapata aleta
+   PZP_ED  0.300          profundidad zapata aleta
+   PZP_EI  0.300          profundidad zapata aleta
+   PZP_DD  0.300          profundidad zapata aleta
+   PZP_DI  0.300          profundidad zapata aleta
+   PZP_ED1  0.000          desnivel zapata aleta
+   PZP_EI1  0.000          desnivel zapata aleta
+   PZP_DD1  0.000          desnivel zapata aleta
+   PZP_DI1  0.000          desnivel zapata aleta
+   PZP_ED2  0.000          desnivel zapata aleta
+   PZP_EI2  0.000          desnivel zapata aleta
+   PZP_DD2  0.000          desnivel zapata aleta
+   PZP_DI2  0.000          desnivel zapata aleta
+   PZP_ED3  0.000          desnivel zapata aleta
+   PZP_EI3  0.000          desnivel zapata aleta
+   PZP_DD3  0.000          desnivel zapata aleta
+   PZP_DI3  0.000          desnivel zapata aleta
+   PZP_ED4  0.000          desnivel zapata aleta
+   PZP_EI4  0.000          desnivel zapata aleta
+   PZP_DD4  0.000          desnivel zapata aleta
+   PZP_DI4  0.000          desnivel zapata aleta
+   PZh_ED 0          profundidad zapata aleta Horizontal
+   PZh_EI 0          profundidad zapata aleta Horizontal
+   PZh_DD 0          profundidad zapata aleta Horizontal
+   PZh_DI 0          profundidad zapata aleta Horizontal
+   PNZt_ED 0          Tipo pendiente zapata aleta
+   PNZt_EI 0          Tipo pendiente zapata aleta
+   PNZt_DD 0          Tipo pendiente zapata aleta
+   PNZt_DI 0          Tipo pendiente zapata aleta
+   PAF     1              Generar Lineas de Frontera
+#-----------------------------------------------------------------------------------
+#      Linea  semi.e semi.d d.Emb. d.Des. Ori.emb Ori.des semi.e semi.d giro_e  giro_d
+#------------ ------ ------ ------ ------ ------- ------- ------ ------ ------- ------- ---------------
+   PAD4   306  0.930  0.930  0.000  0.000       1       1  0.930  0.930   0.000   0.000 Dibujar Imposta y aletas
+   PAo_ED 1            Origen de Angulo Aleta Embocadura Derecha
+   PAo_EI 1            Origen de Angulo Aleta Embocadura Derecha
+   PAo_DD 1            Origen de Angulo Aleta Desague Izquierda
+   PAo_DI 1            Origen de Angulo Aleta Desague Izquierda
+   PAA_ED 50.000          Angulo Aleta Embocadura Derecha
+   PAA_EI 50.000          Angulo Aleta Embocadura Derecha
+   PAA_DD 50.000          Angulo Aleta Desague Izquierda
+   PAA_DI 50.000          Angulo Aleta Desague Izquierda
+   PAL_ED  2.200          Longitud Aleta Embocadura Derecha
+   PAL_EI  2.200          Longitud Aleta Embocadura Derecha
+   PAL_DD  2.200          Longitud Aleta Desague Izquierda
+   PAL_DI  2.200          Longitud Aleta Desague Izquierda
+   PAO_ED  0.000          Longitud Horizontal Aleta Embocadura Derecha
+   PAO_EI  0.000          Longitud Horizontal Aleta Embocadura Derecha
+   PAO_DD  0.000          Longitud Horizontal Aleta Desague Izquierda
+   PAO_DI  0.000          Longitud Horizontal Aleta Desague Izquierda
+   PAm_ED  0.000          Longitud Tramo Horizontal Aleta Embocadura Derecha
+   PAm_EI  0.000          Longitud Tramo Horizontal Aleta Embocadura Derecha
+   PAm_DD  0.000          Longitud Tramo Horizontal Aleta Desague Izquierda
+   PAm_DI  0.000          Longitud Tramo Horizontal Aleta Desague Izquierda
+   PAV_ED  0.000          Angulo Vertical Aleta Embocadura Derecha
+   PAV_EI  0.000          Angulo Vertical Aleta Embocadura Derecha
+   PAV_DD  0.000          Angulo Vertical Aleta Desague Izquierda
+   PAV_DI  0.000          Angulo Vertical Aleta Desague Izquierda
+   PAf_ED  0.950          Altura Final Aleta Embocadura Derecha
+   PAf_EI  0.950          Altura Final Aleta Embocadura Derecha
+   PAf_DD  0.950          Altura Final Aleta Desague Izquierda
+   PAf_DI  0.950          Altura Final Aleta Desague Izquierda
+   PAt_ED 0          Altura Final Aleta Desde Terreno Embocadura Derecha
+   PAt_EI 0          Altura Final Aleta Desde Terreno Embocadura Derecha
+   PAt_DD 0          Altura Final Aleta Desde Terreno Desague Izquierda
+   PAt_DI 0          Altura Final Aleta Desde Terreno Desague Izquierda
+   PAC_ED 0             Tuncar Aleta Embocadura Derecha
+   PAC_EI 0             Tuncar Aleta Embocadura Derecha
+   PAC_DD 0             Tuncar Aleta Desague Izquierda
+   PAC_DI 0             Tuncar Aleta Desague Izquierda
+   PAR_ED  0.000          Longitud Residual Aleta Embocadura Derecha
+   PAR_EI  0.000          Longitud Residual Aleta Embocadura Derecha
+   PAR_DD  0.000          Longitud Residual Aleta Desague Izquierda
+   PAR_DI  0.000          Longitud Residual Aleta Desague Izquierda
+   PAS_ED  0.000          Talud Trasdos  Aleta Embocadura Derecha
+   PAS_EI  0.000          Talud Trasdos  Aleta Embocadura Derecha
+   PAS_DD  0.000          Talud Trasdos  Aleta Desague Izquierda
+   PAS_DI  0.000          Talud Trasdos  Aleta Desague Izquierda
+   PAS_ED1  0.000          Talud Trasdos  Aleta  Embocadura Derecha
+   PAS_EI1  0.000          Talud Trasdos  Aleta  Embocadura Derecha
+   PAS_DD1  0.000          Talud Trasdos  Aleta  Desague Izquierda
+   PAS_DI1  0.000          Talud Trasdos  Aleta  Desague Izquierda
+   PAS_ED2  0.000          Talud Trasdos  Aleta  Embocadura Derecha
+   PAS_EI2  0.000          Talud Trasdos  Aleta  Embocadura Derecha
+   PAS_DD2  0.000          Talud Trasdos  Aleta  Desague Izquierda
+   PAS_DI2  0.000          Talud Trasdos  Aleta  Desague Izquierda
+   PAS_ED3  0.000          Talud Trasdos  Aleta  Embocadura Derecha
+   PAS_EI3  0.000          Talud Trasdos  Aleta  Embocadura Derecha
+   PAS_DD3  0.000          Talud Trasdos  Aleta  Desague Izquierda
+   PAS_DI3  0.000          Talud Trasdos  Aleta  Desague Izquierda
+   PAS_ED4  0.000          Talud Trasdos  Aleta  Embocadura Derecha
+   PAS_EI4  0.000          Talud Trasdos  Aleta  Embocadura Derecha
+   PAS_DD4  0.000          Talud Trasdos  Aleta  Desague Izquierda
+   PAS_DI4  0.000          Talud Trasdos  Aleta  Desague Izquierda
+   PAZ_ED  0.000          Desnivel Imposta Aleta Embocadura Derecha
+   PAZ_EI  0.000          Desnivel Imposta Aleta Embocadura Derecha
+   PAZ_DD  0.000          Desnivel Imposta Aleta Desague Izquierda
+   PAZ_DI  0.000          Desnivel Imposta Aleta Desague Izquierda
+   PALA_ED 0            Longitud Automatica Aleta Embocadura Derecha
+   PALA_EI 0            Longitud Automatica Aleta Embocadura Derecha
+   PALA_DD 0            Longitud Automatica Aleta Desague Izquierda
+   PALA_DI 0            Longitud Automatica Aleta Desague Izquierda
+   PAI_E   0.300          Altura de la Imposta de la embocadura
+   PAI_D   0.300          Altura de la Imposta de el desague
+   PAIV_E   0.000         Altura de la Voladizo Imposta de la embocadura
+   PAIV_D   0.000         Altura de la Voladizo Imposta deel desague
+   PAIA_E 0             Altura de la Imposta asimetrica de la embocadura
+   PAIA_D 0             Altura de la Imposta asimetrica de el desague
+   PATS   316             Tipo de linea para la solera
+   PATI   318             Tipo de linea para la base de la imposta
+   PATV   317             Tipo de linea para verticales
+   PATA   391             Tipo de linea para arquetas
+   PAQTIP 0             Tipo de embocadura
+   PAQLON  1.000          Longitud de la arqueta
+   PAQALT  0.000          Altura de la arqueta
+   PAQARE  0.000          Altura de arenero
+   PAQAN2  0.300   0.300  Anchos de la arqueta
+   PAQESP  0.100          Espesor de la arqueta
+   PAQSOL  0.200          Solera de la arqueta
+   PAQDIS  0.000          Distancia de la arqueta
+   PAQDIY  0.000          Distancia de la arqueta
+   PAQORV      0            Orientacion de la V de la arqueta
+   PAQTPL      0            Tapa plana de la arqueta
+   PAQTIPd 0             Tipo de desagüe
+   PAQLONd  1.000          Longitud de la arqueta
+   PAQALTd  0.000          Altura de la arqueta
+   PAQAREd  0.000          Altura de arenero
+   PAQAN2d  0.300   0.300  Anchos de la arqueta
+   PAQESPd  0.100          Espesor de la arqueta
+   PAQSOLd  0.200          Solera de la arqueta
+   PAQDISd  0.000          Distancia de la arqueta
+   PAQDIYd  0.000          Distancia de la arqueta
+   PAQORVd      0            Orientacion de la V de la arqueta
+   PAQTPLd      0            Tapa plana de la arqueta
+   PAc_ER  2.000          Radio del codo de embocadura
+   PAc_EA  2.000          Angulo para segmentos del codo
+#---------------------------------------------------------------------
+#       Puntos  semi d.Emb. d.Des. Ori.emb Ori.des Linea Giro_e  Giro_d
+#------------ ------ ------ ------ ------- ------- ----- ------- ------- -------------
+   PAMV3   10  0.750  0.000  0.000       1       1  307    0.000   0.000 Dibujar Marco
+ PAMVT     0.9300   1.6800 0 0
+ PAMVT    -0.9300   1.6800 1 0
+ PAMVT    -0.9300  -0.1800 1 0
+ PAMVT     0.9300  -0.1800 1 0
+ PAMVT     0.9300   1.6800 1 0
+ PAMVT     0.7500   0.0000 0 1
+ PAMVT     0.7500   1.5000 1 1
+ PAMVT    -0.7500   1.5000 1 1
+ PAMVT    -0.7500   0.0000 1 1
+ PAMVT     0.7500   0.0000 1 1
+#---------------------------------------------------------------------
+   DESC      1
+#---------------------------------------------------------------------
+# Recubrimiento     H      A       T      AT    Nor
+#-------------- ------- ------- ------- ------- ---
+   Prec3     1   0.800   3.000   1.500   0.000   0
+#---------------------------------------------------------------------
+# Sobreexcavac.     H      A       T      AT      SP    Nor
+#-------------- ------- ------- ------- ------- ------- ---
+   Pexc4     1   0.200   0.200   1.000   0.000   0.000   0
+# Arqueta    .     H      A       T      AT
+#-------------- ------- ------- ------- -------
+   Parq2     0   0.100   0.500   0.200   1.000
+#---------------------------------------------------------------------
+# Simbolo para el Perfil Longitudinal
+#       Simbolo Tamaño
+#------ ------- ------ ----------- -----------------------------------
+   LSC2     463  1.000       0         
+#---------------------------------------------------------------------
+# Dibujo de la planta con lineas rellenas
+# --------------------------------------------------------------------
+   PLULR 0 370 376 371 372 373 374 393 375 377
+#---------------------------------------------------------------------
+# Rotular el Cuadro de Coordenadas
+# --------------------------------------------------------------------
+   PCDIB 0 5 1081
+   PCDXB 0
+   PCCEL 44 0.00 -20.00 120.00 -80.00 -5.00
+   PCNUM 4 50.00 14.00 2.60 1 2
+   PCNOM 4 50.00 8.00 2.60 1 2
+   PCXYZ 374 58.00 -2.50 374 98.00 -2.50 0 138.00 -2.50
+#---------------------------------------------------------------------
+# Rotular el Cuadro de datos de la OF
+# --------------------------------------------------------------------
+   PC2DIB2 0 0 2.400 1 2 0
+   PC2SXY 0 49 -25.00 -50.00
+   PC2SXY 1 4 -7.50 -17.50
+   PC2SXY 2 1084 -12.50 -7.50
+   PC2SXY 3 1085 37.50 -7.50
+   PC2SXY 4 374 37.50 -17.50
+   PC2SXY 5 374 12.50 -32.50
+   PC2SXY 6 374 -12.50 -32.50
+   PC2SXY 7 374 37.50 -32.50
+   PC2SXY 8 374 12.50 -47.50
+   PC2SXY 9 374 -12.50 -47.50
+   PC2SXY 10 374 37.50 -47.50
+   PC2SXY 11 0 27.00 -21.00
+   PC2SXY 12 0 27.00 -36.00
+#---------------------------------------------------------------------
+# Rotular los 11 Puntos OF
+# --------------------------------------------------------------------
+   PC3DIB 0
+   PC3SXY 0 48 -50.00 40.00
+   PC3SXY 1 48 -50.00 20.00
+   PC3SXY 2 48 -50.00 0.00
+   PC3SXY 3 48 -50.00 -20.00
+   PC3SXY 4 48 -50.00 -40.00
+   PC3SXY 5 48 -10.00 -40.00
+   PC3SXY 6 48 50.00 -40.00
+   PC3SXY 7 48 50.00 -20.00
+   PC3SXY 8 48 50.00 0.00
+   PC3SXY 9 48 50.00 20.00
+   PC3SXY 10 48 50.00 40.00
+   PC3SXY 11 374 14.00 0.00
+   PC3SXY 12 374 14.00 5.00
+   PC3SXY 13 374 14.00 -5.00
+#---------------------------------------------------------------------
+# Rotular El angulo de las Aletas
+# --------------------------------------------------------------------
+   PC4DIB 0
+   PC4SXY 0 20 20.00 2.00
+#---------------------------------------------------------------------
+# Rotular la longitud de las Aletas
+# --------------------------------------------------------------------
+   PC5DIB 0
+   PC5SXY 0 451 8.00 0.00
+#---------------------------------------------------------------------
+  FIN
