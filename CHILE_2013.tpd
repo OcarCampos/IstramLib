@@ -1,0 +1,43 @@
+# Tabla CHILE_2013.tpd (Tabla de Peraltes Deducidos)
+# Segun tabla 3.302.402.A Pendiente transversal del SAP (Berma int y ext)
+#------------------------------------------------------------------------
+# Los peraltes se dan positivos si echan el agua hacia afuera. Asi que el peralte
+# principal de la calzada izquierda esta con el signo cambiado para
+# facilitar la comprension de la tabla por simetria. Es decir:
+# Los signos de los peraltes del lado derecho son positivos si echan el agua a la derecha.
+# Los signos de los peraltes del lado izquierdo son positivos si echan el agua a la izquierda.
+#------------------------------------------------------------------------
+# Las tablas se ponen en peraltes decrecientes de la calzadas principales
+# Por lo que los datos para la calzada izquierda y derecha en un caso
+# real se tomaran en general de distinta línea.
+#------------------------------------------------------------------------
+# Mandan los peraltes de las calzadas principales y se dan dos por cada
+# lado por si hay doble peralte.
+#------------------------------------------------------------------------
+# En esta tabla va todo prolongado y paralelo excepto las bermas.
+# Las bermas exteriores siempre vierten hacia afuera
+# Las bermas interiores siempre vierten hacia dentro
+# CPe <= 4 -> Bi = -8 // CPe > 4 -> Bi = -4
+# CPe < -3 -> Be = 4 // -3 <= CPe < 0 -> Be = 10 + 2 * CPe // CPe >= 0 -> Be = 10
+#
+# Bm: Berma
+# Ac: Arcen
+# CP: Calzada principal   (CPe:exterior, CPi:interior)
+# S_: Subrasante
+#---------------
+VERSION 1112
+# <-------------------------------------------- IZQUIERDA ---------------------------------------->MEDIANA<----------------------------------------DERECHA------------------------------------------------>
+# <----------------------- Exterior ------------------------>   <-------------Interior ----------->       <-----Interior-------------------->   <-----------------------Exterior-------------------------->
+# S_Be   Be   S_Ac4  Ac4  S_Ac3  Ac3  S_Ac2  Ac2  S_CPe  CPe     CPi  S_CPi  Ac1  S_Ac1  Bi   S_Bi         S_Bi  Bi   S_Ac1  Ac1  S_CPi  CPi     CPe  S_CPe  Ac_2 S_Ac2  Ac3  S_Ac3  Ac_4 S_Ac4  Be   S_Be
+# ----- ----- ----- ----- ----- ----- ----- ----- ----- =====   ----- ----- ----- ----- ----- -----       ----- ----- ----- ----- ----- -----   ===== ----- ----- ----- ----- ----- ----- ----- ----- -----
+D  10.0  10.0  10.0  10.0  10.0  10.0  10.0  10.0  10.0  10.0    10.0  10.0  10.0  10.0  -4.0  -4.0        -4.0  -4.0  10.0  10.0  10.0  10.0    10.0  10.0  10.0  10.0  10.0  10.0  10.0  10.0  10.0  10.0
+D  10.0  10.0   4.01  4.01  4.0   4.0   4.0   4.0   4.01  4.01    4.01  4.01  4.01  4.01 -4.0  -4.0        -4.0  -4.0   4.01  4.01  4.01  4.01    4.01  4.01  4.01  4.01  4.01  4.01  4.01  4.01 10.0  10.0
+D  10.0  10.0   4.0   4.0   4.0   4.0   4.0   4.0   4.0   4.0     4.0   4.0   4.0   4.0  -8.0  -8.0        -8.0  -8.0   4.0   4.0   4.0   4.0     4.0   4.0   4.0   4.0   4.0   4.0   4.0   4.0  10.0  10.0
+D  10.0  10.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0     0.0   0.0   0.0   0.0  -8.0  -8.0        -8.0  -8.0   0.0   0.0   0.0   0.0     0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0  10.0  10.0
+D   8.0   8.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0    -1.0  -1.0  -1.0  -1.0  -8.0  -8.0        -8.0  -8.0  -1.0  -1.0  -1.0  -1.0    -1.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0   8.0   8.0
+D   6.0   6.0  -2.0  -2.0  -2.0  -2.0  -2.0  -2.0  -2.0  -2.0    -2.0  -2.0  -2.0  -2.0  -8.0  -8.0        -8.0  -8.0  -2.0  -2.0  -2.0  -2.0    -2.0  -2.0  -2.0  -2.0  -2.0  -2.0  -2.0  -2.0   6.0   6.0
+D   4.0   4.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0    -3.0  -3.0  -3.0  -3.0  -8.0  -8.0        -8.0  -8.0  -3.0  -3.0  -3.0  -3.0    -3.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0   4.0   4.0
+D   4.0   4.0  -4.0  -4.0  -4.0  -4.0  -4.0  -4.0  -4.0  -4.0    -4.0  -4.0  -4.0  -4.0  -8.0  -8.0        -8.0  -8.0  -4.0  -4.0  -4.0  -4.0    -4.0  -4.0  -4.0  -4.0  -4.0  -4.0  -4.0  -4.0   4.0   4.0
+D   4.0   4.0 -10.0 -10.0 -10.0 -10.0 -10.0 -10.0 -10.0 -10.0   -10.0 -10.0 -10.0 -10.0  -8.0  -8.0        -8.0  -8.0 -10.0 -10.0 -10.0 -10.0   -10.0 -10.0 -10.0 -10.0 -10.0 -10.0 -10.0 -10.0   4.0   4.0
+FIN
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

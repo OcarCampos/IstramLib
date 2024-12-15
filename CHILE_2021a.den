@@ -1,0 +1,530 @@
+# TADISENL                                                                     #
+################################################################################
+# fichero:  CHILE_2021a.den  :                                                 #
+#------------------------------------------------------------------------------#
+# TIPO              :  .den  :TABLA DE DISEÑO PARA CRUCES Y ENLACES            #
+# CONTENIDO         :  Parámetros de diseño para cruces y enlaces              #
+# NORMA             :  DIRECCION DE VIALIDAD Edicion 2013                      #
+# FECHA DE CREACION :  ABRIL 2014 (revision a)                                 #
+# FECHA DE REVISION :  SET 2014 (revision b) Cuñas de transicion doble parabola#
+# FECHA DE REVISION :  OCT 2014 (revision c) Longitud carriles de acel/decel   #
+#      incluyen la clotoide o curva grande hasta la primera curva que limita V #
+# FECHA DE CREACION :  MAYO 2015 (revision c) Correccion de las tablas de los  #
+#                      carriles de aceleracion                                 #
+# FECHA DE REVISION :  OCT 2017 (revision c) Correccion de las tablas de los   #
+#                      carriles de deceleracion. La formula de 3.404.307(3)    #
+#                      Ld= [(FvVc)^2 - Vr^2] / [26(d-i/10)] dice que el signo  #
+# de i es + en subida y - en bajada; pero debe ser signo contrario.            #
+# La corregida es Ld= [(FvVc)^2 - Vr^2] / [26(d+i/10)]                         # *
+# Esta correccion está hecha en las revisiones de 2013 y 2021                  #
+# CHILE_2013c.den de fecha 29/05/2015 está mal. Sustituirla por esta.          #
+# Tambien corregidas las tablas de longitudes de los carriles de aceleracion   #
+# para que no corrijan por pendiente entre -3% y +3% ambos inclusive (faltaba +3)#
+# FECHA DE REVISION : Jul 2020 (revision d) Añadida la velocidad V=65 para los #
+# ramales de enlace. Es un valor interpolado en las tablas; pero sinó no       #
+# calcula los carriles de aceleración para Vramal=65                           #
+#
+# FECHA DE REVISION :  SET 2021 (revision a) Comprobación de la Norma por la   #
+# edicion de 2021. Se han puesto notas en el texto y en el margen derecho.     #
+# Un * en el margen derecho indica que se ha comprobado con Norma 2021         #
+#----------------------------------------------------------------------------- #
+# No utilizar para valores fuera del ámbito indicado.                          #
+################################################################################
+#      Revision de ISTRAM                                                      #
+# ---  -------------------                                                     #
+  REV  900                                                                     #
+################################################################################
+# NOTAS                                                                        #
+################################################################################
+# Algunos valores que pueden influir en el cálculo de enlaces y cruces         #
+# pueden estar definidos en  ficheros de diseño en planta y alzado (.DIP/.DIA) #
+# Revise la documentación al respecto.                                         #
+# ---------------------------------------------------------------------------- #
+################################################################################
+####                              ENLACES                                   ####
+################################################################################
+# Todas las opciones y comandos descritos en esta tabla serán utilizadas por   #
+# defecto para los datos de los Menus 'ENTRONQUES' del menú de ALZADO          #
+# y "ENTRONQUE" de COMPLETO                                                    #
+#                                                                              #
+# Definición de puntos de control para la determinación de los puntos          #
+# característicos del entronque, carriles de cambio de velocidad y cuñas.      #
+# Este gráfico es un esquema de los puntos que definen la conexión tronco-ramal#
+# Consulte la documentación ofrecida en el manual                              #
+################################################################################
+#     | |                   |  | 4  /  /          /
+#     | |         |         5  | E /  /          G
+#     | |                   |  |  /  /          /
+#     | |         |         |  | /  /          /
+#     | |                   |  D/  /          /3
+#     | |         |         |__r__/          /
+#     | |                   |    / \__      /
+#     | |         |         | C /      \__ R_____________         
+#     | |                   |  /          /             |
+#     | |         |         | /          /              |
+#     | |                   B/          /               |
+#     | |         |         |          /                |
+#     | |                   |         |                 |
+#     | |         |         |         |                 |
+#     | |                   |         |                 | Longitud del
+#     | |         |         |         |                 | Carril (s-R)
+#     | |                   |         |                 |
+#     | |         |         A         |2                |
+#     | |                   |         |                 |
+#     | |         |         |         |                 |
+#     | |                   |         |1  _             |
+#     | |         |         |        /                  |
+#     | |                   |      /      |             |   
+#     | |         |         s    /        | Cuña(0-1)   _
+#     | |                   |  /          |  
+#     | |         |         0/            _
+#     | |                   |             
+#     | |         |         |
+################################################################################
+# Punto cero (0): Inicio de cuña o bisel                                       #
+# Punto s       : Origen del Carril. Sección Característica para medir la      #
+#                 longitud del carril ( usuales s=1.5 m, 0 m, 3.5m)            #
+# Punto 1       : Fin de la Cuña (Ancho del Carril de Aceleración/Deceleración)#
+# Punto A       : Origen Eje del ramal                                         #
+# Punto 2       : Origen Eje del ramal (Ancho del Ramal) o eje por fuera (2,R,3,...) #
+# Punto B       : Intersección de lineas blancas tronco - ramal                #
+# Punto C       : Final del Carril.Punto de control (paralelas lineas blancas )#
+#                 se usa para definir la longitud de carril paralelo a aplicar.#
+# Punto R       : El final tambien se puede medir hasta un punto R en que la   #
+#                 distancia perpendicular al tronco entre rayas blancas es "r" #
+# Punto D       : Intersección de arcenes                                      #
+# Punto E       : Punto en el que se decide independizar el ramal              #
+# Punto 3       : Punto E con el Ancho del Ramal                               #
+# Punto 4       : Punto E                                                      #
+# Punto 5       : Punto E en la banda blanca del Tronco                        #
+# Punto G       : Punto E Normal al Tronco en el borde exterior del ramal      #
+# ---------------------------------------------------------------------------- #
+# El punto A (origen del ramal ) se usa por el programa para poder deducir     #
+# el resto de la geometria : Puntos 0, C  y E . Los demás puntos ( B y D ) son #
+# usados por la aplicación para poder realizar el diseño completo.             #
+#                                                                              #
+# En esta tabla se definen las posiciones del punto cero y del punto C (o R)   #
+# Datos esenciales a la hora de definir la geometria y disposición de las cuñas#
+# y carrriles de aceleración- deceleración.                                    #
+#                                                                              #
+# La linea  A-B-C-D-E forma la limatesa que proyecta Peraltes y/o Rasantes del #
+#                    Tronco al Ramal                                           #
+# La Linea 0-1-2-3-E=4-5 Puede Utilizarse para definir Sobreanchos en el tronco#
+#                    si se desea incluir en su geometria todo el carril y      #
+#                    el ramal hasta el punto E                                 #
+#  tambien 0-1-2-3-G-E=4-5 en el caso de Anchos hasta G                        #
+#------------------------------------------------------------------------------#
+# DEFINICION DE LA FORMA DE REALIZAR LA CONEXIÓN GEOMETRICA ENTRE TRONCO-RAMAL #
+#------------------------------------------------------------------------------#
+# La conexión geomética entre tronco y ramal puede efectuarse de las Siguiente #
+# maneras:                                                                     #
+# Aplicación de Sobreanchos del Tronco:  (Origen de Medición del Ramal)        #
+#       Hasta el punto E                                                       #
+#       Hasta el punto C                                                       #
+#       Hasta el punto A                                                       #
+# La Deducción de PERALTES Y RASANTE del Tronco al Ramal admite las siguientes #
+# Variantes:                                                                   #
+#  Caso de llevar los SOBREANCHOS del Tronco Hasta E/G:                        #
+#    RASANTES hasta E    PERALTES hasta E   (RASANTE+PERALTE hasta E)          #
+#    RASANTES hasta G    PERALTES hasta G   (RASANTE+PERALTE hasta G)          #
+#  Caso de llevar los SOBREANCHOS del Tronco Hasta C:                          #
+#  Admite tres variantes:                                                      #
+#    RASANTES  E    PERALTES E   (RASANTE+PERALTE hasta E)                     #
+#    RASANTES  E    PERALTES C   (RASANTE+PERALTE hasta C  y  RASANTE HASTA E) #
+#    RASANTES  C    PERALTES E   (RASANTE+PERALTE hasta C  y  PERALTE HASTA E) #
+#  Caso de llevar los SOBREANCHOS del Tronco Hasta A:                          #
+#  Admite las siguientes variantes:                                            #
+#   RASANTES   E    PERALTES  E  (RASANTE+PERALTE hasta E)                     #
+#   RASANTES   E    PERALTES  C  (RASANTE+PERALTE hasta C  y  RASANTE HASTA E) #
+#   RASANTES   C    PERALTES  E  (RASANTE+PERALTE hasta C  y  PERALTE HASTA E) #
+#   RASANTES   E    PERALTES  A  (                            RASANTE HASTA E) #
+#   RASANTES   A    PERALTES  E  (                            PERALTE HASTA E) #
+#                                                                              #
+# En los Puntos de la linea A-B-C-D-E donde se deduce RASANTE+PERALTE ambas    #
+# calzadas están en el mismo Plano.                                            #
+# En los Puntos donde solo se deduce RASANTE o PERALTE funciona como una       #
+# verdadera LIMATESA                                                           #
+#                                                                              #
+# GEOMETRIA   SOBREANCHOS-RASANTE-PERALTE                                      #
+# ---------   ---------------------------                                      #
+#  Geom              EEE                                                       #
+#  Geom              CEE                                                       #
+#  Geom              CEC                                                       #
+#  Geom              CCE                                                       #
+   Geom              AEE        (SOBREANCHOS hasta A y RASANTE+PERALTES hasta E#
+#  Geom              AEC                                                       #
+#  Geom              ACE                                                       #
+#  Geom              AEA                                                       #
+#  Geom              AAE                                                       #
+#  Geom              GGG        (SOBREANCHOS hasta G y RASANTE+PERALTES hasta G#
+#------------------------------------------------------------------------------#
+#    DEFINICIÓN DE LOS PUNTOS  C y E                                           #
+#------------------------------------------------------------------------------#
+# PUNTO  C                                                                     #
+  PCTD 0.5    # distancia a la banda blanca del Tronco (Deceleración o Salida) #
+  PCRD 0.5    # distancia a la banda blanca del Ramal  (Deceleración o Salida) #
+  PCTA 0.5    # distancia a la banda blanca del Tronco (Aceleración o Entrada) #
+  PCRA 0.5    # distancia a la banda blanca del Ramal  (Aceleración o Entrada) #
+# PUNTO  E                                                                     #
+  PETD 0.5    # distancia al arcén del Tronco (Deceleración o Salida)          #
+  PERD 0.5    # distancia al arcén del Ramal  (Deceleración o Salida)          #
+  PETA 0.5    # distancia al arcén del Tronco (Aceleración o Entrada)          #
+  PERA 0.5    # distancia al arcén del Ramal  (Aceleración o Entrada)          #
+# PUNTO  R. Si se define R la longitud del carril de aceleracion se mide hasta #
+# un punto R en que el ramal se separo R o desde la clotoide (3.404.307 CHILE) #
+  PRU         # Se utiliza el punto R como limite maximo de longitud del carril#
+  PRRLIM 150. # Radio minimo apto para el carril
+  PRTD 999    # distancia al arcén del Tronco (Deceleración o Salida)          #
+  PRRD 0.0    # distancia al arcén del Ramal  (Deceleración o Salida)          #
+  PRTA 3.0    # distancia al arcén del Tronco (Aceleración o Entrada)          #
+  PRRA 0.0    # distancia al arcén del Ramal  (Aceleración o Entrada)          #
+#------------------------------------------------------------------------------#
+# Equidistancia minima para calcular puntos intermedios                        #
+  Equi 2.0                                                                     #
+################################################################################
+#  CUÑAS Y CARRILES DE ACELERACION Y DECELERACION                              #
+#------------------------------------------------------------------------------#
+  Redon   1.0      # Para redondear las longitudes (1. metro)                  #
+  Origen  0.0      # Ancho en la cuña para medir el inicio del carril          #
+  Carril  3.5      # Ancho del Carril                                          #
+  LMA       0.     # Longitud minima del Carril de Aceleración                 #
+  LMD       0.     # Longitud minima del Carril de Deceleración                #
+  Uso       2      # Longitud de Carril: 0:Minimos  1:Formula  2:Tablas        #
+  Ancho0    1.0    # Ancho en el origen de la cuña                             #
+# CHILE La longitud puede incluir la primera clotoide del ramal                #
+# Aceleracion: 3.404.307(2) La longitud se mide desde el final de la ultima    # *
+# curva del ramal que limita la velocidad si en ese punto la distancia es menor#
+# que PRTA. Se incluye la ultima clotoide o curva de radio "grande"            #
+# Deceleracion: La longitud se mide hasta el principio de la primera curva que #
+# limita la velocidad. No importa la distancia                                 #
+#------------------------------------------------------------------------------#
+# Tabla de Anchos de la cuña en tanto por uno de ancho/tanto por ciento de lon.#
+# (CHILE TABLA 3.303.307(3)B).                                                 #
+# Esta tabla cambia la transicion de anchos de lineal a parabólica             #
+#      Ancho = Ancho0 + F * (Carril - Ancho0)                                  # 
+#      Porcentaje de longitud de cuña     Tanto por uno de ancho (F)           #
+#      ------------------------------     --------------------------           #
+ TD4              0.0                            0.0000                        #
+ TD4              5.0                            0.0029                        #
+ TD4             10.0                            0.0127                        #
+ TD4             15.0                            0.0321                        #
+ TD4             20.0                            0.0629                        #
+ TD4             25.0                            0.1073                        #
+ TD4             30.0                            0.1656                        #
+ TD4             35.0                            0.2370                        #
+ TD4             40.0                            0.3190                        #
+ TD4             45.0                            0.4077                        #
+ TD4             50.0                            0.5000                        #
+ TD4             55.0                            0.5923                        #
+ TD4             60.0                            0.6810                        #
+ TD4             65.0                            0.7630                        #
+ TD4             70.0                            0.8344                        #
+ TD4             75.0                            0.8927                        #
+ TD4             80.0                            0.9371                        #
+ TD4             85.0                            0.9679                        #
+ TD4             90.0                            0.9873                        #
+ TD4             95.0                            0.9971                        #
+ TD4            100.0                            1.0000                        #
+# (Para interpolar datos intermedios, se suaviza previamente la curva)         #
+#------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
+#  Longitud de las Cuñas                                                       #
+# CHILE Tabla 3.404.307(2)A y3.404307(3)B                                      # *
+# Se dan las longitudes totales Carril + Cuña, para poner ancho de control 0   #
+#     VP   DECELERACION  ACELERACION                                           #
+#    ---- ------------- ------------                                           #
+ TD1    50       50           50     # Para Vp <= 50 Km/h                      #
+ TD1    60       55           50                                               #
+ TD1    65       57.5         50                                               #
+ TD1    70       60           50                                               #
+ TD1    80       70           50                                               #
+ TD1    90       80           75                                               #
+ TD1   100       85           75                                               #
+ TD1   110       90           75                                               #
+ TD1   120      100           75                                               #
+#------------------------------------------------------------------------------#
+# Longitud de Los Carriles                                                     #
+# Se dan las longitudes totales Carril + Cuña, para poner ancho de control 0   #
+# Para Uso    =0 Se Aplican las longitudes minimas LMD y LMA                   #
+# Para Uso    =1 Se Aplican las siguientes Formulas: ESPAÑA 3.1 IC 2000        #
+#           Carril de Aceleracion:                                             #
+#              i  = Inclinacion de la Rasante en tanto por uno.                #
+#              a  = (1 - 2 x i)                                                #
+#              b  = (1 + 2,65 x i)                                             #
+#              Vc = Velocidad especifica del Carril                            #
+#              Vp = Velocidad de Proyecto                                      #
+#                                                                              #
+#               a         175 a - Vc b         Vp - Vc     Vp2 - Vc2           #
+#   L = 1120 -------  Ln -------------- - 6,4 --------- - ----------- >= LMA   #
+#               b3        175 a - Vp b            b2          96 b             #
+#                                                                              #
+#           Carril de Deceleracion:                                            #
+#                                                                              #
+#        Vp2 - Vc2                                                             #
+#   L = ------------ >= LMD                                                    #
+#        254 i + 50                                                            #
+#                                                                              #
+# Para Uso    =2 Se Aplican las siguientes Tablas:                             #
+#------------------------------------------------------------------------------#
+#           Carril de Deceleración                                             #
+# CHILE 3.404.307(3)                                                           # *
+#------------------------------------------------------------------------------#
+#  Tabla   Vp   Num.Vc   Num.i                                                 #
+#  ----- ----- -------  -------                                                #
+    TD2   120    10        15                                                  #
+# Vc   i                                                                       #
+   -.08 -.06 -.05 -.04 -.03 -.02 -.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.08
+#- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----  #
+ 0  266  242  233  225  217  211  205  200  195  191  187  183  180  177  171  #
+10  263  240  230  222  215  209  203  198  193  189  185  181  178  175  170  #
+20  253  231  223  215  208  202  197  192  188  184  180  177  174  171  166  #
+30  237  218  210  203  197  192  187  182  178  175  172  169  166  163  159  #
+40  215  198  192  186  181  177  173  169  166  163  160  157  155  153  149  #
+50  186  174  169  165  161  157  154  152  149  147  145  143  141  140  137  #
+60  151  144  141  138  136  134  132  130  129  128  126  125  124  123  122  #
+65	131  126  125	123	122	120	119	118	118	117	116	115	115	114	113
+70  109  108  107  107  106  106  106  105  105  105  105  105  104  104  104  #
+80  100  100  100  100  100  100  100  100  100  100  100  100  100  100  100  #
+#  ----- ----- -------  -------                                                #
+    TD2   110    10        15                                                  #
+# Vc   i                                                                       #
+   -.08 -.06 -.05 -.04 -.03 -.02 -.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.08
+#- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----  #
+ 0  234  214  205  198  192  186  181  177  172  169  165  162  159  157  152  #
+10  231  211  203  196  190  184  179  175  171  167  164  161  158  155  150  #
+20  221  203  195  189  183  178  173  169  165  162  159  156  153  151  146  #
+30  205  189  182  177  172  167  163  159  156  153  150  148  145  143  139  #
+40  183  170  164  160  156  152  149  146  143  141  139  137  135  133  130  #
+50  154  145  141  138  135  133  131  129  127  125  123  122  121  120  118  #
+60  119  115  113  112  110  109  108  107  107  106  105  104  104  103  102  #
+65	99	98	97	97	96	96	96	95	95	95	95	94	94	94	94
+70   90   90   90   90   90   90   90   90   90   90   90   90   90   90   90  #
+80   90   90   90   90   90   90   90   90   90   90   90   90   90   90   90  #
+#  ----- ----- -------  -------                                                #
+    TD2   100    10        15                                                  #
+# Vc   i                                                                       #
+   -.08 -.06 -.05 -.04 -.03 -.02 -.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.08
+#- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----  #
+ 0  208  191  184  177  172  167  163  159  155  152  149  147  144  142  138  #
+10  205  188  181  175  170  165  161  157  154  150  148  145  143  140  136  #
+20  195  180  173  168  163  159  155  151  148  145  143  140  138  136  132  #
+30  179  166  160  156  152  148  145  142  139  136  134  132  130  129  125  #
+40  157  147  143  139  136  133  130  128  126  124  123  121  120  118  116  #
+50  128  122  119  117  115  114  112  111  110  108  107  107  106  105  103  #
+60   93   92   91   91   91   90   90   90   89   89   89   89   89   89   88  #
+65	85	85	85	85	85	85	85	85	85	85	85	85	85	85	85
+70   85   85   85   85   85   85   85   85   85   85   85   85   85   85   85  #
+80   85   85   85   85   85   85   85   85   85   85   85   85   85   85   85  #
+#  ----- ----- -------  -------                                                #
+    TD2    90    10        15                                                  #
+# Vc   i                                                                       #
+   -.08 -.06 -.05 -.04 -.03 -.02 -.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.08
+#- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----  #
+ 0  183  168  162  157  153  149  145  142  139  136  134  132  129  128  124  #
+10  180  166  160  155  150  147  143  140  137  134  132  130  128  126  123  #
+20  170  157  152  148  144  140  137  134  132  129  127  125  123  122  119  #
+30  154  144  139  136  132  129  127  125  122  120  119  117  116  114  112  #
+40  132  124  121  119  117  115  113  111  110  108  107  106  105  104  102  #
+50  103  100   98   97   96   95   94   94   93   92   92   91   91   91   90  #
+60   80   80   80   80   80   80   80   80   80   80   80   80   80   80   80  #
+65	80	80	80	80	80	80	80	80	80	80	80	80	80	80	80
+70   80   80   80   80   80   80   80   80   80   80   80   80   80   80   80  #
+80   80   80   80   80   80   80   80   80   80   80   80   80   80   80   80  #
+#- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----   #
+#  ----- ----- -------  -------                                                #
+    TD2    80    10        15                                                  #
+# Vc   i                                                                       #
+   -.08 -.06 -.05 -.04 -.03 -.02 -.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.08
+#- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----  #
+ 0  154  142  137  133  129  126  123  120  118  116  114  112  110  109  106  #
+10  151  139  135  131  127  124  121  118  116  114  112  110  109  107  105  #
+20  141  131  127  123  120  117  115  113  111  109  107  106  104  103  101  #
+30  125  117  114  111  109  107  105  103  102  100   99   98   96   95   94  #
+40  103   98   96   95   93   92   91   90   89   88   87   86   86   85   84  #
+50   74   73   73   73   73   73   72   72   72   72   72   72   72   72   72  #
+60   70   70   70   70   70   70   70   70   70   70   70   70   70   70   70  #
+65	70	70	70	70	70	70	70	70	70	70	70	70	70	70	70
+70   70   70   70   70   70   70   70   70   70   70   70   70   70   70   70  #
+80   70   70   70   70   70   70   70   70   70   70   70   70   70   70   70  #
+#- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----   #
+#  ----- ----- -------  -------                                                #
+    TD2    70    10        15                                                  #
+# Vc   i                                                                       #
+   -.08 -.06 -.05 -.04 -.03 -.02 -.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.08
+#- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----  #
+ 0  128  119  115  111  108  106  103  101   99   97   96   94   93   92   89  #
+10  125  116  112  109  106  103  101   99   97   96   94   93   91   90   88  #
+20  116  108  104  102   99   97   95   93   92   90   89   88   87   86   84  #
+30  100   94   92   90   88   86   85   84   83   82   81   80   79   78   77  #
+40   77   75   74   73   72   71   71   70   70   69   69   69   68   68   67  #
+50   60   60   60   60   60   60   60   60   60   60   60   60   60   60   60  #
+60   60   60   60   60   60   60   60   60   60   60   60   60   60   60   60  #
+65	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60
+70   60   60   60   60   60   60   60   60   60   60   60   60   60   60   60  #
+80   60   60   60   60   60   60   60   60   60   60   60   60   60   60   60  #
+#- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----   #
+#  ----- ----- -------  -------                                                #
+    TD2    65    10        15                                                  #
+# Vc   i                                                                       #
+   -.08 -.06 -.05 -.04 -.03 -.02 -.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.08
+#- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----  #
+0   116  108  105  102   99   97   95   93   91   90   88   87   86   85   83  #
+10  113  105  102   99   97   95   93   91   89   88   87   85   84   83   81  #
+20  104   97   94   92   90   88   87   85   84   83   82   81   80   79   77  #
+30   88   83   82   80   79   78   77   76   75   74   73   73   72   71   70  #
+40   65   64   64   63   63   63   62   62   62   62   62   61   61   61   61  #
+50   58   58   58   58   58   58   58   58   58   58   58   58   58   58   58  #
+60   58   58   58   58   58   58   58   58   58   58   58   58   58   58   58  #
+65	58	58	58	58	58	58	58	58	58	58	58	58	58	58	58
+70   58   58   58   58   58   58   58   58   58   58   58   58   58   58   58  #
+80   58   58   58   58   58   58   58   58   58   58   58   58   58   58   58  #
+#- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----   #
+#  ----- ----- -------  -------                                                #
+    TD2    60    10        15                                                  #
+# Vc   i                                                                       #
+   -.08 -.06 -.05 -.04 -.03 -.02 -.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.08
+#- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----  #
+ 0  108  101   98   95   93   91   89   87   85   84   83   82   81   80   78  #
+10  105   98   95   93   90   88   87   85   84   82   81   80   79   78   76  #
+20   96   90   87   85   84   82   81   79   78   77   76   75   74   74   72  #
+30   80   76   75   73   72   71   70   70   69   68   68   67   67   66   66  #
+40   57   57   57   57   56   56   56   56   56   56   56   56   56   56   56  #
+50   55   55   55   55   55   55   55   55   55   55   55   55   55   55   55  #
+60   55   55   55   55   55   55   55   55   55   55   55   55   55   55   55  #
+65	55	55	55	55	55	55	55	55	55	55	55	55	55	55	55
+70   55   55   55   55   55   55   55   55   55   55   55   55   55   55   55  #
+80   55   55   55   55   55   55   55   55   55   55   55   55   55   55   55  #
+#- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----   #
+#  ----- ----- -------  -------                                                #
+    TD2    50    10        15                                                  #
+# Vc   i                                                                       #
+   -.08 -.06 -.05 -.04 -.03 -.02 -.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.08
+#- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----  #
+ 0   89   84   81   79   78   76   75   74   72   71   70   70   69   68   67  #
+10   86   81   79   77   75   74   73   72   71   70   69   68   67   67   65  #
+20   76   73   71   70   69   68   67   66   65   64   64   63   63   62   61  #
+30   60   59   58   58   57   57   57   56   56   56   55   55   55   55   54  #
+40   50   50   50   50   50   50   50   50   50   50   50   50   50   50   50  #
+50   50   50   50   50   50   50   50   50   50   50   50   50   50   50   50  #
+60   50   50   50   50   50   50   50   50   50   50   50   50   50   50   50  #
+65	50	50	50	50	50	50	50	50	50	50	50	50	50	50	50
+70   50   50   50   50   50   50   50   50   50   50   50   50   50   50   50  #
+80   50   50   50   50   50   50   50   50   50   50   50   50   50   50   50  #
+#- --- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----   #
+################################################################################
+#------------------------------------------------------------------------------#
+#           Carril de Aceleracion                                              #
+# CHILE 3.404.307(2)                                                           #
+#------------------------------------------------------------------------------#
+#  Tabla   Vp   Num.Vc   Num.i                                                 #
+#  ----- ----- -------  -------                                                #
+    TD3   120     9        11                                                  #
+# Vc \ i
+        -0.06 -0.05 -0.04 -0.03 -0.02 0.00 0.02  0.03 0.04  0.05 0.06
+ 0            300  300  300  300  300  300  300   300  300   300  300
+30            300  300  300  300  300  300  300   300  300   300  300
+40            300  300  300  300  300  300  300   300  300   300  300
+50            300  300  300  300  300  300  300   300  300   300  300
+60            300  300  300  300  300  300  300   300  300   300  300
+65			300	300	300	300	300	300	300	300	300	300	300		
+70            300  300  300  300  300  300  300   300  300   300  300
+80            300  300  300  300  300  300  300   300  300   300  300
+90            300  300  300  300  300  300  300   300  300   300  300
+#------------------------------------------------------------------------------#
+#  Tabla   Vp   Num.Vc   Num.i                                                 #
+#  ----- ----- -------  -------                                                #
+    TD3   110     9        11                                                  #
+# Vc \ i
+        -0.06 -0.05 -0.04 -0.03 -0.02 0.00 0.02  0.03 0.04  0.05 0.06
+ 0            300  300  300  300  300  300  300   300  300   300  300
+30            300  300  300  300  300  300  300   300  300   300  300
+40            300  300  300  300  300  300  300   300  300   300  300
+50            300  300  300  300  300  300  300   300  300   300  300
+60            300  300  300  300  300  300  300   300  300   300  300
+65			275	275	275	275	275	275	275	300	300	300	300		
+70            250  250  250  250  250  250  250   300  300   300  300
+80            250  250  250  250  250  250  250   300  300   300  300
+90            250  250  250  250  250  250  250   300  300   300  300
+#------------------------------------------------------------------------------#
+#  Tabla   Vp   Num.Vc   Num.i                                                 #
+#  ----- ----- -------  -------                                                #
+    TD3   100     9        11                                                  #
+# Vc \ i
+        -0.06 -0.05 -0.04 -0.03 -0.02 0.00 0.02  0.03 0.04  0.05 0.06
+ 0            300  300  300  300  300  300  300   300  300   300  300
+30            300  300  300  300  300  300  300   300  300   300  300
+40            300  300  300  300  300  300  300   300  300   300  300
+50            275  275  275  275  275  275  275   275  300   300  300
+60            250  250  250  250  250  250  250   250  300   300  300
+65			238	238	238	238	238	238	238	300	300	300	300		
+70            225  225  225  225  225  225  225   225  300   300  300
+80            200  200  200  200  200  200  200   200  280   300  300
+90            200  200  200  200  200  200  200   200  280   300  300
+#------------------------------------------------------------------------------#
+#  Tabla   Vp   Num.Vc   Num.i                                                 #
+#  ----- ----- -------  -------                                                #
+    TD3    90     9        11                                                  #
+# Vc \ i
+        -0.06 -0.05 -0.04 -0.03 -0.02 0.00 0.02  0.03 0.04  0.05 0.06
+ 0            270  270  285  285  300  300  300   300  300   300  300
+30            275  275  275  275  275  275  275   275  300   300  300
+40            250  250  250  250  250  250  250   250  300   300  300
+50            220  220  220  220  220  220  220   220  300   300  300
+60            170  170  170  170  170  170  170   170  234   300  300
+65			155	155	155	155	155	155	155	213	213	279	279		
+70            140  140  140  140  140  140  140   140  193   252  252
+80            140  140  140  140  140  140  140   140  193   252  252
+90            140  140  140  140  140  140  140   140  193   252  252
+#------------------------------------------------------------------------------#
+#  Tabla   Vp   Num.Vc   Num.i                                                 #
+#  ----- ----- -------  -------                                                #
+    TD3    80     8        11                                                  #
+# Vc \ i
+        -0.06 -0.05 -0.04 -0.03 -0.02 0.00 0.02  0.03 0.04  0.05 0.06
+ 0            192  192  216  216  240  240  240   240  300   300  300
+30            200  200  200  200  200  200  200   200  270   300  300
+40            180  180  180  180  180  180  180   180  243   300  300
+50            140  140  140  140  140  140  140   140  189   238  238
+60            100  100  100  100  100  100  100   100  135   170  170
+65			100	100	100	100	100	100	100	135	135	170	170		
+70            100  100  100  100  100  100  100   100  135   170  170
+80            100  100  100  100  100  100  100   100  135   170  170
+#------------------------------------------------------------------------------#
+#  Tabla   Vp   Num.Vc   Num.i                                                 #
+#  ----- ----- -------  -------                                                #
+    TD3    70     7        11                                                  #
+# Vc \ i
+        -0.06 -0.05 -0.04 -0.03 -0.02 0.00 0.02  0.03 0.04  0.05 0.06
+ 0             98   98  113  113  150  150  150   150  195   240  240
+30            120  120  120  120  120  120  120   120  156   192  192
+40            100  100  100  100  100  100  100   100  130   160  160
+50            100  100  100  100  100  100  100   100  130   160  160
+60            100  100  100  100  100  100  100   100  130   160  160
+65			100	100	100	100	100	100	100	130	130	160	160		
+70            100  100  100  100  100  100  100   100  130   160  160
+#------------------------------------------------------------------------------#
+#  Tabla   Vp   Num.Vc   Num.i                                                 #
+#  ----- ----- -------  -------                                                #
+    TD3    65     6        11                                                  #
+# Vc \ i
+        -0.06 -0.05 -0.04 -0.03 -0.02 0.00 0.02  0.03 0.04  0.05 0.06
+0			81	81	94	94	125	125	125	163	163	200	200
+30			98	98	98	98	98	98	98	127	127	157	157
+40			75	75	75	75	75	75	75	98	98	120	120
+50			75	75	75	75	75	75	75	98	98	120	120
+60			75	75	75	75	75	75	75	98	98	120	120
+65			75	75	75	75	75	75	75	98	98	120	120
+#------------------------------------------------------------------------------#
+#  Tabla   Vp   Num.Vc   Num.i                                                 #
+#  ----- ----- -------  -------                                                #
+    TD3    60     5        11                                                  #
+# Vc \ i
+        -0.06 -0.05 -0.04 -0.03 -0.02 0.00 0.02  0.03 0.04  0.05 0.06
+ 0             50   50   50   50  100  100  100   100  130   150  150
+30             75   75   75   75   75   75   75    75   98   113  113
+40             50   50   50   50   50   50   50    50   65    75   75
+50             50   50   50   50   50   50   50    50   65    75   75
+60             50   50   50   50   50   50   50    50   65    75   75
+################################################################################
+#------------------------------------------------------------------------------#
+  FIN

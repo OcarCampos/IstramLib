@@ -1,0 +1,236 @@
+USO DE ESTE COMPLEMENTO DE LIBRERIA:
+
+En este complemento de libreria, se definen, además de tablas para el diseño de
+Planta, Rasante, ... de acuerdo con la Norma de que se trata, tambien puede haber
+simbología y tablas de órdenes para representar las plantas, perfiles longitudinales,...
+de acuerdo con las especificaciones del País/Norma de que se trate. Esa simbología 
+puede tener elementos con nombre nuevo y/o elementos con el mismo nombre que los 
+de la libreria básica C:/ISPOL/LIB.
+	Si se hace un proyecto para un país diferente del suyo, lo más adecuado 
+es que coloque el contenido de esta carpeta en la libreria local del proyecto, de 
+modo que sólo en este proyecto se vea el contenido de la lib que acompañamos. Por 
+ejemplo, si un usuario español va a hacer un proyecto para Chile, lo más adecuado 
+es que coloque este contenido en C:/TRABAJO/ProyectoDeChile/lib. De este modo, 
+la libreria básica C:/Ispol/lib, sigue siendo la básica de Istram que es la que 
+tiene por costumbre utilizar para sus proyectos y sólo cuando arranque en el proyecto 
+para Chile verá la simbología propia de ese país. En todos los demás proyectos 
+seguirá viendo la librería básica, como siempre.
+	Si es un usuario chileno que hace proyectos para su país, entonces puede 
+colocar este complemento en la libreria de usuario: C:/ISPOL/LIBUSER. Desde todos 
+los proyectos verá esta librería complementando a la básica de Istram. No recomendamos 
+que copie este contenido sobre la librería básica, porque una actualizacion de Istram, 
+copiará encima la simbología básica, y los objetos del mismo nombre de la librería 
+chilena serán sustituídos por la actualización, con lo que deberá repetir la copia 
+del complemento de Chile sobre la lib básica, después de cada actualización.
+	Un usuario chileno que tiene en su LIBUSER, el complemento de Chile, 
+puede hacer un proyecto para otro país; por ejemplo Colombia, si coloca el complemento 
+colombiano en la LIB local del proyecto. Solo en ese proyecto verá las especificaciones 
+para Colombia.
+	Por último, cualquier usuario que quiera hacer algun cambio a las librerías, 
+debería hacerlo desde un proyecto que tenga LIB local. Los cambios se guardarán de 
+momento en esa librería y cuando esté seguro del interés de conservar los cambios 
+hechos para otros proyectos, copiar los archivos modificados a la librería que él 
+utiliza; por ejemplo guardarlos en su LIBUSER. Recomendamos tambien que guarde una 
+carpeta en otro lugar de su ordenador para conservar sus cambios personales, para 
+pasárselos a un compañero, o para ir creando sus propias librerías adaptadas a su 
+gusto o necesidad, y desde luego, para no perder ese trabajo de adaptación.
+	Tenga en cuenta que una instalación de Istram, o una actualización, sólo va 
+a hacer cambios en la librería básica. No tocará la LIBUSER, ni ninguna de las 
+librerías locales de sus proyectos.
+
+2013 NUEVAS TABLAS .dip y .tpe
+
+	Se han creado nuevas tablas .dip y .tpe para aplicar en el caso de peralte 
+de bombeo 2.5 y 3.5.
+	*2002d25.dip y .tpe calculan con bombeo de 2.5%. Son aplicables a 
+carreteras de todas las categorias.
+	*2002d35.dip y .tpe calculan con bombeo de 3.5%. Solo deben utilizarse para 
+las categorias de colectores y caminos.
+
+	CHILE_2002e.dip y CL_rev2002e.tpe calculan con bombeo 2%. Se han creado 
+como una variante de la version *d.dip y *d.tpe, para evitar que rebajen el peralte 
+en transiciones cortas. En el diseño de planta, la recomendacion de longitudes para 
+las clotoides se hace teniendo en cuenta los valores de pendiente relativa de borde 
+Normal (Tabla 3.203.305(3).A. Cuando se calculan los peraltes con *e.tpe, se 
+controla si las transiciones a lo largo de las clotoides son cortas. En ese caso, 
+se pasa la Ipmax a su valor Maximo y si aún es corta, se intenta alargar la 
+transicion tomando parte de la circular y de la recta. Si aun no se consigue 
+suficiente espacio, no se rebaja el peralte por razon de la pendiente de borde, se 
+sobrepasa la pendiente maxima sin bajar el peralte. Tan solo en casos extremos se 
+rebajará el peralte produciendo un informe para que se pueda revisar a mano y 
+corregir la transicion.
+
+MARZO 2014 NUEVAS TABLAS .dip y .tpe
+
+	Se ha revisado la edición la Norma  de 2013 y se han generado nuevas tablas 
+para diseño de planta .dip y peraltes .tpe. Los peraltes de bombeo que se pueden 
+utilizar ahora son 2.0, 2.5, 3.0 y 3.5. La tablas son prácticamente las mismas que 
+se venían utilizando en sus versiones 2002d y 2002e. Para las nuevas hemos 
+homogeneizado su nombre para evitar confusiones al usuario:
+	Tablas .dip y .tpe            para bombeo de
+	CHILE_2013a20.dip y .tpe            2.0 %
+	CHILE_2013a25.dip y .tpe            2.5 %
+	CHILE_2013a30.dip y .tpe            3.0 %
+	CHILE_2013a35.dip y .tpe            3.5 %
+
+	Las tablas para bombeos de 3 y 3.5 % son válidas para carreteras colectores 
+y locales; pero no está tan claro que sean aplicables a autopistas y primarias.
+
+ABRIL 2014 Correccion de las tablas CHILE_2013a[20,25,30,35].dip y .tpe: 
+El peralte que se calcula teniendo en cuenta la pendiente relativa de borde según  
+los anchos de las calzadas tomados de la tabla de Anchos del Alzado da muchos 
+problemas porque, sobre todo en enlaces, los anchos tienen muchos cambios. 
+	Eso da lugar a que las longitudes de transición tomasen valores muy 
+variados, pareciendo erróneos. Se ha cambiado el modo en que se utiliza la 
+pendiente relativa de borde. Ahora se toma el Ancho de Carril (AC) y el Numero de 
+Carriles (NC) de la tabla GENERAL. Ahí se puede dar un numero de carriles fijo, o 
+una tabla por Pk. Eso independiza los anchos para el calculo de las longitudes de 
+clotoide y las transiciones de peraltes, de los de la tabla ANCHOS de Alzado. El 
+calculador de peraltes utiliza el ancho instantáneo (AC * NC) que interpola en la 
+tabla GENERAL, en la mitad de la longitud entre peralte 0 y peralte Bombeo, para 
+calcular la longitud de transicion del bombeo. 
+	Las tablas .tpe tienen el parámetro AC_gen activado para este modo.
+
+SETIEMBRE 2014 Nueva tabla .den para calculo de entronques
+	A partir de la tabla CHILE_2013a.den se genera una nueva CHILE_2013b.den 
+que calcula las cuñas de salida y de entrada con carriles paralelos, utilizando 
+una transicion de anchos en doble parabóla segun graficos 3.404.307 (2)A y (3)B 
+
+2014 OCTUBRE Nuevas tablas .dip y .tsa para incluir el calculo de CURVAS DE RETORNO 
+	Basados en 3.203.504 se ha programado el calculo de sobreanchos segun 
+curvas de 3 centros. Es obligatorio que la planta de las curvas de retorno esté 
+trazada con clotoides para que el retranqueo que la clotoide produce en la circular 
+sea resuelto con curvas que hacen la transicion al sobreancho interior 
+y exterior segun una circular en planta. El calculador trabaja bien aunque las 
+clotoides de entrada y salida sean diferentes. Si no se ponen las clotoides y radios 
+de la lámina 3.203.504 A, al menos deben permitir que el punto PCi´ esté antes del 
+KE y este antes que el PCe´para que el problema geométrico tenga solución. Lo 
+correspondiente a la salida. 
+	Son nuevas las tablas:
+	CHILE_2013b20.dip 
+	CHILE_2013b25.dip 
+	CHILE_2013b30.dip 
+	CHILE_2013b35.dip 
+que sustituyen a la version a de las mismas. Igualmente son nuevas las:
+	CHILE_2013bCamion11m.tsa
+	CHILE_2013bBus13m.tsa
+	CHILE_2013bSemitrailer16m.tsa 
+que sustituyen a sus homólogas en version a. 
+Hemos creado una subcarpeta Obsoleto en la que se han puesto las tablas que quedan 
+desplazadas por estas modificaciones las obsoletas son:
+	*rev2002c*.tsa
+	CHILE_2013a.den 
+	CHILE_2013b.den 
+	cl_rev2002c.dip 
+	CHILE_2002*.dip
+	cl_rev2002*.tpe 
+	CHILE_01A.tpe 
+	cl_rev2002c.dia renombrada (su contenido es el mismo) a CHILE_2013b.dia 
+
+2015 MAYO Nueva tabla de definicion de entronques CHILE_2013c.den que define las 
+cuñas de los carriles de aceleracion con transicion parabolica: TABLA 3.303.307(3)B
+
+2015 DICIEM Nueva CHILE6.ali que rotula los relojes con el contenido de las curvas sin 
+clotoides en todo caso. Si hay clotoides (simetricas, asimetricas o una sola) se usa 
+la misma tabla. Si no hay clotoides en una curva no hay tabla. Chile_lib_12.rar
+
+2016 JUNIO Nueva CHILE7.ali que rotula las clotoides simétricas, asimetricas o que 
+no las haya. Nueva CHILE4_CE.ali que usa células (para recolocarlas fácilmente); 
+pero que solo sirve para clotoides simétricas
+
+2017 ENE Valores de clotoide minima más grandes de lo que dice la Norma:
+    En las tablas CHILE_2013b[20,25,30,35].dip (tablas b) la clotoides que se dan 
+en las tablas T0 estan calculadas para que la aceleracion transversal no compensada 
+por el peralte utilice SIEMPRE la Jnormal buscando un trazado de confort segun 
+3.203.403 d.2). El diseñador puede utilizar el valor de las tablas T0 o anular el 
+uso de las tablas T0 quedando el cálculo de las clotoides segun la fórmula que 
+utiliza la Jmax cuando R<=1.2Rmin segun 3.203.403 d.1).
+
+    Esta programacion seguía el consejo de un diseñador de carreteras en Chile que, 
+basándose en la redaccion de 3.203.403 Criterio d.1) que dice que "resulta 
+conveniente" considera que el confort que se pierde al utilizar la Jmax, supone el 
+mayor peligro del cansancio del conductor, etc. etc.
+
+    Como parece que esto da lugar a confusion en los criterios de diseño, hemos 
+creado la nueva serie de tablas CHILE_2013c[20,25,30,35].dip (tablas c) en las que 
+las clotoides de tablas T0 se calculan con la Jmax si R<=1.2*Rmin y la J normal 
+para R mayores. Las clotoide que resultan siguen con rigor los criterios d.1 y d.2, 
+resultando menores para radios pequeños. No debe extrañar entonces que se produzca 
+algún salto entre radios menores y mayores que 1.2*Rmin. La discontinuidad se debe 
+al salto brusco de la J de, por ejemplo, 1.4 a 0.5 para V70 o de 0.8 a 0.4 para V100.
+
+    Si se desea que las tablas vuelvan a recomendar las clotoides calculadas siempre 
+con la J normal, basta con utilizar las tablas CHILE_2013b[20,25,30,35].dip (tablas 
+b). Recomiendo en ese caso, que se cambie el parámetro T0U que está justo antes de 
+las tablas T0 poniendo T0U  a  0 para que el diseñador vea el valor calculado para 
+la J normal; pero que no lo utilice para calcular la clotoide minima que va a dar 
+el asistente de diseño. De este modo, la clotoide minima que ofrece el asistente es 
+la que utiliza la Jmax para R<=1.2*Rmin; pero puede leerse que el valor de la tabla 
+es el calculado con la J normal. Así es diseñador puede optar por utilizar un valor 
+u otro.
+
+2017 ABRIL Nuevas tablas dip y tsa para FFCC 
+fichero:  FFCC_CHILE_EFE_a.dip  :                                                     #
+TIPO              :  .dip TABLA Y FORMULACION PARA DISEÑO DE EJE EN PLANTA  FFCC      #
+CONTENIDO         :  NORMA CHILE. MInistrerio DE PLANificacion y cooperacion. REDEFE  #
+NORMA             :  Recom. de diseño para proyectos d infraest. ferroviaria. 2003    #
+
+2017 DIC Nuevas tablas de peraltes CHILE_2013bxx.tpe
+	Nuevas tablas que cambian el modo de correccion de los peraltes por drenaje 
+en la zona por debajo del bombeo en las curvas en S. Correccion para que, en clotoides 
+largas, la pendiente en el tramo -b% a b% no sea 0.35 como dice la Norma, sino la del 
+Ipmax Normal que es 0.35 o mayor segun la velocidad. 3.203.405(2) y tabla 3.203.305(3).
+
+2019 ENERO Nueva tabla CHILE_MINVU_2009b.dia
+	Camiado tiempo percepcion a 1.5 s fijo y algunos valores de la tabla TDP. 
+Calcula la Dp por la fórmula DP = (Vd*Tp/3.6)+(Vd*Vd/(254(Fl+i)).
+
+2019 MAYO Nueva tabla de sobreanchos que calcula sobreanchos dentro de las curvas.
+	Nueva tabla CHILE_2013bSemit16m_Curva.tsa, que resuelve un caso particular de 
+cálculo transiciones de sobreanchos. La transicion de sobreancho de entrada se hace 
+dentro de la circular y ocupando la mitad. La otra mitad se usa para la salida.
+	Se ha programado un nuevo parámetro CmtrC, que para este caso se pone a 0.5 
+para que se utilice la mitad de la longitud de la curva. Para que no se utilice la 
+recta hay que poner tambien Rmtr=0 0 0. Como se calcula sobreancho solo para adentro 
+se activa tambien el comando Dentro. Los repasos Ltcc, etc. son incompatibles.
+
+2020 ABRIL Simbolo S6050 no funcionaba bien por faltarle orden de Escalable
+
+2020 JULIO Nuevas tablas de la norma CHILE_2013d*.*. Incluyen la Norma de ramales
+segun 3.404 y 3.504.3. Hay versiones para bombeos de 2.0, 2.5, 3.0, 3.5.
+
+2020 SETIEMBRE (CHILE_2013d40.dip y .tpe) tabla solo apta para caminos (aunque tiene 
+las otras categorías) para bombeo 4%, Peralte max 7%, Pendiente relativa de borde 
+máxima de 0.7 peralte a desarrolar en recta 50%.
+
+2021 FEBRERO 2021 Nuevas tablas CHILE_MINVU_2009c.DIP / .DIA / .TPE para añadir las 
+subcategorías de Peralte máximo de 8%, 6% y 4%; pero con bombeo de 2.5 %. Sustituyen 
+a las del mismo nombre version "b"
+
+2021 SETIEMBRE 2021 Nuevas tablas segun la norma editada en 2021. Se han comprobado 
+las tablas y formulación de esta edición de 2021. Los archivos tienen todos el nombre 
+CHILE_2021a*.*. Las tablas DIP y TPE tienen sus versiones para peraltes de bombeo de 
+2%, 2.5%, 3% y 3.5%.
+Tambien se han publicado unas tablas DIP y TPE para caminos con un peralte máximo de 5% 
+para radios menores o iguales a 350 m y bombeos de 2.5% y 3.5% a petición del ingeniero 
+Cruz de la region de BioBio. CHILE_CAMIN_PM_5.dip/tpe
+Hay dos versiones, una que calcula las transiciones con una pendiente relativa de borde 
+comprendida entre 0.4 y 1.3; y otra (b) con la Ipmax entre 0.7 y 1.5. Probablemente la 
+versión b es más apropiada para estos caminos
+Me faltan datos sobre el valor del radio para peralte de valor bombeo y radio para bombeo; 
+pero he adaptado unos valores "razonables". 
+Con la fórmula del valor de peralte que sigue, resultan:
+ Peralte p = 5 - 5,65*((1-350/R)^1,9)
+ Bombeo para radio >= 1400 y Peralte de 2.5% para R = 1000
+ Bombeo para radio >=  980 y Peralte de 3.5% para R = 700
+ Peralte de 5 para R <= 350
+Los radios minimos para cada velocidad se obtienen de la tabla de Velocidad especifica 
+calculada por una fórmula que usa el valor TFT del factor de fricción transversal.
+La longitud de las clotoides y las transiciones de peralte se calculan por la fórmula de 
+la aceleracion centrifuga y la pendiente relativa de borde, que se define entre 0.4 
+(normal) y 1.3 (maxima). En la tabla está calculada para una velocidad de 60. 
+Para cada velocidad de diseño, el ancho de carril y el número de carriles se mayora 
+por la formula teórica.
+Se agradecen críticas y correcciones a esta "invención", o confirmación si es que la 
+considerais adecuada.
+

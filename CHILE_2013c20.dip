@@ -1,0 +1,721 @@
+# TADISPLA
+################################################################################
+# fichero:  CHILE_2013c20.dip  :                                               #
+#------------------------------------------------------------------------------#
+# TIPO              :  .dip  :TABLA Y FORMULACION PARA DISEÑO DE EJE EN PLANTA #
+# CONTENIDO         :  NORMA CHILE MINISTERIO DE OBRAS PUBLICAS                # 
+# NORMA             :  DIRECCION DE VIALIDAD Edicion 2013                      #
+# FECHA DE CREACION :  OCTUBRE 2008 (revision a)                               #
+# FECHA DE REVISION :  ENERO   2009 (revision b) # FEBRERO 2011 (revision c)   #
+# FECHA DE REVISION :  MARZO   2009 (revision c)                               #
+# FECHA DE REVISION :  MARZO   2012 (revision d) estimaciones de V85% y V*     #
+# FECHA DE REVISION :  NOVIE   2013 (revision e) tabla peraltes que no rebaja  #
+#                      el peralte en clotoides cortas. Esta tabla es como la d #
+#                      MARZO   2014 (revision 2013a20) como la 2002e con la    #
+#                      serie de bombeos 2.0, 2.5, 3.0, 3.5                     #
+#                      ABRIL 2014 Utilizacion de AC Ancho de carril y NC Numero#
+#                      de carriles para calcular la longitud de transicion de  #
+#                      peraltes, con AC y NC en la pestaña GENERAL             #
+#                La tabla de peraltes relacionada con esta es:CHILE_2013a20.tpe#
+# FECHA DE REVISION :  OCT 2014 (revision b) Añadidas curvas de retorno segun  #
+#                   3.203.504. Requiere CHILE_2013b*.dip, .tpe, .tsa           #
+# FECHA DE REVISION : ENE 2017 (revision c) En las tablas b las clotoides que  #
+# se dan en las tablas T0 están calculadas para que la aceleracion transversal #
+# no compensada por el peralte utilice siempre la J normal buscando un trazado #
+# de confort: 3.203.403 d.2) el diseñador podía utilizar el valor de las tablas#
+# T0 o anular el uso de las tablas T0 quedando el calculo de la clotoide segun #
+# la fórmula que utiliza la Jmax cuando R<=1.2Rm. Esto parece dar lugar a      #
+# confusion, asi que hemos optado por recalcular las T0 utilizando la Jmax si  #
+# R<=1.2Rm. El trazado entonces resulta con clotoides más pequeñas para radios #
+# cercanos al minimo. Si se desea que la clotoide se calcule con la fórmula de #
+# la Jnormal, conmutar en las T0 las columnas de la A recom y la A min y       #
+# recalcular la longitud de la clotoide                                        #
+# ---------------------------------------------------------------------------- #
+# No utilizar para valores fuera del ambito indicado.                          #
+################################################################################
+  REV  900                  # REVISION DE ISTRAM                               #
+# ---------------------------------------------------------------------------- #
+# Notas sobre el agrupamiento de valores en la tabla :                         #
+#   Cualquier parametro puede ir precedido de una velocidad entre corchetes    # 
+#   Ejemplo: <120> Velocidad de proyecto 120  <Vd120> Velocidad de diseño 120  #
+#   Tambien, si se han definido grupos, pueden definirse grupos de valores :   #
+#   Ejemplo :                                                                  #
+#   <GRT1>                                                                     #
+#   <GRT2>                                                                     #
+#      <100>LCmin1    150     m  : Longitud minima de Circulos  m              #
+#      <080>LCmin1    140     m  : Longitud minima de Circulos  m              #
+#      <060>LCmin1    115     m  : Longitud minima de Circulos  m              #
+#   </GRT2>                                                                    #
+#   </GRT1>                                                                    #
+#                                                                              #
+################################################################################
+# PARAMETROS DE DISEÑO                                                         #
+################################################################################
+# Descripción de la tabla que se visualiza en el cuadro de diálogo             #
+COM  CHILE : AUTOPISTAS, AUTORUTAS Y PRIMARIAS + COLECTORES Y CAMINOS
+NORMA CHILE
+# ============================================================================ #
+# DEFINICION DE LOS TIPOS DE TRAZADO (Max 10) Y SUS PARAMETROS                 #
+# ============================================================================ #
+#    TITULO DEL TIPO              VMIN - VMAX   V+ *  AC**   PB***  V****      #
+#    --------------------------   ----   ----  ----- -----  ------  -------    #
+GR_T  <AUTOPISTA>                   80   120    00    7.00   2.0     V120      #
+GR_T  <AUTORRUTA>                   80   100    00    7.00   2.0     V100      #
+GR_T  <PRIMARIA UNIDIRECCIONAL>     80   100    00    3.50   2.0     V100      #
+GR_T  <PRIMARIA UNI. RAMAL>         80   100    00    3.50   2.0     V080      #
+GR_T  <PRIMARIA BIDIRECCIONAL>      80   100    00    3.50   2.0     V100      #
+# ----------------------------------
+GR_T  <COLECTOR UNIDIRECCIONAL>     60    80    00    3.50   2.0      V80      #
+GR_T  <CAMINOS COLECTORES>          60    80    00    3.50   2.0      V80      #
+GR_T  <CAMINOS LOCALES>             40    70    00    3.00   2.0      V80      #  
+GR_T  <CAMINOS DE DESARROLLO>       30    50    00    3.00   2.0      V80      #  
+# ---------------------------------------------------------------------------- #
+# SUBTIPOS : Puede definir los subtipos que necesite, y utilizarlos dentro     # 
+# de la tabla para agrupar diferentes tipos de comportamiento                  #
+GR_S  <TERRENO LLANO>                                                          #
+GR_S  <TERRENO ONDULADO>                                                       #
+GR_S  <TERRENO MONTAÑOSO>                                                      #
+# ---------------------------------------------------------------------------- #
+# * Incremento de velocidad sobre la de proyecto para definir V de diseño Vd   #
+# ** Ancho de calzada : utilizado para calcular algunos parámetros             #
+# *** PB : Pendiente de bombeo : valor de la pendiente de bombeo en recta      #
+#     La norma Chilena especifica un valor 2.0 o 2.5 en funcion de la lluvia   #
+#     reproduciendo esta tabla el valor 2.0. Si necesita usar otro puede       #
+#     crear otra tabla de diseño a partir de esta y modificar los datos        #
+# ****   : Velocidad inicial asociada a un eje hasta que sea modificada        #
+# ---------------------------------------------------------------------------- #
+# Tabla 3.201.5.C                                                              #
+# -----  ---------- ---------------------------------------------------------- #
+<GRT1>   :   <AUTOPISTA>                                                       #
+ AC    3.50  m : Ancho de carril para calculos de Pendiente de borde           #
+ NC    2.00    : Numero de carriles para calculos de Pendiente de borde        #
+ Vmin    80    : Velocidad minima de diseño de un tramo                        #
+ Vmax   120    : Velocidad Maxima de diseño de un tramo                        #
+ Vpini  120    : Velocidad de proyecto inicial del eje                         #
+#Vp     120  Km/h : VELOCIDAD DE PROYECTO : Si se comenta se usa la del eje    #
+</GRT1>                                                                        #
+# -----  ---------- ---------------------------------------------------------- #
+<GRT2>   :   <PRIMARIOS y AUTORRUTAS>                                          #
+ AC    3.50  m : Ancho de carril para calculos de Pendiente de borde           #
+ NC    2.00    : Numero de carriles para calculos de Pendiente de borde        #
+ Vmin    80    : Velocidad minima de diseño de un tramo                        #
+ Vmax   100    : Velocidad Maxima de diseño de un tramo                        #
+ Vpini  100    : Velocidad de proyecto inicial del eje                         #
+#Vp     100  Km/h : VELOCIDAD DE PROYECTO : Si se comenta se usa la del eje    #
+</GRT2>                                                                        #
+# -----  ---------- ---------------------------------------------------------- #
+<GRT3>   :   <PRIMARIA UNIDIRECCIONAL>                                         #
+ AC    3.50  m : Ancho de carril para calculos de Pendiente de borde           #
+ NC    1.00    : Numero de carriles para calculos de Pendiente de borde        #
+ Vmin    80    : Velocidad minima de diseño de un tramo                        #
+ Vmax   100    : Velocidad Maxima de diseño de un tramo                        #
+ Vpini  100    : Velocidad de proyecto inicial del eje                         #
+#Vp     100  Km/h : VELOCIDAD DE PROYECTO : Si se comenta se usa la del eje    #
+</GRT3>                                                                        #
+# -----  ---------- ---------------------------------------------------------- #
+<GRT4>   :   <PRIMARIA UNI. RAMAL>                                             #
+ AC    3.50  m : Ancho de carril para calculos de Pendiente de borde           #
+ NC    1.00    : Numero de carriles para calculos de Pendiente de borde        #
+ Vmin    80    : Velocidad minima de diseño de un tramo                        #
+ Vmax   100    : Velocidad Maxima de diseño de un tramo                        #
+ Vpini  100    : Velocidad de proyecto inicial del eje                         #
+#Vp     100  Km/h : VELOCIDAD DE PROYECTO : Si se comenta se usa la del eje    #
+</GRT4>                                                                        #
+# -----  ---------- ---------------------------------------------------------- #
+<GRT5>   :   <PRIMARIA BIDIRECCIONAL>                                          #
+ AC    3.50  m : Ancho de carril para calculos de Pendiente de borde           #
+ NC    1.00    : Numero de carriles para calculos de Pendiente de borde        #
+ Vmin    80    : Velocidad minima de diseño de un tramo                        #
+ Vmax   100    : Velocidad Maxima de diseño de un tramo                        #
+ Vpini  100    : Velocidad de proyecto inicial del eje                         #
+#Vp     100  Km/h : VELOCIDAD DE PROYECTO : Si se comenta se usa la del eje    #
+</GRT5>                                                                        #
+# -----  ---------- ---------------------------------------------------------- #
+<GRT6-7>   :   <COLECTOR UNIDIRECCIONAL><CAMINOS COLECTORES>                   #
+ AC    3.50  m : Ancho de carril para calculos de Pendiente de borde           #
+ NC    1.00    : Numero de carriles para calculos de Pendiente de borde        #
+ Vmin    60    : Velocidad minima de diseño de un tramo                        #
+ Vmax    80    : Velocidad Maxima de diseño de un tramo                        #
+ Vpini   80    : Velocidad de proyecto inicial del eje                         #
+#Vp      80  Km/h : VELOCIDAD DE PROYECTO : Si se comenta se usa la del eje    #
+</GRT6-7>                                                                      #
+# -----  ---------- ---------------------------------------------------------- #
+<GRT8>   :   <CAMINOS LOCALES>                                                 #
+ NC    1.00    : Numero de carriles para calculos de Pendiente de borde        #
+ <040>AC    3.00  m : Ancho de calzada para calculos de Pendiente de borde     #
+ <050>AC    3.50  m : Ancho de calzada para calculos de Pendiente de borde     #
+ <060>AC    3.50  m : Ancho de calzada para calculos de Pendiente de borde     #
+ <070>AC    3.50  m : Ancho de calzada para calculos de Pendiente de borde     #
+ Vmin    40    : Velocidad minima de diseño de un tramo                        #
+ Vmax    70    : Velocidad Maxima de diseño de un tramo                        #
+ Vpini   70    : Velocidad de proyecto inicial del eje                         #
+#Vp      70  Km/h : VELOCIDAD DE PROYECTO : Si se comenta se usa la del eje    #
+</GRT8>                                                                        #
+# -----  ---------- ---------------------------------------------------------- #
+<GRT9>   :   <CAMINOS DE DESARROLLO>                                           #
+ NC    1.00    : Numero de carriles para calculos de Pendiente de borde        #
+ <030>AC    2.00  m : Ancho de calzada para calculos de Pendiente de borde     #
+ <040>AC    3.00  m : Ancho de calzada para calculos de Pendiente de borde     #
+ <050>AC    3.00  m : Ancho de calzada para calculos de Pendiente de borde     #
+ Vmin    30    : Velocidad minima de diseño de un tramo                        #
+ Vmax    50    : Velocidad Maxima de diseño de un tramo                        #
+ Vpini   50    : Velocidad de proyecto inicial del eje                         #
+#Vp      50  Km/h : VELOCIDAD DE PROYECTO : Si se comenta se usa la del eje    #
+</GRT9>                                                                        #
+#                                                                              #
+# ============================================================================ #
+# ESPECIFICACIONES PARA LA DETERMINACION DE LA Vd ( V85 CHILE )                #
+# ============================================================================ #
+# El funcionamiento del control Vd es el siguiente :                           #
+# - Para cada alineación circular ISTRAM calcula la V85 de la recta precedente #
+# y busca (en la tabla radios-velocidad especifica-clotoides ....) el radio    # 
+# que proporcione una velocidad específica mayor o igual que el Vd calculado   #
+# - Esta situación se complementa con la definición de una longitud de recta   #
+# por debajo de la cual se obliga a que los radios mantengan una relacion      #
+# minima y maxima (Radio mínimo y Radio máximo ) 
+# ---------------------------------------------------------------------------- #
+# Según la longitud de la recta precedente la velocidad V85% para calcular el  #
+# radio que sigue debe ser mayor o igual que Vp (3.201.301(1))                 #
+# El número de tramos de velocidad puede ser 8 o 9                             #
+<GRT1-5> AUTOPISTAS, AUTORUTAS Y PRIMARIAS
+#                 ---- ---- ---- ---- ---- ---- ---- ---- ---- --------------- #
+Vd_V        9       30   40   50   60   70   80   90  100  120 # tramos de Vp  #
+#                 ---- ---- ---- ---- ---- ---- ---- ---- ---- --------------- #
+Vd_R        0       30   40   50   60   70   80   90  100  120   # Lr >=   0   #
+Vd_R      400       40   50   60   70   80   90  100  110  125   # Lr >= 400   #
+Vd_R      600       50   60   70   80   90  100  110  115  130   # Lr >= 600   #
+#                 ---- ---- ---- ---- ---- ---- ---- ---- ---- --------------- #
+</GRT1-5>
+#----------------------------------------------------------------------------- #
+<GRT6-8> COLECTORES Y CAMINOS
+ <GRS1-2> TERRENO LLANO o ONDULADO
+#                 ---- ---- ---- ---- ---- ---- ---- ---- ---- --------------- #
+Vd_V        9       30   40   50   60   70   80   90  100  120 # tramos de Vp  #
+#                 ---- ---- ---- ---- ---- ---- ---- ---- ---- --------------- #
+Vd_R        0       30   40   50   60   70   80   90  100  120   # Lr >=   0   #
+Vd_R      400       35   45   55   65   75   85   95  105  120   # Lr >= 400   #
+Vd_R      600       45   55   65   75   85   95  105  110  125   # Lr >= 600   #
+#                 ---- ---- ---- ---- ---- ---- ---- ---- ---- --------------- #
+ </GRS1-2>
+ <GRS3> TERRENO MONTAÑOSO
+#                 ---- ---- ---- ---- ---- ---- ---- ---- ---- --------------- #
+Vd_V        9       30   40   50   60   70   80   90  100  120 # tramos de Vp  #
+#                 ---- ---- ---- ---- ---- ---- ---- ---- ---- --------------- #
+Vd_R        0       30   40   50   60   70   80   90  100  120   # Lr >=   0   #
+Vd_R      400       30   40   50   60   70   80   90  100  120   # Lr >= 400   #
+Vd_R      600       40   50   60   70   80   90  100  105  120   # Lr >= 600   #
+#                 ---- ---- ---- ---- ---- ---- ---- ---- ---- --------------- #
+ </GRS3>
+</GRT6-8>
+#----------------------------------------------------------------------------- #
+# - Rectas de longitudes de 400 a 600 metros se mantiene la Vd de la curva     #
+# previa, cuando la recta anterior es de más de 600m. Es decir en la secuencia #
+# L1 C2 L3 C4. (L1 > 600) y (400 < L3 <= 600) es deseable que Vd(C4) >= Vd(C2) #
+# se puede eliminar este control si entramos en zona restrictiva (3.201.301(2)b#
+# Control de velocidad para a. recta posterior en funcion de la recta anterior #
+#       Lmin  Lmax    Lant                                                     #
+#       ----  ----    ----                                                     #
+ Vd_L    400   600     600                                                     #
+#       Para rectas: Lmin <= Lr < Lmax se conserva Vd si la recta anterior     #
+#       es de longitud La >= Lant                                              #
+# Puede desactivar este control cuando sea necesario (tramos restringidos)     #
+#------------------------------------------------------------------------------#
+# Clave  Valor      Descripcion                                                #
+# -----  ---------- ---------------------------------------------------------- #
+# Vp     120  Km/h : VELOCIDAD DE PROYECTO : Si se comenta se usa la del eje   #
+# Vpini  120       : Velocidad de proyecto inicial del eje                     #
+# AC     3.50  m   : ANCHO DE CALZADA    : Para calculos de Pendiente de borde #
+  RedA   0.1       : Redondeo final para el parametro A de la CLOTOIDE         #
+  RedL   1.0       : Redondeo final para longitud final de la CLOTOIDE         #
+  RedR   1.0       : Redondeo final para radios de CIRCULOS                    #
+# -----  ---------- ---------------------------------------------------------- #
+# TRANSICION Y CONTROL DEL BOMBEO RECTA - CLOTOIDE                             #
+# ---------------------------------------------------------------------------- #
+# 0 transicion de bombeo dentro de la clotoide                                 #
+# 1 mitad en la clotoide y mitad en la recta: -b a 0 en recta y 0 a b en clot. #
+# 2 todo dentro de la recta                                                    #
+# -----  -----                                                                 #
+  Trbo    1        : Normativa Chile : mitad en clotoide - mitad en recta      #
+  Pbomb   2.0      : Peralte de Bombeo                                         #
+# La longitud de transicion del peralte (desde p=0 a P=p(R)) esta limitada por #
+# la pendiente relativa de borde (IpMax): l = n*a*P/IpMax; n*a es numero de    #
+# pistas por su ancho, o sea el ancho total desde el eje de giro al borde      #
+# exterior de la calzada (sin contar sobreanchos en curva)                     #
+# IpMax   0.35     : Maxima Pendiente de Borde                                 #
+#          Normal Cont.  V.Aplicable si Pras<=control    3.203.305(3)          #
+# --------  ----- ----- ------  ---------------------------------------------- #
+<030>IpMax1 0.7    0.7   1.5    El valor maximo solo se usara cuando el espacio#
+<040>IpMax1 0.7    0.7   1.5    para la transicion de peralte es corto o       #
+<050>IpMax1 0.7    0.7   1.5    cuando la pendiente longitudinal es del orden  #
+<060>IpMax1 0.6    0.6   1.3    de la ipmax lo que crea zona de pendiente nula #
+<070>IpMax1 0.6    0.6   1.3    en el entorno de peralte cero. Entonces se debe#
+<080>IpMax1 0.5    0.5   0.9    limitar la longitud del tramo -b% b%           #
+<090>IpMax1 0.5    0.5   0.9    (En mi opinion es mejor aumentar la pendiente  #
+<100>IpMax1 0.35   .35   0.8    longitudinal en las zonas en que la rasante y  #
+<110>IpMax1 0.35   .35   0.8    el peralte son simultaneamente bajos. Ver tabla#
+<120>IpMax1 0.35   .35   0.8    de peraltes Krasper o KMinMaxP)                #
+# --------  ----- ----- ------  ---------------------------------------------- #
+# IPMax en zona de Bombeo. Problemas de desagüe en el paso de -Pbomb% a Pbomb% #
+# ------  ----- Pendiente relativa de borde en la zona -b b no puede ser <0.35 #
+  IpMaxB   0.35                                                                #
+# Primero se calcula la longitud de transicion con los valores normales        #
+# A continuación se comprueba si ese tramos tiene una pendiente menor o igual  #
+# al valor normal y se recalcula con la nueva Ipmax                            #
+# ---------------------------------------------------------------------------- #
+# MaxVpe  4.0  %   : Máx.veloc. variación del peralte 4%/seg.  L=Pe*Vp/MaxVpe  #
+# ============================================================================ #
+# CARACTERISTICAS DE LAS ALINEACIONES RECTAS                                   #
+# -----  ---------- ---------------------------------------------------------- #
+# Si la longitud de las rectas no puede ser cero, el minimo es 1.4 * Vp        #
+ LRSmin  1.4 * Vp   : Longitud minima de Rectas en S (5 segundos) 3.203.203(1) #
+ LRSmax  20. * Vp   : Longitud maxima de Rectas en S  ( 20 veces Vp )3.203.202 #
+#                                                                              #
+#LROmin  1.39 *  Vp   : Longitud minima de Rectas en Ovalos (5segundos)        #
+#LROmin  1.5  *  LTransPer : (Longitud de Transición al peralte)               #
+#LROmin  200  m  Fija : Longitud en metros                                     #
+#LROminD 190 305 Fija : Longitud minima y deseable                             #
+ LROmax 20 * Vp    : Longitud maxima de Rectas en Ovalos                       #
+#Longitud mínima y deseable de Rectas en C o en Ovalo (mismo sentido)          #
+# Si Lr <= LDeseable, se mantiene en la recta peralte de valor bombeo          #
+<GRS1>    # En terreno llano    (subtipo 1)                                    #
+<GRS2>    # En terreno ondulado (subtipo 2)                                    #
+# Longitud   Minima Deseable    3.203.203(2).A                                 #
+#            ------ -------                                                    #
+<030>LROminD  043   085   Fija  (Longitudes Minimas y Deseables m)             #
+<040>LROminD  055   110   Fija  (aproximado 1.4*Vp y 2.75*Vp)                  #
+<050>LROminD  070   140   Fija                                                 #
+<060>LROminD  085   170   Fija                                                 #
+<070>LROminD  098   195   Fija                                                 #
+<080>LROminD  110   220   Fija                                                 #
+<090>LROminD  125   250   Fija                                                 #
+<100>LROminD  150   280   Fija                                                 #
+<110>LROminD  190   305   Fija                                                 #
+<120>LROminD  250   330   Fija                                                 #
+</GRS2>                                                                        #
+</GRS1>                                                                        #
+<GRS3>  # En terreno montañoso  (subtipo 3 Vp 30 - 80 km/h)                    #
+<030>LROminD  025   025   Fija (Longitudes Minimas y Deseables m)              #
+<040>LROminD  030   055   Fija aproximado 0.8*Vp y 1.4*Vp)                     #
+<050>LROminD  040   070   Fija                                                 #
+<060>LROminD  050   085   Fija                                                 #
+<070>LROminD  065   098   Fija                                                 #
+<080>LROminD  090   110   Fija                                                 #
+</GRS3>                                                                        #
+#------------------------------------------------------------------------------#
+# ============================================================================ #
+# CARACTERISTICAS DE LAS ALINEACIONES CIRCULARES                               #
+# ============================================================================ #
+# Tener en cuenta mediana, arcen, plataforma y anchos calzada para obtener     #
+# el radio mínimo de las alineaciones. 3.203.302(1)                            #
+# Debe estudiarse el radio del borde interior de la calzada de fuera (p. ej.   #
+# en autopista sumar ancho de mediana/2 + arcen_interior + una de las dos      #
+# calzadas para obtener el radio minimo)                                       #
+# Este valor se suma al Radio minimo Rmin                                      #
+<GRT1-2>                                                                       #
+ RCMode  7      #  2.5(semimediana)+1(arcen)+ 3.5(calzada)                     #
+</GRT1-2>                                                                      #
+#                                                                              #
+<GRT3-9>                                                                       #
+ RCMode  0                                                                     #
+</GRT3-9>                                                                      #
+#                                                                              #
+#                                                                              #
+#------------------------------------------------------------------------------#
+# Rmin     700.     m  : Radio minimo  (Para Vesp == Vp)                       #
+# Rrec    1000.     m  : Radio Recomendado minimo                              #
+# LCmin  0.55 * Vp  : Longitud minima de Circulos (2 segundos)                 #
+# Este valor de dos segundos proporciona un valor muy pequeño en relacion a los#
+# valores que se ofrecen en otra tabla y que son calaramente superiores        #
+#------------------------------------------------------------------------------#
+# Especificaciones de radio mínimo según velocidad de proyecto Vp 3.203.302    #
+# Rm = Vp^2/(127*(pmax+tmax)) ; peralte max y coef. fric. trasv max para Vp    #
+# En 3.203.302(1) dice que se use el radio cuya V especifica sea la Vd = V85%  #
+# El radio minimo despues de una recta de longitud mayor que 400 debe ser el   #
+# que corresponde a la V85% calculada segun la longitud de esa recta.3.203.302 #
+#----------------------------------------------------------------------------- #
+<Vd030>Rmin    25  : Radio mínimo para Vd =                                   #
+<Vd040>Rmin    50  :          "                                               #
+<Vd050>Rmin    80  :          "                                               #
+<Vd060>Rmin   120  :          "                                               #
+<Vd070>Rmin   180  :          "                                               #
+<Vd080>Rmin   250  :          "                                               #
+<Vd090>Rmin   330  :          "                                               #
+<Vd100>Rmin   425  :          "                                               #
+<Vd110>Rmin   540  :          "                                               #
+<Vd115>Rmin   607  :          "                                               #
+<Vd120>Rmin   700  :          "                                               #
+<Vd125>Rmin   772  :          "                                               #
+<Vd130>Rmin   900  :          "                                               #
+# ============================================================================ #
+<GRT1-5>              : Carreteras o Categoría I (grupos 1-5)                  # 
+ RBomb  7500  m     : Radio a partir del cual se usa el valor Bombeo           #
+</GRT1-5>                                                                      #
+<GRT6-9>            : Caminos o categoria II (grupos 6-9)                      #
+ RBomb  3500  m     : Radio a partir del cual se usa el valor 'bombeo'         #
+</GRT6-9>                                                                      #
+# ============================================================================ #
+# Longitud Minima de circulos con un porcentaje de las clotoides               #
+# LCminC  150.  50. : minimo 150 m, incluye 50% de la L de las Clotoides  N/A  #
+# ---------------------------------------------------------------------------- #
+#  LCmax  8.33 * Vp    : Longitud maxima de Circulos (30 segundos)        N/A  #
+#----------------------------------------------------------------------------- #
+# Control del desarrollo angular de las alineaciones circulares                #
+#------------------------------------------------------------------------------#
+  Omin   2.0    gon : Omega minimo entre Rectas                                #
+  OminCl 6.0    gon : Omega minimo usando clotoides                            #
+# Longitud mínima para omega circular < 6 gon (no usar clotoides) 3.203.303(4)B#
+# Se deben utilizar circulares de R grande sin clotoides que den longitudes >= #
+<025>LCmin6  165. - 13.0 * Omega                                               #
+<030>LCmin6  165. - 13.0 * Omega                                               #
+<040>LCmin6  165. - 13.0 * Omega                                               #
+<050>LCmin6  165. - 13.0 * Omega                                               #
+<060>LCmin6  165. - 13.0 * Omega                                               #
+<070>LCmin6  325. - 32.5 * Omega                                               #
+<080>LCmin6  325. - 32.5 * Omega                                               #
+<090>LCmin6  325. - 32.5 * Omega                                               #
+<100>LCmin6  325. - 25.0 * Omega                                               #
+<110>LCmin6  325. - 25.0 * Omega                                               #
+<120>LCmin6  325. - 25.0 * Omega                                               #
+#------------------------------------------------------------------------------#
+# Para w total (circular mas clotoides) entre 7 y 15 gon es preferible usar    #
+# radios grandes que no necesiten clotoide (sobre todo si w<10) 3.203.303(4)c) #
+  OCminRec 20.0 : Omega solo de la circular minimo Recomendable(g.centesimales)#
+  OCminAce  9.0 : Omega solo de la circular minimo Aceptable 3.203.303(4)a)    #
+#------------------------------------------------------------------------------#
+# Desarrollo minimo para Curvas Circulares de Radio Minimo 3.203.303(4).A      #
+# Este desarrollo puede ser solo de la circular o sumarle 1/6 del de cada      #
+# clotoide 3.203.303(4)d)                                                      #
+# Vp             wc=9  wc=20  longitud para omega de circular entre 9 y 20 gon #
+#---             ----   ----                                                   #
+<040>LCminW         7     16  Este desarrollo puede ser solo de la circular o  #
+<050>LCminW        12     26  sumerle 1/6 del de cada clotoide 3.203.303(4)d)  #
+<060>LCminW        17     38                                                   #
+<070>LCminW        26     57                                                   #
+<080>LCminW        35     78                                                   #
+<090>LCminW        47    104  p.e: para wc=9 lmin=47, para wc=20 lmin=104 y    #
+<100>LCminW        60    134  para wc por el medio, se interpola               #
+<110>LCminW        76    170                                                   #
+<120>LCminW       100    220                                                   #
+#------------------------------------------------------------------------------#
+# Longitud mínima de las alineaciones circulares por mantener el peralte       #
+# constante un minimo de Vp/3.6 para Vp >= 60     3.203.305(4)b)               #
+# El concepto deseable 30 m si V85%>=80  no está implementado                  #
+#----------------------------------------------------------------------------- #
+<025>LCminPer   0     m     No es necesario        3.203.305(4)b)              #
+<030>LCminPer   0     m     No es necesario                                    #
+<040>LCminPer   0     m     No es necesario                                    #
+<050>LCminPer   0     m     No es necesario                                    #
+<060>LCminPer  17     m                                                        #
+<070>LCminPer  20     m                                                        #
+<080>LCminPer  23     m                                                        #
+<090>LCminPer  25     m                                                        #
+<100>LCminPer  28     m                                                        #
+<110>LCminPer  31     m                                                        #
+<120>LCminPer  34     m                                                        #
+#------------------------------------------------------------------------------#
+# Control de  radio maximo y minimo de la circular siguiente 3.203.304         #
+  LRRs    400. : Longitud de Recta, por debajo de ella comprobar RsMin y Rsmax #
+# RsMin4  500. : Radio siguiente Minimo para rectas mayores que LRRs           #
+# El radio minimo despues de una recta de longitud mayor que 400 debe ser el   #
+# que corresponde a la V85% calculada segun la longitud de esa recta.3.203.302 #
+#------------------------------------------------------------------------------#
+# Radio mínimo a aplicar en función de la longitud de la recta previa          #
+#       Longitud de recta | Valor si mayor igual - Valor si menor              #
+# =======================-----------------------===================            #
+#  RsMinL       600                   600                 L               N/A  #
+#------------------------------------------------------------------------------#
+# Radios para los que no es necesario el uso de clotoide 3.203.305(1)          #
+#----------------------------------------------------------------------------- #
+<GRT1-5>            : Autopistas Autorrutas Primarios                          # 
+ RmaxCL  2999.999   : Radio maximo que admite clotoides       (5000 p=2)       #
+</GRT1-5>                                                                      # 
+#                                                                              #
+<GRT6-9>            : Colectores y Locales                                     # 
+ RmaxCL  1499.999   : Radio maximo que admite clotoides        (2500 p=2)      #
+</GRT6-9>                                                                      # 
+#----------------------------------------------------------------------------- #
+# ============================================================================ #
+# PARAMETROS PARA EL CALCULO DINAMICO DE CLOTOIDES                             #
+# ============================================================================ #
+# NOTA :   En esta sección se declaran los valores de algunos parámetros que   #
+# permiten al calculador  de ISTRAM ISPOL ofrecer los valores adecuados y de   #
+# revisión de la norma.                                                        #
+# Estos parámetros se ofrecen junto con el valor descrito en la tabla          #
+# (si se indica que sea usado)                                                 # 
+# Para activarlos basta con que la línea no este comentada con el símbolo '#', #
+# para que además sean incluidos en la valoración de mínimo y máximo deben de  #
+# indicarse obligatoriamente que sean usados.                                  #
+# Algunos de éstos no se usan en la normativa chilena y aparecen desactivados. #
+# ---------------------------------------------------------------------------- #
+# Especificación de J : Variacion de la aceleración centrifuga o transversal   #
+#  J      0.4 m/s3  : VARIACION DE LA ACELERACION CENTRIFUGA                   #
+################################################################################
+# T1 : TABLA J/VELOCIDADES ESPECIFICAS                                         #
+#------------------------------------------------------------------------------#
+  T1U   1    : 1->Usar tabla para calculo de J    0->No Usar   2->Usar con Vd  #
+  T1R   1.2  : Se usan los valores de la segunda columna para R > 1.2*Rmin     #
+#------------------------------------------------------------------------------#
+# La norma chilena da una tabla de J asociados a la Vespecifica 3.203.403 d)   #
+<GRT1-5>            : Autopistas Autorrutas Primarios                          # 
+#   J max ves<  J normal                                                       #
+#  -----  ----  ------                                                         #
+T1   1.5  40  0.5     Los valores J normal se usan para R > 1.2*Rmin           #
+T1   1.5  50  0.5                                                              #
+T1   1.5  60  0.5                                                              #
+T1   1.4  70  0.5                                                              #
+T1   0.9  80  0.4                                                              #
+T1   0.9  90  0.4                                                              #
+T1   0.8 100  0.4                                                              #
+T1   0.6 110  0.4                                                              #
+T1   0.4 120  0.4                                                              #
+</GRT1-5>                                                                      # 
+<GRT6-9>            : Colectores y Locales                                     # 
+# J max  ves< J normal                                                         #
+# -----  ---- -----                                                            #
+T1   1.5  40  0.5     Los valores J normal se usan para R > 1.2*Rmin           #
+T1   1.5  50  0.5                                                              #
+T1   1.5  60  0.5                                                              #
+T1   1.4  70  0.5                                                              #
+T1   1.0  80  0.4                                                              #
+T1   0.9  90  0.4                                                              #
+T1   0.8 100  0.4                                                              #
+T1   0.6 110  0.4                                                              #
+T1   0.4 120  0.4                                                              #
+</GRT6-9>                                                                      # 
+################################################################################
+#                                                                              #
+  LmaxCL 1.5 * Lmin : Longitud Maxima de la clotoide en funcion de la minima   #
+  AmaxCLR   1 * R   : parametro máximo de la clotoide 3.202.403 a)             # En las curvas de retorno las clot son mayores que R
+# Relaciones entre alineación circular y clotoides                             #
+#==============================================================================#
+# K0 : CLOTOIDE MINIMA. PERCEPCION VISUAL. RETRANQUEO MINIMO.MINIMO DE 0.5m    #
+# ---------------------------------------------------------------------------- #
+  K0U  0             : 0->No Usar esta formula      1->Usar esta formula       #  
+  K0   1.861         : A >= K0 * R ^ (3/4)          3.203.403 b)               #  
+# La norma chilena dice que "es conveniente" para radios R >= 1.2Rmin          #
+# Este valor será visualizado pero no utilizado como criterio obligatorio      #
+# ---------------------------------------------------------------------------- #
+# K1:CLOTOIDE MINIMA. PERCEPCION VISUAL.RETRANQUEO MINIMO.MAXIMO DE 2.0m   N/A #
+# ---------------------------------------------------------------------------- #
+#  K1U  0              : 1->Usar esta formula      0->No Usar esta formula     #
+#  K1   2.6321         : A >= K1 * R ^ (3/4)                                   #
+# ---------------------------------------------------------------------------- #
+# K2 : CLOTOIDE MINIMA.PERCEPCION VISUAL.DESARROLLO ANG.MINIMO 3.54 gon        #
+# ---------------------------------------------------------------------------- #
+  K2U  1             : 1->Usar esta formula     0->No Usar esta formula        #
+  K2   0.333         : A >= K2 * R              3.203.403 a)                   #
+# La normativa chilena permite usar 3.2 gonios para radio > 1000 m,            #
+# puede usar si lo desea K2 = 0.3125                                           #
+# ---------------------------------------------------------------------------- #
+# K3 : CLOTOIDE MINIMA. PERCEPCION VISUAL.DESARROLLO MINIMO 1/5 de OMEGA  N/A  #
+# ---------------------------------------------------------------------------- #
+# K3U  0             : 1->Usar esta formula    0->No Usar esta formula         #
+# K3   0.079         : A >= K3 * R * sqrt(omega)                               #
+# ---------------------------------------------------------------------------- #
+# K4 :  LIMITACION DE LA VARIACION DE LA PENDIENTE TRASVERSAL             N/A  #
+# ---------------------------------------------------------------------------- #
+# K4U 1              : 1->Usar esta formula     0->No Usar esta formula        #
+# K4   0.2635        : A >= K4 * sqrt(Peralte * Ve * R)                        #
+# K4VP               : Obliga a utilizar la velocidad de proyecto              #
+# K4X 0.28284  7.00  : A >= K4X*sqrt(Peralte*Vp*R)                             #
+#                      Solo se ofrece para PE>=7%  K4X=SQR(8/100)              #
+#                    : peralte = PeralteCurva-0 en valor absoluto / Vp en Km/h #
+# -----------------------------------------------------------------------------#
+# K5 : LIMITACION DE LA VARIACION DE LA ACELERACION CENTRIFUGA EN EL PLANO HOR.#
+# ---------------------------------------------------------------------------- #
+  K5U  1       : 1->Usar esta formula    0->No Usar esta formula               #
+  K5   46.656  : A >= sqrt{Ve*R/(K5*J)*[Ve^2/R - 1.27*Peralte]} 3.203.403 d)   #
+# K5P  0.1464  : A >=  k5 * SQRT(VP^3 /J )  0.1464=sqrt(1/46.656)(Otra fórmula)#
+# ---------------------------------------------------------------------------- #
+# K6 :  LIMIT. POR LONGITUD DE TRANSICION AL PERALTE o PEND. RELATIVA DE BORDE #
+# ---------------------------------------------------------------------------- #
+  K6U  1         : 1->Usar esta formula     0->No Usar esta formula            #
+# K6   0.5       : A >= sqrt { R * Peralte * AC /( K6 -0.01*Vp) (España)       #
+# k6P  (RUMANIA) : A= sqrt(R*PER*AC/Pborde); PER=PERcurva-Pbomb; pborde=K6P    #
+# K6P  AASHTO    : L >= PER*AC/Pborde A= sqrt(R*PER*AC/Pborde); AC=Ancho calz. #
+  K6C  1         : A= sqrt(R*PER*AC/Ipmax)       3.203.403 c)          (Chile) #
+# ---------------------------------------------------------------------------- #
+# K8 :  Mínimo valor absoluto o longitud según velocidad                  N/A  #
+# ---------------------------------------------------------------------------- #
+# K8U 1       : 1->Usar esta formula     0->No Usar esta formula               #
+# K8  133   m : longitud mínima de clotoide      A=sqrt(R*K8)    L= 2segundos*V#
+# K8P 0.555 m : espacio recorrido en K8 segundos A=sqrt(K8P*v*R) L= K*V        #
+################################################################################
+#
+################################################################################
+# T0 :  TABLA DE RADIOS/PERALTES/CLOTOIDES 3.203.303 (2) A                     #
+# Calculo del peralte CARRETERAS:
+# 250 <= R <= 700  --> p = 8%
+# 700  < R <= 5000 --> p = 8 - 7.3(1-700/R)^1.3
+# 5000 < R <= 7500 --> p = 2%
+# 7500 < R         --> p = Bombeo
+# Si R>3000 no deben ponerse clotoides. En la tabla estan para referencia      #
+#------------------------------------------------------------------------------#
+  T0U   1           : 1->Usar la tabla para calculo de A_min    0->No Usar     #
+# Peralte -2 indica que le corresponde bombeo
+#------------------------------------------------------------------------------#
+#   Radio  Peralte Arecom  Amin LonClo   VelEsp    ft     RsMin  RsMax    fl   #
+# -------- ------- ------  ---- -------  ------ ------    -----  ----- ------- #
+<GRT1-5>
+T0  12500   -2.00   4167   4167 1388.9   210.03  0.0078    700    0    0.0000
+T0  12000   -2.00   4000   4000 1333.3   209.03  0.0087    700    0    0.0000
+T0  11000   -2.00   3667   3667 1222.2   206.82  0.0106    700    0    0.0000
+T0  10500   -2.00   3500   3500 1166.7   205.60  0.0117    700    0    0.0000
+T0  10000   -2.00   3333   3333 1111.1   204.28  0.0129    700    0    0.0000
+T0   9500   -2.00   3167   3167 1055.6   202.86  0.0141    700    0    0.0000
+T0   9000   -2.00   3000   3000 1000.0   201.33  0.0155    700    0    0.0000
+T0   8598   -2.00   2866   2866  955.3   200.00  0.0166    700    0    0.0000
+T0   8500   -2.00   2833   2833  944.4   199.66  0.0169    700    0    0.0000
+T0   8000   -2.00   2667   2667  888.9   197.85  0.0185    700    0    0.0000
+T0   7500   -2.00   2500   2500  833.3   195.87  0.0203    700    0    0.0000
+T0   7000    2.00   2333   2333  777.8   193.69  0.0222    700    0    0.0000
+T0   6500    2.00   2167   2167  722.2   191.28  0.0243    700    0    0.0000
+T0   6254    2.00   2085   2085  694.9   190.00  0.0255    700    0    0.0000
+T0   6000    2.00   2000   2000  666.7   188.60  0.0267    700    0    0.0000
+T0   5500    2.00   1833   1833  611.1   185.61  0.0293    700    0    0.0000
+T0   5000    2.00   1667   1667  555.6   182.24  0.0323    700    0    0.0000
+T0   4640    2.07   1547   1547  515.6   180.00  0.0343    700    0    0.0000
+T0   4500    2.10   1500   1500  500.0   179.06  0.0351    700    0    0.0000
+T0   4000    2.30   1333   1333  444.4   175.89  0.0379    700    0    0.0000
+T0   3750    2.40   1250   1250  416.7   173.99  0.0396    700    0    0.0000
+T0   3500    2.50   1167   1167  388.9   171.86  0.0414    700    0    0.0000
+T0   3279    2.63   1093   1093  364.3   170.00  0.0431    700    0    0.0000
+T0   3250    2.65   1083   1083  361.1   169.75  0.0433    700    0    0.0000
+T0   3000    2.80   1000   1000  333.3   167.30  0.0455    700    0    0.0000
+T0   2750    3.03    917    917  305.6   164.93  0.0476    700    0    0.0000
+T0   2500    3.20    833    833  277.8   161.73  0.0504    700    0    0.0000
+T0   2345    3.41    782    782  260.6   160.00  0.0519    700    0    0.0000
+T0   2250    3.53    750    750  250.0   158.82  0.0529    700    0    0.0000
+T0   2000    3.80    667    667  222.2   154.87  0.0564    700    0    0.0000
+T0   1900    4.00    633    633  211.1   153.50  0.0576    700    0    0.0000
+T0   1800    4.20    600    600  200.0   151.95  0.0590    700    0    0.0000
+T0   1725    4.35    575    575  191.7   150.67  0.0601    700    0    0.0000
+T0   1688    4.42    563    563  187.6   150.00  0.0607    695    0    0.0000
+T0   1625    4.55    542    542  180.6   148.80  0.0618    686    0    0.0000
+T0   1525    4.75    508    508  169.4   146.71  0.0636    670    0    0.0000
+T0   1425    5.03    475    475  158.3   144.68  0.0654    653    0    0.0000
+T0   1325    5.32    442    442  147.2   142.47  0.0674    634    0    0.0000
+T0   1228    5.62    409    409  136.4   140.00  0.0695    613    0    0.0000
+T0   1225    5.63    408    408  136.1   139.93  0.0696    612    0    0.0000
+T0   1125    6.00    375    375  125.0   137.29  0.0719    589    0    0.0000
+T0   1025    6.40    342    342  113.9   134.30  0.0746    563    0    0.0000
+T0   1000    6.50    333    333  111.1   133.48  0.0753    556    0    0.0000
+T0    950    6.70    318    318  106.7   131.73  0.0768    541    0    0.0000
+T0    900    7.00    306    306  103.9   130.16  0.0782    525    0    0.0000
+T0    896    7.02    305    305  103.7   130.00  0.0784    523    0    0.0000
+T0    850    7.20    293    293  101.0   128.11  0.0800    507    0    0.0000
+T0    800    7.50    280    280   98.0   126.19  0.0817    488    0    0.0000
+T0    750    7.80    267    267   94.8   124.06  0.0836    467    0    0.0000
+T0    700    8.00    253    253   91.6   120.00  0.0872    444    1720  0.0000
+T0    650    8.00    240    240   88.3   118.07  0.0889    419    1412  0.0000
+T0    600    8.00    226    226   84.8   114.49  0.0920    392    1170  0.0000
+T0    550    8.00    211    211   81.2   110.68  0.0954    363    981   0.0000
+T0    540    8.00    208    208   80.5   110.00  0.0960    357    948   0.0000
+T0    500    8.00    197    197   77.4   106.61  0.0990    332    832   0.0000
+T0    450    8.00    182    182   73.5   102.23  0.1029    300    713   0.0000
+T0    425    8.00    174    174   71.6   100.00  0.1048    283    661   0.0000
+T0    400    8.00    169    169   71.0    97.48  0.1070    267    614   0.0000
+T0    375    8.00    163    163   70.6    94.94  0.1093    250    570   0.0000
+T0    350    8.00    157    157   70.1    92.29  0.1116    250    529   0.0000
+T0    330    8.00    151    151   69.4    90.00  0.1136    250    497   0.0000
+T0    325    8.00    150    150   69.5    89.50  0.1141    250    489   0.0000
+T0    300    8.00    144    134   59.9    86.56  0.1167    250    450   0.0000
+T0    250    8.00    129    117   54.8    80.15  0.1223    250    375   0.0000
+T0    250    8.00    129    117   54.8    80.00  0.1225    250    375   0.0000
+T0    225    8.00    121    121   65.1    76.62  0.1254    250    250   0.0000
+T0    200    8.00    113     99   49.0    72.82  0.1288    250    250   0.0000
+T0    183    8.00    107     93   47.3    70.00  0.1313    250    250   0.0000
+T0    175    8.00    104     93   49.4    68.71  0.1324    250    250   0.0000
+T0    150    8.00     95     85   48.2    64.20  0.1364    250    250   0.0000
+T0    129    8.00     86     71   39.1    61.00  0.1401    250    250   0.0000
+T0    120    8.00     77     67   37.4    60.00  0.1654    250    250   0.0000
+</GRT1-5>                                                              
+# ============================================================================ #
+#Segunda agrupacion : CAMINOS grupos del 6 al 9                                #
+# TABLA DE RADIOS/PERALTES/CLOTOIDES 3.203.303 (2) A                           #
+# Calculo del peralte CAMINOS:
+# 25  <= R <= 350  --> p = 7%
+# 350  < R <= 2500 --> p = 7 - 6.08(1-350/R)^1.3
+# 2500 < R <= 3500 --> p = 2%
+# 3500 < R         --> p = Bombeo
+# Si R>1500 no deben ponerse clotoides. En la tabla estan para referencia      #
+#------------------------------------------------------------------------------#
+#   Radio  Peralte Arecom  Amin LonClo   VelEsp    ft     RsMin  RsMax    fl   #
+# -------- ------- ------  ---- -------  ------ ------    -----  ----- ------- #
+<GRT6-9>
+TO   3500   -2.00   1166   1166  388.5    143.6	  0.045      300   0	 0.0000            
+TO   3200    2.00   1075   1075  361.2    141.8	  0.047      300   0	 0.0000            
+TO   3000    2.00    999    999  332.7    140.4	  0.050      300   0	 0.0000            
+TO   2500    2.00    833    833  277.6    136.3	  0.056      300   0	 0.0000           
+TO   2000    2.30    666    666  221.8    132.0	  0.063      300   0	 0.0000            
+TO   1800    2.40    599    599  199.3    129.7	  0.066      300   0	 0.0000            
+TO   1500    2.70    500    500  166.7	  125.8	  0.072      300   0	 0.0000            
+TO   1200    3.10    400    400  133.3	  120.7	  0.079      300    0	 0.0000            
+T0   1000    3.50    334    334  111.6	  116.4	  0.0844     300    0	 0.0000
+T0    950    3.65    319    319  107.1	  115.2	  0.0859     300    0	 0.0000
+T0    908    3.78    308    308  104.5	  114.2	  0.0872     300    0	 0.0000
+T0    900    3.80    306    306  104.0	  114.0	  0.0874     300    0	 0.0000
+T0    850    3.95    293    293  101.0	  112.6	  0.0891     300    0	 0.0000
+T0    800    4.10    280    280   98.0	  111.1	  0.0909     300    0	 0.0000
+T0    750    4.30    267    267   95.1	  109.5	  0.0927     300    0	 0.0000
+T0    700    4.50    254    254   92.2	  107.8	  0.0947     300    0	 0.0000
+T0    667    4.70    244    244   89.3	  106.8	  0.0960     300    0	 0.0000
+T0    650    4.80    240    240   88.6	  106.2	  0.0966     296    0	 0.0000
+T0    600    5.10    226    226   85.1	  104.3	  0.0988     285    0	 0.0000
+T0    550    5.40    211    211   80.9	  102.1	  0.1012     273    0	 0.0000
+T0    500    5.70    197    197   77.6	  99.7	  0.1039     259    0	 0.0000
+T0    483    5.84    192    192   76.1    98.8	  0.1048     254    0	 0.0000
+T0    450    6.10    182    181   72.8    97.0	  0.1067     244    0	 0.0000
+T0    400    6.60    168    166   68.9    94.2	  0.1097     227    0	 0.0000
+T0    375    6.80    162    158   66.6    92.4	  0.1115     218    0	 0.0000
+T0    350    7.00    156    150   64.3    90.6	  0.1134     208    0	 0.0000
+T0    348    7.00    155    149   63.8    90.4	  0.1136     207    0	 0.0000
+T0    325    7.00    150    150   69.2    88.2	  0.1158     197    0	 0.0000
+T0    300    7.00    143    134   59.9    85.7	  0.1183     186    670	 0.0000
+T0    250    7.00    134    117   54.8    80.1	  0.1225     160    469	 0.0000
+T0    225    7.00    127    114   57.8    76.9	  0.1373     146    394	 0.0000
+T0    200    7.00    120     99   49.0    73.5	  0.1429     131    332	 0.0000
+T0    177    7.00    112     91   46.8    70.1	  0.1488     117    283	 0.0000
+T0    175    7.00    111     99   56.0    69.8	  0.1491     116    279	 0.0000
+T0    150    7.00    102     91   55.2    65.6	  0.1561     100    232	 0.0000
+T0    125    7.00     92     69   38.1    60.9	  0.1639     83	    190	 0.0000
+T0    121    7.00     90     67   37.1    60.1	  0.1654     81	    184	 0.0000
+T0    100    7.00     81     72   51.4    55.5	  0.1728     67	    151	 0.0000
+T0     90    7.00     76     54   32.4    53.1	  0.1768     60	    135	 0.0000
+T0     80    7.00     71     49   30.0    50.5	  0.1811     60	    120	 0.0000
+T0     79    7.00     69     49   30.4    50.2	  0.1820     53	    119	 0.0000
+T0     70    7.00     65     58   48.1    47.7	  0.1858     50	    105	 0.0000
+T0     60    7.00     59     40   26.7    44.6	  0.1910     50	    90	 0.0000
+T0     55    7.00     56     37   24.9    42.9	  0.1937     50	    83	 0.0000
+T0     50    7.00     52     35   24.5    41.1	  0.1967     50	    75	 0.0000
+T0     47    7.00     50     33   23.2    40.0	  0.1986     50	    50	 0.0000
+T0     45    7.00     49     43   41.1    39.3	  0.1998     50	    50	 0.0000
+T0     40    7.00     45     40   40.0    37.2	  0.2032     50	    50	 0.0000
+T0     35    7.00     42     37   39.1    35.1	  0.2068     50	    50	 0.0000
+T0     30    7.00     38     23   17.6    32.7	  0.2107     50	    50	 0.0000
+# T0     25    7.00     33     33   44.0    30.1	  0.2151     50	    50	 0.0000
+# T0     20    7.00     29     29   40.6    27.1	  0.2200     50	    50	 0.0000
+# T0     15    7.00     23     23   36.4    23.7	  0.2256     50	    50	 0.0000
+# T0     10    7.00     18     18   31.0    19.6	  0.2325     50	    50	 0.0000
+# T0      5    7.00     11     11   23.1    14.1	  0.2416     50	    50	 0.0000
+#------------------------------------------------------------------------------#
+# CURVAS DE RETORNO segun 3.203.504 A
+#------------------------------------------------------------------------------#
+#   Radio  Peralte Arecom  Amin LonClo   VelEsp    ft     RsMin  RsMax    fl   #
+# -------- ------- ------  ---- -------  ------ ------    -----  ----- ------- #
+T0    25.55   7.00  22.6    22.6  19.991   30.4   0.2146   9.75     38   0.0000
+T0    21.10   7.00  20.0    20.0  18.957   27.8   0.2188   9.75     32   0.0000
+T0    17.00   7.00  17.5    17.5  18.015   25.2   0.2232   9.75     25   0.0000
+T0    15.50   7.00  16.2    16.2  16.932   24.1   0.2250   9.75     23   0.0000
+T0    15.35   7.00  14.0    14.0  12.768   24.0   0.2252   9.75     23   0.0000
+T0    13.45   7.00  12.7    12.7  11.992   22.5   0.2276   9.75     20   0.0000
+T0    11.55   7.00  11.3    11.3  11.055   21.0   0.2302   9.75     17   0.0000
+T0    10.65   7.00  10.5    10.5  10.352   20.2   0.2315   9.75     16   0.0000
+T0     9.75   7.00   9.9     9.9  10.052   19.4   0.2329   9.75     15   0.0000
+</GRT6-9>                                                           
+# -------- ------- ------  ---- -------  ------ ------    -----  ----- ------- #
+#   Radio  Peralte Arecom  Amin LonClo   VelEsp    ft     RsMin  RsMax    fl   #
+#------------------------------------------------------------------------------#
+#
+FIN
+

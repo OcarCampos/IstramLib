@@ -1,0 +1,131 @@
+######################################################################
+# DEFINICION DE GUITARRA : otra.gut                                  #
+#--------------------------------------------------------------------#
+# Numero de Filas y Columnas maximo                                  #
+# ------    -----   --------                                         #
+  NFC          50        50
+#--------------------------------------------------------------------#
+# OPCIONES                                                           #
+#---------                                                           #
+# Margenes Izquierda  Derecha   Arriba     Abajo                     #
+# -------- --------- --------- --------- ---------                   #
+  G            10.00     10.00     30.00     15.00
+# Orden :   0->Empiezan arriba   1->Empiezan abajo                   #
+# -------- ---------                                                 #
+  Ord      1
+# Dibujar Multiplos de  (0. -> dibujar todos)                        #
+# -------- -----------                                               #
+  Smd             0.00
+# Dibujar Perfiles en puntos singulares                              #
+# -------- ---                                                       #
+# Centrado  0->Segun el eje    1->Segun los datos                    #
+# -------- ---------                                                 #
+  I        0
+# Tipos    Linea eje  Linea Truncado  Eje_Solape distancia A_Ramal EAlz Seje Salz  #
+# -------- ---------  --------------  ---------- --------- ------- ---- ---- ----  #
+  TE2            -63        53       657 2.000 0 -1 -1 -1
+# NO Llevar ultimo punto al terreno competente                       #
+# --------                                                           #
+# X
+# Escalilla TipLinea mm EsX EsY Flag tip2 min. Dx Dy Dx2 .....      #
+# --------- -----------------------------------------------------   #
+  EscB  5 60 5 4 1 1 60 0 6.0 3.0 7.0 0.0 0.0 38 540 0 0 0 2
+#--------------------------------------------------------------------#
+# PAUTA FIJA                                                         #
+#---------                                                           #
+# PK (pos) SimEnt SimFra Dis.Hor Dist.PC Angulo  (PK,PKNW,PKSW)      #
+# -------- ------ ------ ------- ------- ------- (SUP,LAD,COD)       #
+  PKNN       6035   6036    0.00   10.00    0.00 0 0 0
+  P2J_         -1     -1   40.00   15.00    0.00 0 0 0
+# HORIZONT TipLin Dist.PC Superf (H=todo HS= xSuperficie)            #
+# -------- ------ ------- ------                                     #
+# VERTICALES                                                         #
+# V  : En todos los puntos                                           #
+# VB : En una Banda de codigos                                       #
+# VS : En el eje y extremos de Semiperfiles                          #
+# V7 : En 7 puntos (100.  2.   1.  -100.  1.  2. 100.)               #
+# V8 : En Bordes de Fresado y Demolicion                             #
+# VF : A distancias fijas                                            #
+# VM : A distancia minima                                            #
+#    Si D.P.C.fin== 9999999. entonces arranca de la superficie       #
+#    Superf TipLin D.P.C.ini D.P.C.fin Cod.ini Cod.fin               #
+# -- ------ ------ --------- --------- ------- -------               #
+# MEDICIONES                                                         #
+# Med : Medicion de Areas con Texto completo en el SUR               #
+# Mad : Medicion de Areas con Texto abreviado en el SUR              #
+# MaNW: Medicion de Areas con Texto abreviado en el NW               #
+# MeNW: Medicion de Areas con Texto completo en el NW                #
+# MaSW: Medicion de Areas con Texto abreviado en el SW               #
+# MeSW: Medicion de Areas con Texto completo en el SW                #
+# MeH : Medicion de Areas con Texto completo en la hoja              #
+# Mn--: Medicion de Areas con Texto simple                           #
+# Mf--: Medicion de Areas con Formato definido por el usuario        #
+# Q   : Medicion de Volumen Parcial                                  #
+# Qf  : Medicion de Volumen Parcial con Formato de usuario           #
+# W   : Medicion de Volumen Acumulado  con Formato de usuario        #
+# Wf  : Medicion de Volumen Acumulado                                #
+# MN  : Mediciones con valor Nulo                                    #
+# MR  : Mediciones de las areas de las replicas                      #
+#      Estilo TH TV Text/colum Dis.Hor Dist.PC   dX      dY    Formato
+# ---- ------ -- -- ---------- ------- ------- ------- ------- -------
+  MeNW     24  0  4          4    0.00   18.00   50.00   -4.00 S. %s = %7.2lf m2.
+# COTA DEL TERRENO (EN EL EJE DEL PERFIL) ROTULADA EN LA GUITARRA    #
+#      Simbol Dist_x Dist_y angulo donde                             #
+# ---- ------ ------ ------ ------ -----                             #
+  RZGD   6037   0.00  10.00   0.00     0
+# COTA DE LAS RASANTES EN LA GUITARRA                                #
+#      Simbol Dist_dr Dist_iz Dist_z angulo donde                    #
+# ---- ------ ------- ------- ------ ------ -----                    #
+  ZRGD   6038   85.00  -11.00 -115.00   0.00     1
+######################################################################
+#  COMANDOS ESPECIFICOS PARA OBRAS DE FABRICA                        #
+#--------------------------------------------------------------------#
+#  OM  : Nombre de la Obra de Fabrica             (Rotulo)           #
+#  ON  : Numero de la O.F.       en la guitarra   (Simbolo)          #
+#  OE  : Esviaje en centesimales en la guitarra   (Simbolo)          #
+#  OJ  : Eje que corta,          en la guitarra   (Simbolo)          #
+#  OP  : PK que corta,           en la guitarra   (Simbolo)          #
+#  OL  : Longitudde  la O.F.     en la Guitarra   (Simbolo)          #
+#  OX  : X embocadura/desague    en el Perfil     (Simbolo)          #
+#  OY  : Y embocadura/desague    en el Perfil     (Simbolo)          #
+#  OZ  : Z embocadura/desague    en el Perfil     (Simbolo)          #
+#  OD  : Longitud de tramos      en el Perfil     (Simbolo)          #
+#  OA  : Azimut                  en el Perfil     (Simbolo)          #
+#  OT  : Pendiente               en el Perfil     (Simbolo)          #
+#  OB  : Nombre del eje que corta                 (Rotulo)           #
+#  OC  : Z bajo el eje que corta en el Perfil     (Simbolo)          #
+#----------------------------------------------                      #
+#     sim/estilo Dista_x Dista_y  angulo tamano  TH TV               #
+# --- ---------- ------- ------- ------- ------- -- --               #
+######################################################################
+#  COMANDOS PARA DEFINIR SUPERFICIES Y RECINTO                       #
+#--------------------------------------------------------------------#
+# CDS  : Definir una Superficie                                      #
+# CDR  : Definir un Recinto                                          #
+# CDr  : Usar para las replicas                                      #
+#--------------------------------------------------------------------#
+# CDS Sup  Funcion Sup1 Sup2                                         #
+# --- ---- ------- ---- ----                                         #
+#--------------------------------------------------------------------#
+# CDR TipL modo    Sup1 Sup2 Est Rep                                 #
+# --- ---- ------- ---- ---- --- ---                                 #
+ CDr     0 #Usar para las replicas
+#####################################################################
+# REMARCAR SUPERFICIES                                              #
+# CDZ Tipo Sup. cod_ini  cod_fin  lado                              #
+# --- ---- ---- -------- -------- ----                              #
+#####################################################################
+# LEYENDA                                                           #
+# LY  Tipo modo x0      y0      tx      ty      esti texto          #
+# --- ---- ---- ------- ------- ------- ------- ---- ---------------#
+#--------------------------------------------------------------------#
+# Fin de guitarra                                                    #
+# ---                                                                #
+  FIN                                                                #
+######################################################################
+
+
+
+
+
+

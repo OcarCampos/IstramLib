@@ -1,0 +1,422 @@
+# -----------------------------------------------------------------------------#
+# CHILE_2013b20.tpe                                                            #
+# NORMA CHILE:    TABLA DE PERALTES PARA NORMATIVA CHILE                       #
+# Para que funcione corretamente es necesario que el eje tenga asociado un     #
+# tipo de carretera y una velocidad de proyecto                                #
+# FECHA DE REVISION :  NOVIE   2013 (revision e) tabla peraltes que no rebaja  #
+#                      el peralte en clotoides cortas.                         #
+#                      MARZO   2014 (revision 2013a20) como la 2002e con la    #
+#                      serie de bombeos 2.0, 2.5, 3.0, 3.5                     #
+#                      Corregido radio que permite peralte de bombeo           #
+#                      DIC 2017 correccion para que, en clotoides largas, la   #
+# pendiente en el tramo -b% a b% no sea 0.35 como dice la Norma, sino la del   #
+# ipmax Normal. 3.203.405(2) y tabla 3.203.305(3)                              #
+# ---------------------------------------------------------------------------- #
+#                La tabla de planta relacionada con esta es:CHILE_2013a20.dip  #
+#
+# POR FAVOR COMPROBAR Y NOTIFICAR RESULTADOS CORRECTOS O NO A soporte
+#
+#------------------------------------------------------------------------------#
+# La norma chilena especifica la posibilidad de aplicar otros valores de       #
+# bombeo en curva para tramos singulares (2.5), emplazando al usuario para que #
+# escriba una tabla adecuada si lo necesita                                    #
+# ------  ----- -------------------------------------------------------------- #
+# Parametros generales de comportamiento                                       #
+# ------  ----- -------------------------------------------------------------- #
+  Inter   0.1   # interpolacion y precision, comentada no interpola            #
+  Bom     2.0   # valor del bombeo en recta (2 - 2.5)                          #
+  Sbo     0.0   # peralte en el punto del infinito de clotoides en S (0-2.5)   #
+# -----------------------------------------------------------------------------#
+# TABLAS DE PERALTES EN FUNCION DEL RADIO AGRUPADAS POR TIPO DE CARRETERA 1-9  #
+# -----------------------------------------------------------------------------#
+# Maximo numero de datos en la tabla P-r = 100                                 #
+# Para radio >= que el primer dato se aplica el valor 'bombeo' (Bom)           #
+# Datos segundo y siguientes se interpola en la tabla el valor del peralte     #
+# * Ver notas al final de la sección de peraltes                               #
+# ---  -----  ------- -------------------------------------------------------- #
+<GRT1-5>                         3.203.303 (2) A                               #
+  P-r     2.00  7500                                                           #
+  P-r     2.00  7000                                                           #
+  P-r     2.00  5000                                                           #
+  P-r     2.10  4500                                                           #
+  P-r     2.30  4000                                                           #
+  P-r     2.50  3500                                                           #
+  P-r     2.80  3000                                                           #
+  P-r     3.00  2800                                                           #
+  P-r     3.20  2500                                                           #
+  P-r     3.60  2200                                                           #
+  P-r     3.80  2000                                                           #
+  P-r     4.20  1800                                                           #
+  P-r     4.80  1500                                                           #
+  P-r     5.70  1200                                                           #
+  P-r     6.50  1000                                                           #
+  P-r     6.70   950                                                           #
+  P-r     7.00   900                                                           #
+  P-r     7.20   850                                                           #
+  P-r     7.50   800                                                           #
+  P-r     7.80   750                                                           #
+  P-r     7.90   720                                                           #
+  P-r     8.00   700                                                           #
+  P-r     8.00   250                                                           #
+  P-r     8.00    00                                                           #
+# ---------------------------------------------------------------------------- #
+  Maxp    8.0           # maximo peralte en curva (7 - 10)                     #
+</GRT1-5>                                                                      #
+#                                                                              #
+<GRT6-9>                                                                       #
+# ---  -----  -------                                                          #
+  P-r     2.00  3500                                                           #
+  P-r     2.00  3200                                                           #
+  P-r     2.00  3000                                                           #
+  P-r     2.00  2500                                                           #
+  P-r     2.30  2000                                                           #
+  P-r     2.40  1800                                                           #
+  P-r     2.70  1500                                                           #
+  P-r     3.10  1200                                                           #
+  P-r     3.50  1000                                                           #
+  P-r     3.80   900                                                           #
+  P-r     4.10   800                                                           #
+  P-r     4.50   700                                                           #
+  P-r     5.10   600                                                           #
+  P-r     5.40   550                                                           #
+  P-r     5.70   500                                                           #
+  P-r     6.10   450                                                           #
+  P-r     6.60   400                                                           #
+  P-r     7.00   350                                                           #
+  P-r     7.00    25                                                           #
+  P-r     7.00    00                                                           #
+# ---------------------------------------------------------------------------- #
+  Maxp    7.0             # maximo peralte en curva (7 - 10)                   #
+</GRT6-9>                                                                      #
+#------------------------------------------------------------------------------#
+# Longitud minima de peralte en clotoides de vertice y curvas cortas           #
+# especificada según Vp/3.6 para Vp >= 60 (1 segundo)        3.203.305(4)b)    #
+# El concepto deseable 30 m si V85%>=80  no está implementado                  #
+#
+<030>Lmcur   0    # L.minima de peralte en clotoides de vertice y curvas       #
+<040>Lmcur   0    # L.minima de peralte en clotoides de vertice y curvas       #
+<050>Lmcur   0    # L.minima de peralte en clotoides de vertice y curvas       #
+<060>Lmcur  17    # L.minima de peralte en clotoides de vertice y curvas       #
+<070>Lmcur  20    # L.minima de peralte en clotoides de vertice y curvas       #
+<080>Lmcur  23    # L.minima de peralte en clotoides de vertice y curvas       #
+<090>Lmcur  25    # L.minima de peralte en clotoides de vertice y curvas       #
+<100>Lmcur  28    # L.minima de peralte en clotoides de vertice y curvas       #
+<110>Lmcur  31    # L.minima de peralte en clotoides de vertice y curvas       #
+<120>Lmcur  34    # L.minima de peralte en clotoides de vertice y curvas       #
+# ---------------------------------------------------------------------------- #
+# Modo de transición del bombeo recta-clotoide / recta-curva                   #
+# 0: dentro de clotoide  1:mitad clotoide mitad recta  2: todo dentro de recta #
+# -----  -----  -------------------------------------------------------------- #
+  Trbo    1     # Normativa chile: mitad en clotoide - mitad en recta          #
+  A       1     # Repaso automatico de transicion de bombeo  si = 1  no = 0    #
+  Tpara   0     # Transición parabólica de peraltes si=1 / no = 0 (Lineal)     #
+#                                                                              #
+################################################################################
+# Acciones de control, análisis y ajuste sobre los peraltes asignados          #
+################################################################################
+#  1/6   Analisis de la máxima longitud de transición al peralte.              #
+#  2/6   Control de drenaje, límite de zonas con peralte inferior al bombeo    #
+#  3/6   Analisis de mínimas y máximas pendientes :                            #
+#        1.-Rasantes con pendiente <valor1 y  peralte inferioa a valor2        #
+#        2.- Control del valor de la línea de máxima pendiente                 #        
+#  4/6   Controlar la transición de peralte en tramos SIN CLOTOIDE             #
+#  5/6   Analisis de la transición de peraltes entre curvas en S               #
+#  6/6   Transición de peralte en curvas en C (evita bombeo en rectas cortas)  #
+#                                                                              #
+####### ---------------------------------------------------------------------- #
+# 1/6 #  Análisis de la mínima longitud de transición al peralte               #
+####### ---------------------------------------------------------------------- #
+# Puede analizarse usando dos fórmulas que proporcionan la longitud mínima     #
+# de transición. Si se supera la pendiente de borde, se limita el peralte y se #
+# genera un informe adjunto. Puede usar dos modos, el chileno es el 1          #
+#                                                                              #
+# 1.-  L = (DIF peraltes)*ancho/ipmax     Pendiente relativa de borde          #
+# 2.-  L = (DIF_peraltes/ Vpmax)* Ve; Vpmax = Máxima variacion de peralte/seg  #
+#                                     Ve = V. específica m/seg                 #
+# ------  ----   ------------------------------------------------------------- #
+# ipmax    -.-   # Pendiente de borde maxima. dif_Peralte_max= L*ipmax/ancho   #
+# vpmax    -.-   # Variacion de peralte maxi. dif_Peralte_max= L*vpmax/ve      #
+#                                                                              #
+# La longitud de transicion del peralte (desde p=0 a P=p(R)) esta limitada por #
+# la pendiente relativa de borde (ipmax): l = n*a*P/ipmax; n*a es numero de    #
+# pistas por su ancho, o sea el ancho total desde el eje de giro al borde      #
+# exterior de la calzada (sin contar sobreanchos en curva)                     #
+# ipmax   0.35     : Maxima Pendiente de Borde                                 #
+# ------  ----   ------------------------------------------------------------- #
+# En el calculo de la pendiente relativa de borde se puede utilizar el ancho   #
+# de calzada que está en el menú de anchos de la calzada, o utilizar los       #
+# valores AC y NC de la solapa GENERAL, activando el parámetro AC_gen.         #
+# ------  ----   ------------------------------------------------------------- #
+  AC_gen : Activa el uso de AC y NC de la solapa general para el cálculo       #
+# ------  ----   ------------------------------------------------------------- #
+# Este ancho se puede corregir por el factor ACfac, de ajuste para la pendiente#
+# de borde debido al número de carriles girados definido en el .dip de la      #
+# planta para cada categoria de carretera, o en una tabla TA para tener en     #
+# cuenta numero de carriles. Para activar este calculo, se usa el              #
+# parámetro AC_dip.                                                            #
+# ------  ----   ------------------------------------------------------------- #
+  AC_dip        # Utilizar el factor de ajuste de la tabla dip                 #
+# ------  ----   ------------------------------------------------------------- #
+#          Normal Cont.  V.Aplicable si Pras<=control    3.203.305(3)          #
+# --------  ----- ----- ------  ---------------------------------------------- #
+ <030>ipMax1 0.7    0.7   1.5    El valor maximo solo se usara cuando el espacio#
+ <040>ipMax1 0.7    0.7   1.5    para la transicion de peralte es corto o       #
+ <050>ipMax1 0.7    0.7   1.5    cuando la pendiente longitudinal es del orden  #
+ <060>ipMax1 0.6    0.6   1.3    de la ipmax lo que crea zona de pendiente nula #
+ <070>ipMax1 0.6    0.6   1.3    en el entorno de peralte cero. Entonces se debe#
+ <080>ipMax1 0.5    0.5   0.9    limitar la longitud del tramo -b% b%           #
+ <090>ipMax1 0.5    0.5   0.9    (En mi opinion es mejor aumentar la pendiente  #
+ <100>ipMax1 0.35   .35   0.8    longitudinal en las zonas en que la rasante y  #
+ <110>ipMax1 0.35   .35   0.8    el peralte son simultaneamente bajos. Ver tabla#
+ <120>ipMax1 0.35   .35   0.8    de peraltes Krasper o KMinMaxP)                #
+# --------  ----- ----- ------  ---------------------------------------------- #
+# En el calculo de peraltes solo debe ampliarse la longitud de transicion de   #
+# peraltes si la clotoide es corta cuando la pendiente de borde supera el      #
+# maximo permitido.                                                            #
+#          Normal Cont.  V.Aplicable si Pras<=control    3.203.305(3)          #
+# --------  ----- ----- ------  ---------------------------------------------- #
+#<030>ipMax1 1.5    0.7   1.5    El valor maximo solo se usara cuando el espacio#
+#<040>ipMax1 1.5    0.7   1.5    para la transicion de peralte es corto o       #
+#<050>ipMax1 1.5    0.7   1.5    cuando la pendiente longitudinal es del orden  #
+#<060>ipMax1 1.3    0.6   1.3    de la ipmax lo que crea zona de pendiente nula #
+#<070>ipMax1 1.3    0.6   1.3    en el entorno de peralte cero. Entonces se debe#
+#<080>ipMax1 0.9    0.5   0.9    limitar la longitud del tramo -b% b%           #
+#<090>ipMax1 0.9    0.5   0.9    (En mi opinion es mejor aumentar la pendiente  #
+#<100>ipMax1 0.8    .35   0.8    longitudinal en las zonas en que la rasante y  #
+#<110>ipMax1 0.8    .35   0.8    el peralte son simultaneamente bajos. Ver tabla#
+#<120>ipMax1 0.8    .35   0.8    de peraltes Krasper o KMinMaxP)                #
+# --------  ----- ----- ------  ---------------------------------------------- #
+# Resolucion del caso de clotoides cortas (y curvas cortas y rectas cortas)    #
+# Si hay clotoide; pero es corta para el ipmax, se intenta alargar la          #
+# transicion de peralte hacia la curva, comprobando que en el contacto         #
+# clotoide-circulo el peralte no se rebaja más de dPipmax:                     #
+#  0.- Calcula la pendiente de borde y si es mayor que la ipmax, se realiza el #
+#      estudio de la pendiente de borde con un peralte reducido en dPipmax a   #
+#      la entrada de la curva                                                  #
+#  1.1.- si la pendiente de borde aun es mayor que ipmax, se rebaja el peralte #
+#        hasta el valor de ipmax. La transicion se deja en la clotoide y anota #
+#        un informe de la reduccion del peralte.                               #
+#  1.2.- si la pendiente de borde es mayor que ipmax, se estudia si entra el   #
+#        peralte total con la rampa ipmax, utilizando hasta 1/dLipmax de la    #
+#        circular. Si entra, toma lo que se necesita de la circular.           #
+#  2.1.- si aún tomando 1/dLipmax de la circular se supera el ipmax, y         #
+#        dNipmax==0 entonces se reduce el peralte y da un informe              #
+#  2.2.- si dNipmax==1 se alarga la transicion de peralte hasta 1/dLipmax con  #
+#        la ip que entre, aunque se supere la ipmax pero sin rebajar el peralte#
+#  2.3.- si dNipmax==2 se alarga la transicion hasta 1/dLipmax de la circular  #
+#        y busca cumplir la ipmax tomando el resto necesario en la recta si    #
+#        cabe.                                                                 #
+#  2.4.- si no cabe, utiliza 1/dLipmax de la circular y la parte de recta      #
+#        disponible. Si la pendiente de borde es mayor que ipmax; se baja el   #
+#        peralte para conseguir ipmax y Lmcur.                                 #
+#  3. -  Si la recta es corta y se solapan las transiciones del bombeo se lleva#
+#        el inicio de la transicion del peralte a la mitad de la recta y se    #
+#        recupera parte de la longitud de transicion que invadia la circular   #
+#  4. -  Oct 2013(d) Cuando las curvas son cortas y las clotoides tambien, no  #
+#        se puede conseguir la ipmax (pendiente de borde) y la longitud Lmcur  #
+#        de peralte constante en la curva a la vez. Con dNipmax a 2 se rebaja  #
+#        el peralte para conseguir ipmax y Lmcur. Con dNipmax a 3 no se rebaja #
+#        el peralte, se rebaja Lmcur para buscar la ipmax y en ultimo extremo  #
+#        se rebasa tambien el ipmax.                                           #
+#                                                                              #
+  dPipmax  4.0      # Valor a restar al peralte nominal de curva por ipmax     #
+  dLipmax  3.0      # Puede entrar hasta 1/3 de la longitud del circulo        #
+# (El valor menor de dLipmax es 2. que es tambien el valor por defecto)        #
+# dNipmax  0        # 0:Superar la ipmax en casos extremos.Rebajar peralte     #
+# dNipmax  1        # 1:Superar la ipmax en casos extremos.NO rebajar peralte  #
+# dNipmax  2        # 2:Dejar ipmax y  peralte y tomar el resto en la recta    #
+  dNipmax  3        # 3:Manda el peralte. Rebajar Lmcur y ipmax si no cabe     #
+# -------  ----  ------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+# Primero se calcula la longitud de transicion con los valores normales        #
+# A continuación se comprueba si ese tramo tiene una pendiente menor o igual   #
+# al valor normal y se recalcula con la nueva ipmax                            #
+####### ---------------------------------------------------------------------- #
+# 2/6 #  Longitud máxima de tramos con peralte menor que el bombeo             #
+####### ---------------------------------------------------------------------- #
+# Maxima longitud de la transicion de bombeo si rasante < mras.                #
+# Especifica la transición al bombeo de curvas-rectas / clotoide-recta         #
+# También, en el caso de clotoides grandes se inserta un dato de peralte igual #
+# a bombeo evitando tramos en los que pueda acumularse agua.                   #
+# Si el tramo con peralte menor que el bombeo es mas largo que Mlbo se inserta #
+# un dato de peralte con valor bombeo a Lbo metros.                            #
+# Esta longitud se mide desde peralte 0 (cero) hasta valor bombeo.             #
+# El paso de -2% a 2% se hace en 2*Mlbo m como maximo.                         #
+# Solo se analiza si la pendiente de la rasante es inferior a mras.            #
+# Si mras = 0.0 controla siempre sin importar rasante.                         #
+#------------------------------------------------------------------------------#
+#             Mlbo  mras  Lbo                                                  #
+# ------      ----  ----  ----                                                 #
+# Klmbom      25.0  0.00  25.0     # Aqui Mlbo y Lbo son fijos                 #
+# Klmbom      15.0  0.00  15.0                                                 #
+#                                                                              #
+# KlmbomP es la pendiente de borde para calcular los valores Mlbo y Lbo        #
+# KlmbomP   0.35   : Pendiente relativa de borde >= 0.35 en el tramo -b% a b%  #
+#
+ <030>KlmbomP 0.7 : Pendiente relativa de borde en el tramo -b% a b%           #
+ <040>KlmbomP 0.7   3.203.405(2) y tabla 3.203.305(3) ipmax                    #
+ <050>KlmbomP 0.7                                                              #
+ <060>KlmbomP 0.6                                                              #
+ <070>KlmbomP 0.6                                                              #
+ <080>KlmbomP 0.5                                                              #
+ <090>KlmbomP 0.5                                                              #
+ <100>KlmbomP 0.35                                                             #
+ <110>KlmbomP 0.35                                                             #
+ <120>KlmbomP 0.35                                                             #
+#
+#         Mlbo  mras  Lbo                                                      #
+# ------  ----  ----  ----             3.203.405(2)b)                          #
+ Klmbom   Mlbo  0.00  Lbo     : Mlbo es variable: Mlbo=Bomb*AC/KlmbomP         #
+#                             : Lbo  es variable: Lbo= Bomb*AC/KlmbomP         #
+####### ---------------------------------------------------------------------- #
+#  3/6   Analisis de mínimas y máximas pendientes :                            #
+#     1.-Aviso de Rasantes con pendiente <valor1 y  peralte inferioa a valor2  #
+####### ---------------------------------------------------------------------- #
+  Krasper     0.5    1.0  : La norma de Chile no controla esto, solo Mlbo; pero#
+#                           el aviso viene bien para evitarlo si se puede      #
+# --------  ------- ---------------------------------------------------------- #
+# KMinMaxP    0.5   : Pendiente Minima de la linea de maxima pendiente         #
+# ---------------------------------------------------------------------------- #
+#        2.- Control del valor de la línea de máxima pendiente 3.203.303(5)    #  
+# --------  ------- ---------------------------------------------------------- #
+<GRT1-5>                                                                       #
+  KMaxMaxP     10   : Pendiente maxima de la linea de maxima pendiente         #
+</GRT1-5>                                                                      #
+<GRT6-9>                                                                       #
+  KMaxMaxP     11                                                              #
+</GRT6-9>                                                                      #
+####### ---------------------------------------------------------------------- #
+# 4/6 #  Controlar la transición de peralte en tramos SIN CLOTOIDE             #
+#######  Para los casos en los que no hay clotoide se especifica una longitud  #
+#        de transición de peralte, definiendose la parte en recta y en curva   #
+#        La longitud que se define es utilizada por el programa para realizar  #
+#        la transicion desde el peralte de la curva hasta el valor que define  #
+#        trbo.                                                                 #
+#        Puede calcularse este valor de 3 formas diferentes  :                 #
+#                                                                              #
+# A.- En función del valor de máxima pendiente relativa de borde               #
+# (IPmax especificada anteriormente según una tabla de valores) 3.203.305(4)a) #
+  RmtrIP  0.7    : Rmtr = K * Pe*AC/ipmax   Fraccion en recta o curva mayor Pe #
+  CmtrIP  0.3    : Cmtr = K * Pe*AC/ipmax   Fraccion en curva o curva menor Pe #
+# La normativa chilena permite especificar otros factores para trazado de      #
+# montaña que no están soportados en esta tabla:                               #
+# minimo p<4.5 -> RmtrIP=0.5 CmtrIP=0.5 # maximo p<=7 -> RmtrIP=0.8 CmtrIP=0.2 #
+# ----- --------  ------------------------------------------------------------ #
+# B.- Usando una velocidad de variación del peralte :            N/A CHILE     #
+#                                                                              #
+# RmtrK   0.04   : Rmtr = 0.04 * Pe * V     Fraccion en recta o curva mayor Pe #
+# CmtrK   0.04   : Cmtr = 0.04 * Pe * V     Fraccion en curva o curva menor Pe #
+# ----- --------  ------------------------------------------------------------ #
+# C.- Usando un valor fijo calculado según formula               N/A CHILE     #
+#     long =   L0r  + L1r * per_cur                                            #
+# ------   ----  ----                                                          #
+#  Rmtr   15.0   0.0           Fraccion en recta (o curva de menor peralte)    #
+#  Cmtr    0.0   0.0           Fraccion en curva (o curva de mayor peralte)    #
+# ------   ----  ----                                                          #
+#                                                                              #
+# Pe = dif de peralte CURVA - peralte cero en valor absoluto                   #
+# AC = Ancho de calzada nominal (sin sobreanchos)                              #
+# Independientemente de la formula usada, el valor calculado siempre queda     #
+# guardado en las variables Rmtr y Cmtr para que lo pueda usar más adelante.   #
+#                                                                              #
+####### ---------------------------------------------------------------------- #
+# 5/6 #  Analisis de la transición de peraltes entre curvas en S               #
+####### ---------------------------------------------------------------------- #
+# Para Rectas de longitud menor a la que se define, se realiza la transición   #
+# de peralte de +bombeo a -bombeo en una longitud dada y centrada en la recta  #
+# La transicion del resto del peralte se realiza linealmente hasta la curva    #
+# haya o no clotoides, eliminándose ésta si resulta concava.                   #
+# Tambien se aplica en caso de no existir rectas ( curvas de radio grande )    #
+#                                                                              #
+# D_CPBSC  # permite concavidad de peraltes cuando el ajuste es muy largo      #
+#                                                                              #
+# Puede calcularse de tres formas diferentes (A,B,C)                           #
+#                                                                              #
+# Cambio de Peralte Bombeo curvas S    Long recta.    Long cambio.             #
+# ----------------------------------- ------------- -------------------------- #
+# A.- Valor fijo                                                               #
+# ----------------------------------- ------------- -------------------------- #
+# D_CPBS                                    200           40                   #
+# ---------------------------------------------------------------------------- #
+# B.- Usando la pendiente de borde,se define valor; resultado Lrec Ltra   N/A  #
+# Ejemplo : P=0.35     Ltra=2*Bomb*Ac/P=2*2*7/.35=80m     Disp = Toda la recta #
+#                      Ltra=2*2*3.5/.35=40m
+# ----------------------------------- ------------- -------------------------- #
+#             Long Recta Long Cambio  Comentarios                              #
+# ------ ---- ---------- ----------- ----------------------------------------- #
+  D_CPBSP  0.60                        # Pendiente Borde                       #
+ <030>D_CPBSP 0.7    0.7   1.5    El valor maximo solo se usara cuando el espacio#
+ <040>D_CPBSP 0.7    0.7   1.5    para la transicion de peralte es corto o       #
+ <050>D_CPBSP 0.7    0.7   1.5    cuando la pendiente longitudinal es del orden  #
+ <060>D_CPBSP 0.6    0.6   1.3    de la ipmax lo que crea zona de pendiente nula #
+ <070>D_CPBSP 0.6    0.6   1.3    en el entorno de peralte cero. Entonces se debe#
+ <080>D_CPBSP 0.5    0.5   0.9    limitar la longitud del tramo -b% b%           #
+ <090>D_CPBSP 0.5    0.5   0.9    (En mi opinion es mejor aumentar la pendiente  #
+ <100>D_CPBSP 0.35   .35   0.8    longitudinal en las zonas en que la rasante y  #
+ <110>D_CPBSP 0.35   .35   0.8    el peralte son simultaneamente bajos. Ver tabla#
+ <120>D_CPBSP 0.35   .35   0.8    de peraltes Krasper o KMinMaxP)                #
+# ------   ----  ----                                                          #
+# D_CPBS        Lrec<=     Ltra        # calculados según fórmula              #
+  D_CPBSK       2.5        1.0         # Un multiplo para cada valor           #
+#                                                                              #
+# ---------------------------------------------------------------------------- #
+# C : Usando valores rmtr y cmtr calculados anteriormente                 N/A  #
+#             Long Recta Long Cambio  Comentarios                              #
+# ------ ---- ---------- ----------- ----------------------------------------- #
+# D_CPBS       Rmtr         Rmtr      #
+# D_CPBSK      3.0          1.0       #
+# (puede usar además D_CPBSK para aplicar un factor de Rmtr y/o Cmtr)          #
+#                                                                              #
+# La variable Disp significa 'espacio de recta disponible' y puede usarse para #
+# especificar que deseamos usar toda la recta para hacer la transición.        #
+#                                                                              #
+# ---------------------------------------------------------------------------- #
+# Cuando falta una o las dos clotoides, la transicion se hace por defecto en   #
+# el punto medio de la clotoide, pero es posible, activando NUCSS, indicarle   #
+# al programa que realice la transicion de la clotoide para la curva conectada #
+# y que calcule la transición de la curva que no tiene clotoide usando Rmtr    #
+# (definido con anterioridad para tratar los casos de ausencia de clotoide)    #
+# ------  -------------------------------------------------------------------- #
+   NUCSS  # No usar mitad clotoide cuando falta una clotoide en curvas en S    #
+# ---------------------------------------------------------------------------- #
+####### ---------------------------------------------------------------------- #
+# 6/6 #  Transición de peralte en curvas en C (evita bombeo en rectas cortas)  #
+####### ---------------------------------------------------------------------- #
+# Para rectas de longitud inferior a uno dado, en lugar de bombeo se deja un   #
+# tramo con peralte = valor bombeo en curva y el sentido de giro de las curvas #
+#                                                                              #
+# Si falta alguna de las dos clotoides (o las dos), se prueba con una          #
+# transicion de longitud Rmtr; si la recta que queda tiene longitud menor      #
+# que el valor de control, no se realiza la transición al bombeo quedando el   #
+# peralte de valor el bombeo en el punto que corresponda                       #
+# En la norma chilena es la longitud mínima deseable de recta en C 3.203.305(5)#
+#Longitud mínima y deseable de Rectas en C o en Ovalo (mismo sentido)          #
+# Si Lr <= LDeseable, se mantiene en la recta peralte de valor bombeo          #
+<GRS1>    # En terreno llano    (subtipo 1)                                    #
+<GRS2>    # En terreno ondulado (subtipo 2)                                    #
+#Evitar Bombeo  Long Max Recta.      3.203.203(2).A                            #
+#-------------  ---------------                                                #
+ <030>EBO            85            (aproximado 2.75*Vp)                        #
+ <040>EBO           110                                                        #
+ <050>EBO           140                                                        #
+ <060>EBO           170                                                        #
+ <070>EBO           195                                                        #
+ <080>EBO           220                                                        #
+ <090>EBO           250                                                        #
+ <100>EBO           280                                                        #
+ <110>EBO           305                                                        #
+ <120>EBO           330                                                        #
+</GRS2>                                                                        #
+</GRS1>                                                                        #
+<GRS3>  # En terreno montañoso  (subtipo 3 Vp 30 - 80 km/h)                    #
+ <030>EBO             25        (aproximado 1.4*Vp)                            #
+ <040>EBO             55                                                       #
+ <050>EBO             70                                                       #
+ <060>EBO             85                                                       #
+ <070>EBO             98                                                       #
+ <080>EBO            110                                                       #
+</GRS3>                                                                        #
+#------------------------------------------------------------------------------#
+# ---------------------------------------------------------------------------- #
+  FIN         # OBLIGATORIO TERMINAR LA TABLA CON (FIN)                        #
+

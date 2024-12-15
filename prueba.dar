@@ -1,0 +1,15 @@
+# DEFINICION DE AREAS
+# Fichero : prueba.dar
+#  (nombre iniciado por '<' ni se lista ni se dibuja su valor)
+#  (nombre segundo caracter '+' se suma su valor al anterior)
+#  (nombre iniciado por <s crea una superficie combinando A1 y A2 y resultando B1)
+# -----------------------------------------------------------------------------------------------
+# NOMBRE_DEL_AREA D/T F1  A1    A2    F1  B1   B2  +/- RATIO D.MASAS ESTRUC COEF. GEO. TUB  ORDEN
+# -----------------------------------------------------------------------------------------------
+1106             <s>   0  4   111    68    0    68     0     0  1.0000  0.0000 1  1.0000 0 1 #1
+1106             <s>   0  4   111   110    0   110     0     0  1.0000  0.0000 1  1.0000 0 1 #2
+ 9
+
+
+
+

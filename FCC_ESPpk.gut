@@ -1,0 +1,213 @@
+######################################################################
+# DEFINICION DE GUITARRA : FCC_ESPpk.gut                             #
+#--------------------------------------------------------------------#
+# Numero de Filas y Columnas maximo                                  #
+# ------    -----   --------                                         #
+  NFC          50        50
+#--------------------------------------------------------------------#
+# OPCIONES                                                           #
+#---------                                                           #
+# Margenes Izquierda  Derecha   Arriba     Abajo                     #
+# -------- --------- --------- --------- ---------                   #
+  G            40.00     10.00     50.00     50.00
+# Orden :   0->Empiezan arriba   1->Empiezan abajo                   #
+# -------- ---------                                                 #
+  Ord      0
+# Dibujar Multiplos de  (0. -> dibujar todos)                        #
+# -------- -----------                                               #
+  Smd             0.00
+# Dibujar Perfiles en puntos singulares                              #
+# -------- ---                                                       #
+# Centrado  0->Segun el eje    1->Segun los datos                    #
+# -------- ---------                                                 #
+  I        0
+# Tipos    Linea eje  Linea Truncado  Eje_Solape distancia A_Ramal EAlz Seje Salz  #
+# -------- ---------  --------------  ---------- --------- ------- ---- ---- ----  #
+  TE2             60        53       657 2.000 0 -1 -1 -1
+# NO Llevar ultimo punto al terreno competente                       #
+# --------                                                           #
+# X
+# Escalilla TipLinea mm EsX EsY Flag tip2 min. Dx Dy Dx2 .....      #
+# --------- -----------------------------------------------------   #
+  EscC  0 60 10 0 0 0 710 0 6.0 3.0 7.0 -1.0 1.0 38 540 0 0 0 0 1
+#--------------------------------------------------------------------#
+# PAUTA FIJA                                                         #
+#---------                                                           #
+# Cabecera Sim Dis.Hor Dist.PC Angulo  SIMBOLO PARA LA CABECERA      #
+# -------- --- ------- ------- -------                               #
+  Cab      165    0.00    0.00    0.00
+# Z Compa. Sim Dis.Hor Dist.PC Angulo    COTA PLANO COMPARACION      #
+# -------- --- ------- ------- -------                               #
+  Acom     551  -25.00    0.00    0.00
+# PK (pos) SimEnt SimFra Dis.Hor Dist.PC Angulo  (PK,PKNW,PKSW)      #
+# -------- ------ ------ ------- ------- ------- (SUP,LAD,COD)       #
+  PKNW        156    156    0.00    0.00    0.00 0 0 0
+  P2__         -1     -1   40.00   15.00    0.00 0 0 0
+# HORIZONT TipLin Dist.PC Superf (H=todo HS= xSuperficie)            #
+# -------- ------ ------- ------                                     #
+  H            32    0.00
+  H            32  -12.00
+  H            32  -19.00
+  H            32  -31.00
+  H            32  -38.00
+  HS           32  -45.00     68
+# VERTICALES                                                         #
+# V  : En todos los puntos                                           #
+# VB : En una Banda de codigos                                       #
+# VS : En el eje y extremos de Semiperfiles                          #
+# V7 : En 7 puntos (100.  2.   1.  -100.  1.  2. 100.)               #
+# V8 : En Bordes de Fresado y Demolicion                             #
+# VF : A distancias fijas                                            #
+# VM : A distancia minima                                            #
+#    Si D.P.C.fin== 9999999. entonces arranca de la superficie       #
+#    Superf TipLin D.P.C.ini D.P.C.fin Cod.ini Cod.fin               #
+# -- ------ ------ --------- --------- ------- -------               #
+  V      68     68 9999999.0       0.0
+  V      68     68     -19.0     -19.5
+  V      68     68     -30.5     -38.0
+  V      66     66 9999999.0      -0.5
+  V      66     66     -11.5     -19.0
+  VS     68     68     -38.0     -45.0
+#  PK inicio hoja en el cajetin                                      #
+#--------------------------------------------------------------------#
+#     Campo formato                                                  #
+# --- ----- ---------------------------                              #
+  CV0     1 PK %.2lf
+#  PK final  hoja en el cajetin                                      #
+#--------------------------------------------------------------------#
+#     Campo formato                                                  #
+# --- ----- ---------------------------                              #
+  CV1     2 PK %.2lf
+# MEDICIONES                                                         #
+# Med : Medicion de Areas con Texto completo en el SUR               #
+# Mad : Medicion de Areas con Texto abreviado en el SUR              #
+# MaNW: Medicion de Areas con Texto abreviado en el NW               #
+# MeNW: Medicion de Areas con Texto completo en el NW                #
+# MaSW: Medicion de Areas con Texto abreviado en el SW               #
+# MeSW: Medicion de Areas con Texto completo en el SW                #
+# MeH : Medicion de Areas con Texto completo en la hoja              #
+# Mn--: Medicion de Areas con Texto simple                           #
+# Mf--: Medicion de Areas con Formato definido por el usuario        #
+# Q   : Medicion de Volumen Parcial                                  #
+# Qf  : Medicion de Volumen Parcial con Formato de usuario           #
+# W   : Medicion de Volumen Acumulado  con Formato de usuario        #
+# Wf  : Medicion de Volumen Acumulado                                #
+# MN  : Mediciones con valor Nulo                                    #
+# MR  : Mediciones de las areas de las replicas                      #
+#      Estilo TH TV Text/colum Dis.Hor Dist.PC   dX      dY    Formato
+# ---- ------ -- -- ---------- ------- ------- ------- ------- -------
+  MaNW     27  0  2         10  -32.00   26.00   45.00   -4.00 A.%.8s %.2lf
+#--------------------------------------------------------------------#
+# ANOTACIONES                                                        #
+#---------                                                           #
+# BANDA DE ATRIBUTOS SOBRE LAS SUPERFICIES                           #
+#---------                                                           #
+# Distancia minima entre rotulos:                                    #
+#       Distancia minima                                             #
+#---------------------------------                                   #
+    J   2.00
+#---------------------------------                                   #
+# BZ_   : Cota                                                       #
+# BD_   : Distancia al eje Geometrico                                #
+# BX_   : Distancia al eje en planta                                 #
+# BR_   : Cota Roja                                                  #
+# BT_   : Talud                                                      #
+# BM_   : Talud 3 Simbolos  T0.00:1 T0.0:1 T0:1                      #
+# BC_   : Codigo                                                     #
+# B_D   : Lado Derecho                                               #
+# B_I   : Lado Izquierdo                                             #
+# B__-  : Signo - en distancias por la izquierda  del eje            #
+# BE_   : Distancia al eje Existente                                 #
+#     Sup Cod.Min Cod.Max  Sim Dis.Hor Dis.Ver  Angulo               #
+#---- --- ------- ------- ---- ------- ------- ------- ---- ----     #
+ BRD_  68 -100.00 2000.00  540    0.00    8.00   90.00    0    0
+ BRI_  68 -100.00 2000.00  540    0.00    8.00   90.00    0    0
+#---------                                                           #
+# ATRIBUTOS EN LA GUITARRA                                           #
+#---------------------------------                                   #
+# DZ__  : Cota                                                       #
+# DE__  : Distancia al eje Geometrico                                #
+# DX__  : Distancia al eje en planta                                 #
+# DN__  : Numero de Punto                                            #
+# Dn__  : Numero de Punto  (Para Listas con angulo y num final)      #
+# DS__  : Distancia del Semiperfil                                   #
+# DP__  : Distancias Parciales                                       #
+# DD__  : Distancias Eje Existente                                   #
+# DC__  : Codigo                                                     #
+# DG__  : D.Codigo                                                   #
+# Dt__  : Diagrama de pendiente                                      #
+# Dc__  : Celula de referencia                                       #
+# Dp__  : Pendiente                                                  #
+# -----------------------------------                                #
+# D___  : Todos los puntos                                           #
+# D_E_  : Distancia minima de separacion en x                        #
+# D_C_  : Distancia minima de separacion en x y en z                 #
+# D_B_  : Banda de Codigos                                           #
+# D_C7  : Los 7 puntos                                               #
+# D_C8  : Fresado y demolicion                                       #
+# D___- : Signo - en distancias desde la izquierda del eje           #
+# D_F_  : Distancia Fija                                             #
+# D_L_  : Listado de los datos en posicion fija de la hoja           #
+# D_D_  : Listado de los datos del lado derecho referidos al eje     #
+# D_I_  : Listado de los datos del lado izquierdo referidos al eje   #
+# D_i_  : Listado de los datos del lado -izquierdo referidos al eje  #
+# --------------------------------------------------------           #
+#      Sup Sim Dis.Hor Dis.Ver Angulo Dis.Min DMin90 Cod.Min Cod.Max Codigo#
+#----- --- --- ------- ------- ------ ------- ------ ------- ------- -------#
+ DZC_   66 540    0.00   -6.00   90.0    2.00   1.00
+ DZC_   68 540    0.00  -25.00   90.0    2.00   1.00
+ DPC_   66 540    0.00  -15.50    0.0    2.40   8.00
+ DPC_   68 540    0.00  -34.50    0.0    2.40   8.00
+ DSC_   68 540    0.00  -41.50    0.0    2.40   8.00
+######################################################################
+#  COMANDOS ESPECIFICOS PARA OBRAS DE FABRICA                        #
+#--------------------------------------------------------------------#
+#  OM  : Nombre de la Obra de Fabrica             (Rotulo)           #
+#  ON  : Numero de la O.F.       en la guitarra   (Simbolo)          #
+#  OE  : Esviaje en centesimales en la guitarra   (Simbolo)          #
+#  OJ  : Eje que corta,          en la guitarra   (Simbolo)          #
+#  OP  : PK que corta,           en la guitarra   (Simbolo)          #
+#  OPe : Estaca que corta,       en la guitarra   (Simbolo)          #
+#  OL  : Longitudde  la O.F.     en la Guitarra   (Simbolo)          #
+#  OX  : X embocadura/desague    en el Perfil     (Simbolo)          #
+#  OY  : Y embocadura/desague    en el Perfil     (Simbolo)          #
+#  OZ  : Z embocadura/desague    en el Perfil     (Simbolo)          #
+#  OD  : Longitud de tramos      en el Perfil     (Simbolo)          #
+#  OA  : Azimut                  en el Perfil     (Simbolo)          #
+#  OT  : Pendiente               en el Perfil     (Simbolo)          #
+#  OB  : Nombre del eje que corta                 (Rotulo)           #
+#  OC  : Z bajo el eje que corta en el Perfil     (Simbolo)          #
+#----------------------------------------------                      #
+#     sim/estilo Dista_x Dista_y  angulo tamano  TH TV               #
+# --- ---------- ------- ------- ------- ------- -- --               #
+######################################################################
+#  COMANDOS PARA DEFINIR SUPERFICIES Y RECINTO                       #
+#--------------------------------------------------------------------#
+# CDS  : Definir una Superficie                                      #
+# CDR  : Definir un Recinto                                          #
+# CDr  : Usar para las replicas                                      #
+#--------------------------------------------------------------------#
+# CDS Sup  Funcion Sup1 Sup2                                         #
+# --- ---- ------- ---- ----                                         #
+#--------------------------------------------------------------------#
+# CDR TipL modo    Sup1 Sup2 Est Rep                                 #
+# --- ---- ------- ---- ---- --- ---                                 #
+ CDr     0 #Usar para las replicas
+#####################################################################
+# REMARCAR SUPERFICIES                                              #
+# CDZ Tipo Sup. cod_ini  cod_fin  lado                              #
+# --- ---- ---- -------- -------- ----                              #
+#####################################################################
+# LEYENDA                                                           #
+# LY  Tipo modo x0      y0      tx      ty      esti texto          #
+# --- ---- ---- ------- ------- ------- ------- ---- ---------------#
+#--------------------------------------------------------------------#
+# Fin de guitarra                                                    #
+# ---                                                                #
+  FIN                                                                #
+######################################################################
+
+
+
+
+
