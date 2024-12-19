@@ -12,12 +12,13 @@
     1. [Demarcaciones lineales](#demarcaciones-lineales)
     2. [Barreras](#barreras)
     3. [Demarcaciones de piso](#demarcaciones-de-piso)
-    4. [Tachas](#tachas)
-    5. [Señales verticales](#señales-verticales)
+    4. [Señales verticales](#señales-verticales)
+    5. [Símbolos, Etiquetas y Textos 2D](#símbolos-etiquetas-y-textos-2d)
     6. [Obras de Arte](#obras-de-arte)
     7. [Cunetas](#cunetas)
     8. [Soleras](#soleras)
     9. [Talud/Terraplen vectorial](#talud-terraplen-vectorial)
+    10. [Planimetría](#planimetría)
 
 ## Introducción
 
@@ -212,7 +213,7 @@ Se detallana a continuación los elementos de la librería complementaria:
 - C3514: IT-38
 - C3701: perfil doble para señalética
 
-### Símbolos\Etiquetas\Textos 2D
+### Símbolos, Etiquetas y Textos 2D
 
 Los elementos a continuación son utilizados exclusivamente en la visualización 2D del software,
 ya sea para la visualización de los corredores o la generación de planos. Se actualizaron los colores
@@ -288,10 +289,18 @@ de obras de arte que incluye este repositorio:
 - OA Cajón Simple HA 150x150
 - OA Cajón Simple HA 165x145
 - OA Cajón Simple HA 200x150
+
+![OACajonSimple](/assets/OACajonSimple.png)
+
 - OA Cajón Doble HA 120x120
 - OA Cajón Doble HA 200x150
+
+![OACajonDoble](/assets/OACajonDoble.png)
+
 - OA Tubo de Hormigón Base Plana Diametro 1,2 metros.
 - OA Tubo de Hormigón Base Plana Diametro 1 metros.
+
+![OATuboHormigon](/assets/OATHBP.png)
 
 ### Cunetas
 
@@ -323,3 +332,19 @@ Dada la particularidad del proyecto Embalse Las Palmas, los taludes debieron ser
 ![TaludContrafoso](/assets/TaludContrafosoBanqueta.png)
 
 ![TaludaVariable](/assets/TaludVariable.png)
+
+### Planimetría
+
+Los símbolos y etiquetas presentados en la sección [Símbolos\Etiquetas\Textos 2D](#símbolos-etiquetas-y-textos-2d) son utilizados para la generación de vistas para planimetría del proyecto generado (Perfiles transversales, símbolos vertices y otras etiquetas). Además, estos se complementan con el archivo de guitarra, el cual se configuró con los colores adecuados según lo presentado en Manual de Carreteras.
+
+- chile_mop_ColoresCL.gui
+
+![Guitarra](/assets/guitarra.png)
+
+Para el caso de los perfiles transversales, basta con utilizar los textos y símbolos presentados en la sección [Símbolos\Etiquetas\Textos 2D](#símbolos-etiquetas-y-textos-2d) y el archivo de guitarra para generar perfiles transversales como se presentan en la imagen a continuación.
+
+![transversales](/assets/transversales.png)
+
+
+
+
