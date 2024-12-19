@@ -143,10 +143,12 @@ Se detallan a continuación los elementos de la librería complementaria:
 - S3173: Símbolo para línea continua LC/10
 - S3176: Símbolo para línea segmentada, LSS/15/300/500
 
+![LineasTachas](/assets/LineasTachas.png)
+
 ### Barreras:
 
- Las barreras H1 por defecto del software son L3250, L3251, L3252 y L3253. Las agregadas
- a esta librería complementaria son:
+Las barreras H1 por defecto del software son L3250, L3251, L3252 y L3253. Las agregadas
+a esta librería complementaria son:
 
 - L3254: Barrera H3 Izquierda (símbolo plano s265)
 - L3255: Barrera H3 Derecha  (símbolo plano s265)
@@ -166,6 +168,10 @@ Se detallan a continuación los elementos de la librería complementaria:
 - C3576: Tacha Blanca (debe acompañarse con archivo ifc). 
 - C3577: Tacha Roja (debe acompañarse con archivo ifc).
 - C3578: Tacha Amarilla (debe acompañarse con archivo ifc).
+
+![SenalPiso](/assets/SenalPiso.png)
+
+![SenalesPiso](/assets/SenalesPiso.png)
 
 ### Señales verticales
 
@@ -214,6 +220,12 @@ Se detallan a continuación los elementos de la librería complementaria:
 - C3438: ID-2 Señal de posición - Ruta y Km. (Kilómetro)
 - C3514: IT-38
 - C3701: perfil doble para señalética
+
+![senalesverticales](/assets/senalesverticales.png)
+
+![Hectometro](/assets/Hectometro.png)
+
+![Kilometro](/assets/Kilometro.png)
 
 ### Símbolos, Etiquetas y Textos 2D
 
@@ -337,6 +349,12 @@ Dada la particularidad del proyecto Embalse Las Palmas, los taludes debieron ser
 ![TaludContrafoso](/assets/TaludContrafosoBanqueta.png)
 
 ![TaludaVariable](/assets/TaludVariable.png)
+
+![Taludes](/assets/Taludes.png)
+
+![Terraplen](/assets/Terraplen.png)
+
+![TaludTerraplen](/assets/TaludTerraplen.png)
 
 ### Planimetría
 
