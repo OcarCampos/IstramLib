@@ -132,16 +132,16 @@ que se genere dado que es una configuración local y proyecto específica.
 
 ## Contenido
 
-Se detallana a continuación los elementos de la librería complementaria:
+Se detallan a continuación los elementos de la librería complementaria:
 
 ### Demarcaciones lineales
 
-- L3157: Linea doble continua, LCD\10\12 para TR600.
-- L3173: Línea segmentada de separación, LSS\15\300\500 para TB800.
-- L3174: Línea continua LC\15. 
-- S3172: símbolo para línea continua 15 cm ancho
-- S3173: símbolo para línea continua 10 cm ancho
-- S3176: símbolo para línea segmentada Chile (Línea 15 cm ancho 3 metros largo)
+- L3157: Línea doble continua, LCD/10/12 para TR600.
+- L3173: Línea segmentada de separación, LSS/15/300/500 para TB800.
+- L3174: Línea continua LC/15. 
+- S3172: Símbolo para línea continua LC/15
+- S3173: Símbolo para línea continua LC/10
+- S3176: Símbolo para línea segmentada, LSS/15/300/500
 
 ### Barreras:
 
@@ -150,6 +150,8 @@ Se detallana a continuación los elementos de la librería complementaria:
 
 - L3254: Barrera H3 Izquierda (símbolo plano s265)
 - L3255: Barrera H3 Derecha  (símbolo plano s265)
+
+![BarreraH3](/assets/BarreraH3.png)
 
 ### Demarcaciones de piso
 
@@ -281,8 +283,11 @@ Los nombres son solo descriptivos ya que la mayoría son realmente etiquetas par
 
 ISTRAM incluye la configuración para el dibujo de obras de arte y algunas obras de arte que cumplen con la normativa
 española, sin embargo, no incluye ejemplos de obras de arte para Chile. Por ello, se generaron archivos para las obras de
-arte utilizadas en el proyecto Embalse Las Palmas y según lo especificado por manual de carreteras. Se detalla el listado
-de obras de arte que incluye este repositorio:
+arte utilizadas en el proyecto Embalse Las Palmas y según lo especificado por manual de carreteras. 
+
+Cabe señalar que las Obras de Arte que es posible generar a partir del software ISTRAM **NO CUMPLEN** a cabalidad con lo expuesto en manual de carreteras, quedando al debe en detalles estructurales que, dependiendo del NDI o LOD BIM que se deba trabajar según el proyecto, deberán desarrollarse con otro software de modelación para cumplir con el NDI o LOD BIM estipulado.
+
+Se detalla el listado de obras de arte que incluye este repositorio:
 
 - OA Cajón Simple HA 100x100
 - OA Cajón Simple HA 120x120
