@@ -17,7 +17,7 @@
     6. [Obras de Arte](#obras-de-arte)
     7. [Cunetas](#cunetas)
     8. [Soleras](#soleras)
-    9. [Talud/Terraplen vectorial](#talud-terraplen-vectorial)
+    9. [Talud y Terraplen vectorial](#talud-y-terraplen-vectorial)
     10. [Planimetría](#planimetría)
 
 ## Introducción
@@ -337,7 +337,7 @@ Al igual que el caso de las obras de arte, ISTRAM incluye la configuración para
 - Solera Tipo A.
 ![SoleraTipoA](/assets/SoleraTipoA.png)
 
-### Talud/Terraplen vectorial
+### Talud y Terraplen vectorial
 
 Dada la particularidad del proyecto Embalse Las Palmas, los taludes debieron ser generados de forma vectorial para contener en sus banquetas, la pendiente y el contrafoso correspondiente en cada banqueta. Por ello, se incluyen en este repositorio los archivos de vector para taludes y terraplen con imagenes que describen el vector generado.
 
