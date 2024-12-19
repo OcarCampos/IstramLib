@@ -32,8 +32,8 @@ softwares de diseño de obras lineales.
 Este repositorio recopila los archivos de librería que no se encuentran presentes en
 la librería oficial de ISTRAM para Chile (lib_cl), pero que son indispensables para 
 la correcta generación de proyectos siguiendo las normativas de Chile según el
-[Manual de Carreteras](https:\\mc.mop.gob.cl\)  y según lo expuesto por el 
-[Ministerio de Transporte de Chile](https:\\www.conaset.cl\repositorio-senales-de-transito\). 
+[Manual de Carreteras](https://mc.mop.gob.cl/)  y según lo expuesto por el 
+[Ministerio de Transporte de Chile](https://www.conaset.cl/repositorio-senales-de-transito/). 
 
 ## Librerías
 
