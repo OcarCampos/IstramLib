@@ -1,5 +1,25 @@
 # Librería complementaria ISTRAM Chile
 
+## Índice
+
+1. [Introducción](#introducción)
+2. [Librerías](#librerías)
+3. [Uso](#uso)
+    1. [Configuración Global](#configuración-global)
+    2. [Configuración por Proyecto](#configuración-por-proyecto)
+    3. [Recarga de librerías](#recarga-de-librerías)
+4. [Contenido](#contenido)
+    1. [Demarcaciones lineales](#demarcaciones-lineales)
+    2. [Barreras](#barreras)
+    3. [Demarcaciones de piso](#demarcaciones-de-piso)
+    4. [Tachas](#tachas)
+    5. [Señales verticales](#señales-verticales)
+    6. [Obras de Arte](#obras-de-arte)
+    7. [Cunetas](#cunetas)
+    8. [Soleras](#soleras)
+    9. [Talud/Terraplen vectorial](#talud-terraplen-vectorial)
+
+## Introducción
 
 ISTRAM es una aplicación para el diseño de proyectos de ingeniería civil,
 especializado en obras lineales como rutas, calles, carreteras, líneas de tren,
@@ -11,8 +31,8 @@ softwares de diseño de obras lineales.
 Este repositorio recopila los archivos de librería que no se encuentran presentes en
 la librería oficial de ISTRAM para Chile (lib_cl), pero que son indispensables para 
 la correcta generación de proyectos siguiendo las normativas de Chile según el
-[Manual de Carreteras](https://mc.mop.gob.cl/)  y según lo expuesto por el 
-[Ministerio de Transporte de Chile](https://www.conaset.cl/repositorio-senales-de-transito/). 
+[Manual de Carreteras](https:\\mc.mop.gob.cl\)  y según lo expuesto por el 
+[Ministerio de Transporte de Chile](https:\\www.conaset.cl\repositorio-senales-de-transito\). 
 
 ## Librerías
 
@@ -38,9 +58,9 @@ ISTRAM contempla el manejo de una librería "distribuida" o, si se prefiere, var
 según una escala jerárquica de búsqueda. Así, durante el arranque se establecen por defecto 
 las siguientes rutas o “paths” para cada librería:
 
-1. ./lib/ 
-2. /ISPOL/libuser/
-3. /ISPOL/lib/
+    .\lib\ 
+    C:\Ispol\lib_ext\
+    C:\Ispol\lib\
 
 La primera es la librería primaria, local o de proyecto, y existe una para cada carpeta de proyecto.
 
@@ -50,8 +70,8 @@ específica por país para ajustarse a la normativa local.
 La última es la librería base. Acompaña a cada nueva revisión de ISTRAM y satisface todas las demandas 
 de simbología que el programa maneja automáticamente.
 
-ISTRAM buscará los objetos de librería que precise en la librería primaria *./lib*, lo que no encuentre ahí 
-lo irá a buscar a la secundaria o general de usuario */ISPOL/libuser/*, y por último busca en */ISPOL/lib* 
+ISTRAM buscará los objetos de librería que precise en la librería primaria *.\lib*, lo que no encuentre ahí 
+lo irá a buscar a la secundaria o general de usuario *\ISPOL\libuser\*, y por último busca en *\ISPOL\lib* 
 (librería terciaria o de base).
 
 La librería local y la de usuario pueden ser carpetas vacías o incluso no existir. No obstante no es 
@@ -59,7 +79,7 @@ aconsejable usar ISTRAM sin tener al menos una librería secundaria o de usuario
 modificaciones propias sin afectar a la de base, y mejor aún, una librería local del proyecto que permita 
 modificar localmente los objetos de librería que se deseen sin afectar a los otros proyectos.
 
-## Librería Oficial Chile
+### Librería Oficial Chile
 
 La librería oficial de ISTRAM para Chile (lib_cl) se encuentra en la carpeta 
 
@@ -73,7 +93,7 @@ y luego se debe configurar en el programa la librería segunda de ISTRAM para ac
 
 ![Configuración librería segunda](/assets/lib_config.png)
 
-## Librería complementaria Chile
+### Librería complementaria Chile
 
 Sin embargo, la librería oficial de ISTRAM para Chile (lib_cl) no contiene todas las señales (verticales y de piso),
 ni las configuraciones para obras de arte, o las demarcaciones de piso, tachas, y otras configuraciones propias
@@ -81,9 +101,9 @@ de los diseños viales en Chile. Dado lo anterior, se genera este repositorio co
 librería oficial de ISTRAM para Chile (lib_cl) y así contar con una librería completa para el diseño de obras
 lineales chilenas.
 
-# Uso
+## Uso
 
-## Configuración Global
+### Configuración Global
 
 La configuración global complementa y sobre escribe elementos presentes en la librería oficial de ISTRAM para Chile (lib_cl).
 Para configurar globalmente se debe:
@@ -94,7 +114,7 @@ Para configurar globalmente se debe:
 4. Reemplazar los archivos que ya existen en la librería oficial.
 5. Recargar las librerías desde ISTRAM para reflejar los cambios realizados.
 
-## Configuración por Proyecto
+### Configuración por Proyecto
 
 La configuración por proyecto complementa la librería oficial de ISTRAM para Chile no alterando su contenido, sino que, encapsulando el contenido en la carpeta *.\lib* del proyecto. Se debe considerar que esto se debe realizar para cada proyecto
 que se genere dado que es una configuración local y proyecto específica.
@@ -105,24 +125,24 @@ que se genere dado que es una configuración local y proyecto específica.
 4. Reemplazar los archivos que ya existen en la carpeta *.\lib* si se requiriera.
 5. Recargar las librerías desde ISTRAM para reflejar los cambios realizados.
 
-## Recarga de librerías
+### Recarga de librerías
 
 ![Recarga de librerías](/assets/reload_libraries.png)
 
-# Contenido
+## Contenido
 
 Se detallana a continuación los elementos de la librería complementaria:
 
-## Demarcaciones lineales
+### Demarcaciones lineales
 
-- L3157: Linea doble continua, LCD/10/12 para TR600.
-- L3173: Línea segmentada de separación, LSS/15/300/500 para TB800.
-- L3174: Línea continua LC/15. 
+- L3157: Linea doble continua, LCD\10\12 para TR600.
+- L3173: Línea segmentada de separación, LSS\15\300\500 para TB800.
+- L3174: Línea continua LC\15. 
 - S3172: símbolo para línea continua 15 cm ancho
 - S3173: símbolo para línea continua 10 cm ancho
 - S3176: símbolo para línea segmentada Chile (Línea 15 cm ancho 3 metros largo)
 
-## Barreras:
+### Barreras:
 
  Las barreras H1 por defecto del software son L3250, L3251, L3252 y L3253. Las agregadas
  a esta librería complementaria son:
@@ -130,21 +150,21 @@ Se detallana a continuación los elementos de la librería complementaria:
 - L3254: Barrera H3 Izquierda (símbolo plano s265)
 - L3255: Barrera H3 Derecha  (símbolo plano s265)
 
-## Demarcaciones de piso
+### Demarcaciones de piso
 
-- S3184: símbolo RR-1 máxima velocidad 40 kms/h para pista vel < 60 kms/h
-- S3185: símbolo RR-1 máxima velocidad 50 kms/h para pista vel < 60 kms/h
-- S3186: símbolo RR-1 máxima velocidad 60 kms/h para pista vel < 60 kms/h
-- S3187: símbolo RR-1 máxima velocidad 70 kms/h para pista vel > 60 kms/h
-- S3150: flecha recta > 60kms/h
-- S3151: flecha recta < 60kms/h
+- S3184: símbolo RR-1 máxima velocidad 40 kms\h para pista vel < 60 kms\h
+- S3185: símbolo RR-1 máxima velocidad 50 kms\h para pista vel < 60 kms\h
+- S3186: símbolo RR-1 máxima velocidad 60 kms\h para pista vel < 60 kms\h
+- S3187: símbolo RR-1 máxima velocidad 70 kms\h para pista vel > 60 kms\h
+- S3150: flecha recta > 60kms\h
+- S3151: flecha recta < 60kms\h
 - S3170: flecha cambio pista hacia Derecha
 - S3171: flecha cambio pista hacia Izquierda
 - C3576: Tacha Blanca (debe acompañarse con archivo ifc). 
 - C3577: Tacha Roja (debe acompañarse con archivo ifc).
 - C3578: Tacha Amarilla (debe acompañarse con archivo ifc).
 
-## Señales verticales
+### Señales verticales
 
 - C971: DC-5a (usa S3695 como poste de 1.3m de lib principal)
 - C981: DC-5b (usa S3695 como poste de 1.3m de lib principal)
@@ -192,7 +212,7 @@ Se detallana a continuación los elementos de la librería complementaria:
 - C3514: IT-38
 - C3701: perfil doble para señalética
 
-## Símbolos/Etiquetas/Textos 2D
+### Símbolos\Etiquetas\Textos 2D
 
 Los elementos a continuación son utilizados exclusivamente en la visualización 2D del software,
 ya sea para la visualización de los corredores o la generación de planos. Se actualizaron los colores
@@ -256,5 +276,50 @@ Los nombres son solo descriptivos ya que la mayoría son realmente etiquetas par
 - L66 : Líneas guitarra.
 - L308 : Líneas guitarra.
 
+### Obras de Arte
+
+ISTRAM incluye la configuración para el dibujo de obras de arte y algunas obras de arte que cumplen con la normativa
+española, sin embargo, no incluye ejemplos de obras de arte para Chile. Por ello, se generaron archivos para las obras de
+arte utilizadas en el proyecto Embalse Las Palmas y según lo especificado por manual de carreteras. Se detalla el listado
+de obras de arte que incluye este repositorio:
+
+- OA Cajón Simple HA 100x100
+- OA Cajón Simple HA 120x120
+- OA Cajón Simple HA 150x150
+- OA Cajón Simple HA 165x145
+- OA Cajón Simple HA 200x150
+- OA Cajón Doble HA 120x120
+- OA Cajón Doble HA 200x150
+- OA Tubo de Hormigón Base Plana Diametro 1,2 metros.
+- OA Tubo de Hormigón Base Plana Diametro 1 metros.
+
+### Cunetas
+
+Al igual que el caso de las obras de arte, ISTRAM incluye la configuración para el dibujo de cunetas que cumplen con la normativa española. Sin embargo, no incluye ejemplos de cunetas para Chile. Por ello, se generaron archivos para las cunetas utilizadas en el proyecto Embalse Las Palmas. Se detalla el listado de cunetas que incluye este repositorio y una imágen de ejemplo.
+
+- Cuneta Rectangular Hormigón.
+![CunetaRectangularHormigon](/assets/CunetaRectangular.png)
+
+- Cuneta Triangular Hormigón.
+![CunetaTriangularHormigon](/assets/CunetaTriangular.png)
 
 
+### Soleras
+
+Al igual que el caso de las obras de arte, ISTRAM incluye la configuración para el dibujo de soleras disponibles en el mercado español. Sin embargo, no incluye cuentas disponibles en el mercado Chileno. Por ello, se incluyen en este repositorio la solera tipo A.
+
+- Solera Tipo A.
+![SoleraTipoA](/assets/SoleraTipoA.png)
+
+### Talud/Terraplen vectorial
+
+Dada la particularidad del proyecto Embalse Las Palmas, los taludes debieron ser generados de forma vectorial para contener en sus banquetas, la pendiente y el contrafoso correspondiente en cada banqueta. Por ello, se incluyen en este repositorio los archivos de vector para taludes y terraplen con imagenes que describen el vector generado.
+
+- Talud-Vectorial-b2.5m-z1.5-h1-10m:    Banqueta 2.5m, pendiente 1.5%, altura 10m.
+- Talud-Vectorial-b3m-z1,5-h1-7m:       Banqueta 3m, pendiente 1.5%, altura 7m.
+- Talud-Vectorial-b3m-z3-h1-8m:         Banqueta 3m, pendiente 3%, altura 8m.
+- Terraplen-Vectorial-b3-z1,5-h1-7m:    Banqueta 3m, pendiente 1.5%, altura 7m.
+
+![TaludContrafoso](/assets/TaludContrafosoBanqueta.png)
+
+![TaludaVariable](/assets/TaludVariable.png)

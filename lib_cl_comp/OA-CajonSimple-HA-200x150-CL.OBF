@@ -1,22 +1,23 @@
 # OBRA DE FABRICA : OA-CajonSimple-HA-200x150-CL.OBF
+# Generado por: O'car Campos
 #---------------------------------------------------------------------
 # Nombre
 #----------------
-  N MARCO DE 2 m
+  N OA CajSimp 200x150
   COLOR 230
 #---------------------------------------------------------------------
 # Rotular el nombre en la planta y/o el numero de dato
 #          Estilo Tam    TH TV Dis.D. Ang.rel.
 # -------  ------ ------ -- -- ------ --------
    PN          24  2.000  0  4  5.000   0.000  Rotular el Nombre
-   PD          24  2.000  0  0  5.000   0.000  Rotular el Número
+   PD          24  2.000  0  0  5.000   0.000  Rotular el Nï¿½mero
 #---------------------------------------------------------------------
    PAH     1.500          Altura de la Obra de Fabrica
    PM_ES   0.200          Espesor del marco
    PM_LM   0.000          Longitud del modulo de marco
    PM_HM   0.010          holgura del modulo de marco
    PM_CM       1            Cortar ultimo modulo modulo de marco
-   PM_PER      0            Extremos de módulos perpendiculares a base
+   PM_PER      0            Extremos de mï¿½dulos perpendiculares a base
    PI_ESE  0.200          Espesor Imp.Embo.
    PI_ESD  0.200          Espesor IMp.Desa.
    PI_ESVE  0.000         Espesor voladizo Imp.Embo.
@@ -281,7 +282,7 @@
    PAQDIY  0.000          Distancia de la arqueta
    PAQORV      0            Orientacion de la V de la arqueta
    PAQTPL      0            Tapa plana de la arqueta
-   PAQTIPd 0             Tipo de desagüe
+   PAQTIPd 0             Tipo de desagï¿½e
    PAQLONd  1.000          Longitud de la arqueta
    PAQALTd  0.000          Altura de la arqueta
    PAQAREd  0.000          Altura de arenero
@@ -324,7 +325,7 @@
    Parq2     0   0.100   0.500   0.200   1.000
 #---------------------------------------------------------------------
 # Simbolo para el Perfil Longitudinal
-#       Simbolo Tamaño
+#       Simbolo Tamaï¿½o
 #------ ------- ------ ----------- -----------------------------------
    LSC2     463  1.000       0         
 #---------------------------------------------------------------------

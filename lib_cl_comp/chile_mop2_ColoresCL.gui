@@ -1,7 +1,8 @@
 ######################################################################
 # DEFINICION DE GUITARRA : chile_mop2_personal.gui                          #
+# Generado por: O'car Campos                                         #
 #--------------------------------------------------------------------#
-# Versión                                                            #
+# Versiï¿½n                                                            #
 # --------                                                           #
   VER 2105                                                           #
 # Longitud por hoja  l.p.h.   = num/den                              #
@@ -16,7 +17,7 @@
  dMPC2   30.0   20.0   20.0   20.0
 #--------------------------------------------------------------------#
 #     SIMBOLOS DE CABECERA     (CF al final de PC)                   #
-#      simbolo  dist p.c  desp hor angulo tamaño hor ver             #
+#      simbolo  dist p.c  desp hor angulo tamaï¿½o hor ver             #
 # ---- -------  --------  -------- ------ ------ --- ---             #
  CI00      186      0.00      0.00   0.00   2.00   2   2
 #--------------------------------------------------------------------#
@@ -103,7 +104,7 @@
     LT3O   61   61 0 0  Perfil longitudinal del terreno
     LV   308      Trazos verticales del terreno al plano comparacion
 #--------------------------------------------------------------------#
-#  Cota del plano comparación:    (SC:Inicio SU:Final)               #
+#  Cota del plano comparaciï¿½n:    (SC:Inicio SU:Final)               #
 #        simbolo  dist p.c. desp.hor.  angulo                        #
 # ------ -------  --------  --------  --------                       #
     SC    579         0.00      0.00      0.00
@@ -171,7 +172,7 @@
 # orden [<-Otros Long] [Marca TipoL].   Alli se ven tambien sobre el #
 # longitudinal del terreno.                                          #
 #                                                                    #
-#    num tipL  0 abajo  arriba tex x tex y angulo tamaño             #
+#    num tipL  0 abajo  arriba tex x tex y angulo tamaï¿½o             #
 # -- --- ---- -- ------ ------ ----- ----- ------ ------             #
  OM   1    -1  0    3.0   15.0   0.0   0.0   90.0    2.0
  OM   2    -1  0   -3.0  -15.0   0.0   0.0  -90.0    2.0
@@ -180,7 +181,7 @@
 # ----- ---                                                          #
   PP    550
 #--------------------------------------------------------------------#
-# P.Paso Estilo   dx     dy   angulo tamaño th tv                    #
+# P.Paso Estilo   dx     dy   angulo tamaï¿½o th tv                    #
 # ------ ------ ------ ------ ------ ------ -- --                    #
   AP          6   0.00   8.00   90.0   2.50  0  2
 #--------------------------------------------------------------------#
@@ -320,11 +321,11 @@
 #  -P-   Dato de un Vertice sin acuerdo                              #
 #  -T-   Dato de el centro del Tramo de Rasante recta                #
 #  -D-   Dato con equiDistancia maxima en tramo de rasante recta     #
-#  -A-   Dato para la Acotación del Acuerdo                          #
+#  -A-   Dato para la Acotaciï¿½n del Acuerdo                          #
 #  -I-   Punto inicial                                               #
 #  -F-   Punto final                                                 #
-#  -e-   Dato de la Entrada del acuerdo Pero referido como Acotación #
-#  -s-   Dato de la Salida  del acuerdo Pero referido como Acotación #
+#  -e-   Dato de la Entrada del acuerdo Pero referido como Acotaciï¿½n #
+#  -s-   Dato de la Salida  del acuerdo Pero referido como Acotaciï¿½n #
 #---3-----------------------------------------------------           #
 #  El tercer caracter indica   que se anota:                         #
 #  --S   Simbolo  cualquiera (SES,SVS,SSS,.......)(3,120,119,114,...)#
@@ -515,13 +516,13 @@
    N   997  -83.0   0.0  90
 #--------------------------------------------------------------------#
 #   RECTA,RADIO,PARAMETRO DE CLOTOIDE PARA EL DIAGRAMA PROPORCIONAL  #
-#   Los Simbolos van centrados en las alineaciones y lleva su ángulo #
+#   Los Simbolos van centrados en las alineaciones y lleva su ï¿½ngulo #
 #      SimRect SimCirc SimClot dist.PC sa_max sa_min rad_min rad_max dis.Hor angulo  -#
 #  --- ------- ------- ------- ------- ------ ------ ------- ------- ------- ------- -#
    AP4     566     567     568  -88.00  12.00   2.00     500    5000       0       0 0
 #--------------------------------------------------------------------#
 #   LONGITUDES Y DESARROLLOS PARA EL DIAGRAMA PROPORCIONAL           #
-#   Los Simbolos van centrados en las alineaciones y lleva su ángulo #
+#   Los Simbolos van centrados en las alineaciones y lleva su ï¿½ngulo #
 #      SimRect SimCirc SimClot dist.PC sa_max sa_min rad_min rad_max dis.Hor#
 #  --- ------- ------- ------- ------- ------ ------ ------- ------- -------#
    CP3     145     146     547  -91.00  12.00   2.00     500    5000       0 1
@@ -536,12 +537,12 @@
 #  --- ------- ------- ------- ------- ------- ------                #
    I1                      987  -92.00  -10.00    0.0
 #--------------------------------------------------------------------#
-#   Número de Vértice(Curva)                                         #
+#   Nï¿½mero de Vï¿½rtice(Curva)                                         #
 #                      Sim     dist.PC dis.Hor angulo                #
 #  --- ------- ------- ------- ------- ------- ------                #
    NV                      497  -88.00  -13.00    0.0
 #--------------------------------------------------------------------#
-#   Número de Eje(Curva)                                             #
+#   Nï¿½mero de Eje(Curva)                                             #
 #                      Sim     dist.PC dis.Hor angulo                #
 #  --- ------- ------- ------- ------- ------- ------                #
    NE                      498  -88.00  -13.00    0.0
@@ -590,7 +591,7 @@
  NDP 1 0 0.000  0 0 -100.000
  LADO 2  (0:Derecha 1:Izquierda 2:Ambos)
  DHI  -40.000  (Desplazamiento vertical,via izquierda)
- DX   0.000  (Separación mínima entre rótulos)
+ DX   0.000  (Separaciï¿½n mï¿½nima entre rï¿½tulos)
 #--------------------------------------------------------------------#
 #   DIAGRAMA PROPORCIONAL DE PERALTES                                #
 #      LinDere LinIzqu dist.PC Escala (mm/%)                         #
@@ -657,7 +658,7 @@
 #  ---                                                               #
    STV
 #--------------------------------------------------------------------#
-# NOMBRE Estilo   dx     dy   angulo tamaño th tv                    #
+# NOMBRE Estilo   dx     dy   angulo tamaï¿½o th tv                    #
 # ------ ------ ------ ------ ------ ------ -- --                    #
   M           6   5.00   6.00    0.0   2.50  0  4
 #--------------------------------------------------------------------#
