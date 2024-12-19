@@ -38,19 +38,20 @@ ISTRAM contempla el manejo de una librería "distribuida" o, si se prefiere, var
 según una escala jerárquica de búsqueda. Así, durante el arranque se establecen por defecto 
 las siguientes rutas o “paths” para cada librería:
 
-- ./lib/ : Librería primaria, local o de proyecto
-- /ISPOL/libuser/ : Librería secundaria, global o de usuario
-- /ISPOL/lib/ : Librería terciaria, básica o de programa
+1. ./lib/ 
+2. /ISPOL/libuser/
+3. /ISPOL/lib/
 
+La primera es la librería primaria, local o de proyecto, y existe una para cada carpeta de proyecto.
 
-La última es la librería base. Acompaña a cada nueva revisión de ISTRAM y satisface 
-todas las demandas de simbología que el programa maneja automáticamente.
+La segunda es la librería secundaria, global o general del usuario. Generalmente en esta se configura la librería
+específica por país para ajustarse a la normativa local.
 
-La segunda es la librería general del usuario y la primera es la librería particular de cada proyecto, 
-pues puede haber una en cada carpeta de trabajo (./lib/ hace referencia a una subcarpeta de la carpeta de trabajo).
+La última es la librería base. Acompaña a cada nueva revisión de ISTRAM y satisface todas las demandas 
+de simbología que el programa maneja automáticamente.
 
-ISTRAM buscará los objetos de librería que precise en la librería primaria ./lib, lo que no encuentre ahí 
-lo irá a buscar a la secundaria o general de usuario/ISPOL/libuser/, y por último busca en /ISPOL/lib 
+ISTRAM buscará los objetos de librería que precise en la librería primaria *./lib*, lo que no encuentre ahí 
+lo irá a buscar a la secundaria o general de usuario */ISPOL/libuser/*, y por último busca en */ISPOL/lib* 
 (librería terciaria o de base).
 
 La librería local y la de usuario pueden ser carpetas vacías o incluso no existir. No obstante no es 
@@ -60,9 +61,15 @@ modificar localmente los objetos de librería que se deseen sin afectar a los ot
 
 ## Librería Oficial Chile
 
-La librería oficial de ISTRAM para Chile (lib_cl) se encuentra en la carpeta C:\Ispol\lib_ext, comprimida en
-un archivo .zip. Este archivo zip debe descomprimirse a la carpeta C:\Ispol\lib_ext\lib_cl y luego se debe 
-configurar en el programa la librería segunda de ISTRAM para acceder a esta carpeta:
+La librería oficial de ISTRAM para Chile (lib_cl) se encuentra en la carpeta 
+
+    C:\Ispol\lib_ext 
+
+comprimida en un archivo .zip. Este archivo zip debe descomprimirse a la carpeta 
+
+    C:\Ispol\lib_ext\lib_cl 
+    
+y luego se debe configurar en el programa la librería segunda de ISTRAM para acceder a esta carpeta.
 
 ![Configuración librería segunda](/assets/lib_config.png)
 
@@ -76,16 +83,29 @@ lineales chilenas.
 
 # Uso
 
-Para utilizar los archivos presentes en esta librería, se debe:
+## Configuración Global
 
-1. Configurar la librería oficial de chile en la carpeta C:\Ispol\lib_ext\lib_cl
-2. Descargar esta librería complementaria (lib_cl_comp).
-3. Configuración General (cualquier proyecto): Copiar todos los archivos desde la carpeta 
-lib_cl_comp a la carpeta C:\Ispol\lib_ext\lib_cl. Reemplazar los archivos que ya existen en la librería oficial.
-o
-3. Configuración Específica (proyecto específico): Copiar todos los archivos desde la carpeta 
-lib_cl_comp a la carpeta .\lib del proyecto. La librería oficial ISTRAM Chile no se verá afectada.
-4. Recargar las librerías desde ISTRAM para reflejar los cambios realizados.
+La configuración global complementa y sobre escribe elementos presentes en la librería oficial de ISTRAM para Chile (lib_cl).
+Para configurar globalmente se debe:
+
+1. Configurar la librería oficial de chile en la carpeta *C:\Ispol\lib_ext\lib_cl*
+2. Descargar los archivos de este repositorio.
+3. Copiar todos los archivos desde la carpeta *lib_cl_comp* a la carpeta *C:\Ispol\lib_ext\lib_cl*. 
+4. Reemplazar los archivos que ya existen en la librería oficial.
+5. Recargar las librerías desde ISTRAM para reflejar los cambios realizados.
+
+## Configuración por Proyecto
+
+La configuración por proyecto complementa la librería oficial de ISTRAM para Chile no alterando su contenido, sino que, encapsulando el contenido en la carpeta *.\lib* del proyecto. Se debe considerar que esto se debe realizar para cada proyecto
+que se genere dado que es una configuración local y proyecto específica.
+
+1. Configurar la librería oficial de chile en la carpeta *C:\Ispol\lib_ext\lib_cl*
+2. Descargar los archivos de este repositorio.
+3. Copiar todos los archivos desde la carpeta *lib_cl_comp* a la carpeta *.\lib* del proyecto. 
+4. Reemplazar los archivos que ya existen en la carpeta *.\lib* si se requiriera.
+5. Recargar las librerías desde ISTRAM para reflejar los cambios realizados.
+
+## Recarga de librerías
 
 ![Recarga de librerías](/assets/reload_libraries.png)
 
@@ -174,7 +194,7 @@ Se detallana a continuación los elementos de la librería complementaria:
 
 ## Símbolos/Etiquetas/Textos 2D
 
-    Los elementos a continuación son utilizados exclusivamente en la visualización 2D del software,
+Los elementos a continuación son utilizados exclusivamente en la visualización 2D del software,
 ya sea para la visualización de los corredores o la generación de planos. Se actualizaron los colores
 tanto para visualización PDF como impresión digital para acercarse a lo descrito en manual de carreteras. 
 Los nombres son solo descriptivos ya que la mayoría son realmente etiquetas para visualización 2D.
@@ -225,10 +245,8 @@ Los nombres son solo descriptivos ya que la mayoría son realmente etiquetas par
 - S900 : Cotas rasantes.
 - S901 : Cotas subrasantes.
 - S987 : Alfa.
-
 - R0 : Texto.
 - R24 : Texto.
-
 - L32 : Líneas guitarra.
 - L40 : Líneas guitarra.
 - L60 : Líneas guitarra.
