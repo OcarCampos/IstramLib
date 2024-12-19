@@ -219,7 +219,8 @@ a esta librería complementaria son:
 - C3437: ID-2 Señal de posición - km y m. (Hectómetro)
 - C3438: ID-2 Señal de posición - Ruta y Km. (Kilómetro)
 - C3514: IT-38
-- C3701: perfil doble para señalética
+- C3701: Perfil doble para señalética vertical doble perfil
+- C9000: Señal inicio pista lenta con doble perfil.
 
 ![senalesverticales](/assets/senalesverticales.png)
 
