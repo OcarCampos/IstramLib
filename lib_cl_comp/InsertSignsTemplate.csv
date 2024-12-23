@@ -1,0 +1,13 @@
+#
+# Archivos de importación de señales verticales
+# para ISTRAM desde el botón Importar CSV
+#
+# Campos:
+#
+# NumCelula;PK;Lado(0=derecho;1=izquierdo);Código;DistanciaCodigo;Text1;Text2;Text3
+# e.g:
+#3336;83760;0;2;2.5;
+#
+# Reemplaza con tu propia data o genera desde excel separando con ;
+#
+3336;83760;0;2;2.5;

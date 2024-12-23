@@ -19,6 +19,7 @@
     8. [Soleras](#soleras)
     9. [Talud y Terraplen vectorial](#talud-y-terraplen-vectorial)
     10. [Planimetría](#planimetría)
+    11. [Otros Archivos](#otros-archivos)
 
 ## Introducción
 
@@ -369,6 +370,13 @@ Para el caso de los perfiles transversales, basta con utilizar los textos y sím
 
 ![transversales](/assets/transversales.png)
 
+### Otros Archivos
+
+Se incluyen otro tipo de archivos que es posible utilizar con el software ISTRAM:
+
+- InsertSignsTemplate.csv : plantilla para la importación desde CSV de señales verticales u objetos puntuales a modelar en la ruta (tachas y demarcadores de piso). Una vez generada la plantilla esta se carga en la ventana de objetos puntuales.
+
+![ObjetosPuntuales](/assets/InsertPunctualObjects.png)
 
 
 
