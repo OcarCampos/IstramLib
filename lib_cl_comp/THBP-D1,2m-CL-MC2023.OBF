@@ -15,8 +15,8 @@
    PAH     1.200          Altura de la Obra de Fabrica
    PM_ES   0.440          Espesor del marco
    PM_LM   1.000          Longitud del modulo de marco
-   PM_HM   0.000          holgura del modulo de marco
-   PM_CM       0            Cortar ultimo modulo modulo de marco
+   PM_HM   0.010          holgura del modulo de marco
+   PM_CM       1            Cortar ultimo modulo modulo de marco
    PM_PER      0            Extremos de m�dulos perpendiculares a base
    PI_ESE  0.300          Espesor Imp.Embo.
    PI_ESD  0.300          Espesor IMp.Desa.
@@ -24,16 +24,16 @@
    PI_ESVD  0.000         Espesor voladizo IMp.Desa.
    PI_TIE      0            Timpano Embo.
    PI_TID      0            Timpano Desa.
-   PI_TTE  0.670          Talud Trasdos Timpano Embo.
-   PI_TTD  0.670          Talud Trasdos Timpano Desa.
+   PI_TTE  0.667          Talud Trasdos Timpano Embo.
+   PI_TTD  0.667          Talud Trasdos Timpano Desa.
    PR_ESE  0.300          Espesor Sole.Embo.
    PR_ESD  0.300          Espesor Sole.Desa.
    PR_DSE  0.000          Desnivel Sole.Embo.
    PR_DSD  0.000          Desnivel Sole.Desa.
    PRT_PSE     1           Tipo Pendiente Sole.Embo.
    PRT_PSD     1           Tipo Pendiente Sole.Desa.
-   PR_PSE  1.000          Pendiente Sole.Embo.
-   PR_PSD  1.000          Pendiente Sole.Desa.
+   PR_PSE  2.000          Pendiente Sole.Embo.
+   PR_PSD  2.000          Pendiente Sole.Desa.
    PR_ERE  0.300          Espesor Ancho Rastillo Embo.
    PR_ERD  0.300          Espesor Ancho Rastillo Desa.
    PR_PRE  0.300          Espesor Profun Rastillo Embo.
@@ -68,10 +68,10 @@
    PAX_EI3  0.000          Espesor Aleta
    PAX_DD3  0.000          Espesor Aleta
    PAX_DI3  0.000          Espesor Aleta
-   PAE_ED  0.000          Espesor Aleta
-   PAE_EI  0.000          Espesor Aleta
-   PAE_DD  0.000          Espesor Aleta
-   PAE_DI  0.000          Espesor Aleta
+   PAE_ED  1.000          Espesor Aleta
+   PAE_EI  1.000          Espesor Aleta
+   PAE_DD  1.000          Espesor Aleta
+   PAE_DI  1.000          Espesor Aleta
    PAE_ED1  0.150          Espesor Aleta
    PAE_EI1  0.150          Espesor Aleta
    PAE_DD1  0.150          Espesor Aleta
@@ -261,8 +261,8 @@
    PALA_EI 0            Longitud Automatica Aleta Embocadura Derecha
    PALA_DD 0            Longitud Automatica Aleta Desague Izquierda
    PALA_DI 0            Longitud Automatica Aleta Desague Izquierda
-   PAI_E   0.000          Altura de la Imposta de la embocadura
-   PAI_D   0.000          Altura de la Imposta de el desague
+   PAI_E   0.010          Altura de la Imposta de la embocadura
+   PAI_D   0.010          Altura de la Imposta de el desague
    PAIV_E   0.000         Altura de la Voladizo Imposta de la embocadura
    PAIV_D   0.000         Altura de la Voladizo Imposta deel desague
    PAIA_E 0             Altura de la Imposta asimetrica de la embocadura
@@ -348,11 +348,11 @@
 #---------------------------------------------------------------------
 # Recubrimiento     H      A       T      AT    Nor
 #-------------- ------- ------- ------- ------- ---
-   Prec3     1   0.800   3.000   1.500   0.000   0
+   Prec3     0   0.800   3.000   1.500   0.000   0
 #---------------------------------------------------------------------
 # Sobreexcavac.     H      A       T      AT      SP    Nor
 #-------------- ------- ------- ------- ------- ------- ---
-   Pexc4     1   0.200   0.200   1.000   0.000   0.000   0
+   Pexc4     0   0.200   0.200   1.000   0.000   0.000   0
 # Arqueta    .     H      A       T      AT
 #-------------- ------- ------- ------- -------
    Parq2     0   0.100   0.500   0.200   1.000

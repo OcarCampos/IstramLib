@@ -3,7 +3,7 @@
 #---------------------------------------------------------------------
 # Nombre
 #----------------
-  N THBP D=1mt
+  N TBHP Simple D=1mt
   COLOR 230
 #---------------------------------------------------------------------
 # Rotular el nombre en la planta y/o el numero de dato
@@ -22,20 +22,22 @@
    PI_ESD  0.300          Espesor IMp.Desa.
    PI_ESVE  0.000         Espesor voladizo Imp.Embo.
    PI_ESVD  0.000         Espesor voladizo IMp.Desa.
-   PI_TIE      1            Timpano Embo.
-   PI_TID      1            Timpano Desa.
+   PI_TIE      0            Timpano Embo.
+   PI_TID      0            Timpano Desa.
    PI_TTE  0.618          Talud Trasdos Timpano Embo.
    PI_TTD  0.618          Talud Trasdos Timpano Desa.
-   PR_ESE  0.200          Espesor Sole.Embo.
-   PR_ESD  0.000          Espesor Sole.Desa.
+   PR_ESE  0.300          Espesor Sole.Embo.
+   PR_ESD  0.300          Espesor Sole.Desa.
    PR_DSE  0.000          Desnivel Sole.Embo.
    PR_DSD  0.000          Desnivel Sole.Desa.
-   PRT_PSE     0           Tipo Pendiente Sole.Embo.
-   PRT_PSD     0           Tipo Pendiente Sole.Desa.
-   PR_ERE  0.000          Espesor Ancho Rastillo Embo.
-   PR_ERD  0.000          Espesor Ancho Rastillo Desa.
-   PR_PRE  0.000          Espesor Profun Rastillo Embo.
-   PR_PRD  0.000          Espesor Profun Rastillo Desa.
+   PRT_PSE     1           Tipo Pendiente Sole.Embo.
+   PRT_PSD     1           Tipo Pendiente Sole.Desa.
+   PR_PSE  2.000          Pendiente Sole.Embo.
+   PR_PSD  2.000          Pendiente Sole.Desa.
+   PR_ERE  0.300          Espesor Ancho Rastillo Embo.
+   PR_ERD  0.300          Espesor Ancho Rastillo Desa.
+   PR_PRE  0.500          Espesor Profun Rastillo Embo.
+   PR_PRD  0.300          Espesor Profun Rastillo Desa.
    PME_SIL 0  0.000  0.000  Silbato en Embocadura
    PMD_SIL 0  0.000  0.000  Silbato en Desague
    PA3_ED 0          Aleta triple
@@ -66,10 +68,10 @@
    PAX_EI3  0.000          Espesor Aleta
    PAX_DD3  0.000          Espesor Aleta
    PAX_DI3  0.000          Espesor Aleta
-   PAE_ED  0.000          Espesor Aleta
-   PAE_EI  0.000          Espesor Aleta
+   PAE_ED  1.000          Espesor Aleta
+   PAE_EI  1.000          Espesor Aleta
    PAE_DD  0.000          Espesor Aleta
-   PAE_DI  0.000          Espesor Aleta
+   PAE_DI  1.000          Espesor Aleta
    PAE_ED1  0.150          Espesor Aleta
    PAE_EI1  0.150          Espesor Aleta
    PAE_DD1  0.150          Espesor Aleta
@@ -197,12 +199,12 @@
    PAo_DI 1            Origen de Angulo Aleta Desague Izquierda
    PAA_ED  0.000          Angulo Aleta Embocadura Derecha
    PAA_EI  0.000          Angulo Aleta Embocadura Derecha
-   PAA_DD 30.000          Angulo Aleta Desague Izquierda
-   PAA_DI 30.000          Angulo Aleta Desague Izquierda
-   PAL_ED  0.000          Longitud Aleta Embocadura Derecha
-   PAL_EI  0.000          Longitud Aleta Embocadura Derecha
-   PAL_DD  0.000          Longitud Aleta Desague Izquierda
-   PAL_DI  0.000          Longitud Aleta Desague Izquierda
+   PAA_DD  0.000          Angulo Aleta Desague Izquierda
+   PAA_DI  0.000          Angulo Aleta Desague Izquierda
+   PAL_ED  1.000          Longitud Aleta Embocadura Derecha
+   PAL_EI  1.000          Longitud Aleta Embocadura Derecha
+   PAL_DD  1.000          Longitud Aleta Desague Izquierda
+   PAL_DI  1.000          Longitud Aleta Desague Izquierda
    PAO_ED  0.000          Longitud Horizontal Aleta Embocadura Derecha
    PAO_EI  0.000          Longitud Horizontal Aleta Embocadura Derecha
    PAO_DD  0.000          Longitud Horizontal Aleta Desague Izquierda
@@ -225,8 +227,8 @@
    PAt_DI 0          Altura Final Aleta Desde Terreno Desague Izquierda
    PAC_ED 1             Tuncar Aleta Embocadura Derecha
    PAC_EI 1             Tuncar Aleta Embocadura Derecha
-   PAC_DD 0             Tuncar Aleta Desague Izquierda
-   PAC_DI 0             Tuncar Aleta Desague Izquierda
+   PAC_DD 1             Tuncar Aleta Desague Izquierda
+   PAC_DI 1             Tuncar Aleta Desague Izquierda
    PAR_ED  0.000          Longitud Residual Aleta Embocadura Derecha
    PAR_EI  0.000          Longitud Residual Aleta Embocadura Derecha
    PAR_DD  0.000          Longitud Residual Aleta Desague Izquierda

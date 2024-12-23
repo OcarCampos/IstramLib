@@ -3,7 +3,7 @@
 #---------------------------------------------------------------------
 # Nombre
 #----------------
-  N OA CajSimp 200x150
+  N MARCO DE 2 m
   COLOR 230
 #---------------------------------------------------------------------
 # Rotular el nombre en la planta y/o el numero de dato
@@ -34,10 +34,10 @@
    PRT_PSD     1           Tipo Pendiente Sole.Desa.
    PR_PSE  1.000          Pendiente Sole.Embo.
    PR_PSD  1.000          Pendiente Sole.Desa.
-   PR_ERE  0.000          Espesor Ancho Rastillo Embo.
-   PR_ERD  0.000          Espesor Ancho Rastillo Desa.
-   PR_PRE  0.000          Espesor Profun Rastillo Embo.
-   PR_PRD  0.000          Espesor Profun Rastillo Desa.
+   PR_ERE  0.300          Espesor Ancho Rastillo Embo.
+   PR_ERD  0.300          Espesor Ancho Rastillo Desa.
+   PR_PRE  0.300          Espesor Profun Rastillo Embo.
+   PR_PRD  0.300          Espesor Profun Rastillo Desa.
    PME_SIL 0  0.000  0.000  Silbato en Embocadura
    PMD_SIL 0  0.000  0.000  Silbato en Desague
    PA3_ED 0          Aleta triple
@@ -136,10 +136,10 @@
    PZI_EI5  0.000          ancho int zapata aleta
    PZI_DD5  0.000          ancho int zapata aleta
    PZI_DI5  0.000          ancho int zapata aleta
-   PZH_ED  0.800          altura zapata aleta
-   PZH_EI  0.800          altura zapata aleta
-   PZH_DD  0.800          altura zapata aleta
-   PZH_DI  0.800          altura zapata aleta
+   PZH_ED  0.300          altura zapata aleta
+   PZH_EI  0.300          altura zapata aleta
+   PZH_DD  0.300          altura zapata aleta
+   PZH_DI  0.300          altura zapata aleta
    PZH_ED1  0.000          altura zapata aleta
    PZH_EI1  0.000          altura zapata aleta
    PZH_DD1  0.200          altura zapata aleta
@@ -156,10 +156,10 @@
    PZH_EI4  0.200          altura zapata aleta
    PZH_DD4  0.200          altura zapata aleta
    PZH_DI4  0.200          altura zapata aleta
-   PZR_ED  0.000          recubrimiento zapata aleta
-   PZR_EI  0.000          recubrimiento zapata aleta
-   PZR_DD  0.000          recubrimiento zapata aleta
-   PZR_DI  0.000          recubrimiento zapata aleta
+   PZR_ED -0.800          recubrimiento zapata aleta
+   PZR_EI -0.800          recubrimiento zapata aleta
+   PZR_DD -0.800          recubrimiento zapata aleta
+   PZR_DI -0.800          recubrimiento zapata aleta
    PZP_ED  0.300          profundidad zapata aleta
    PZP_EI  0.300          profundidad zapata aleta
    PZP_DD  0.300          profundidad zapata aleta
@@ -201,10 +201,10 @@
    PAA_EI 50.000          Angulo Aleta Embocadura Derecha
    PAA_DD 50.000          Angulo Aleta Desague Izquierda
    PAA_DI 50.000          Angulo Aleta Desague Izquierda
-   PAL_ED  2.200          Longitud Aleta Embocadura Derecha
-   PAL_EI  2.200          Longitud Aleta Embocadura Derecha
-   PAL_DD  2.200          Longitud Aleta Desague Izquierda
-   PAL_DI  2.200          Longitud Aleta Desague Izquierda
+   PAL_ED  3.000          Longitud Aleta Embocadura Derecha
+   PAL_EI  3.000          Longitud Aleta Embocadura Derecha
+   PAL_DD  3.000          Longitud Aleta Desague Izquierda
+   PAL_DI  3.000          Longitud Aleta Desague Izquierda
    PAO_ED  0.000          Longitud Horizontal Aleta Embocadura Derecha
    PAO_EI  0.000          Longitud Horizontal Aleta Embocadura Derecha
    PAO_DD  0.000          Longitud Horizontal Aleta Desague Izquierda
@@ -225,14 +225,14 @@
    PAt_EI 0          Altura Final Aleta Desde Terreno Embocadura Derecha
    PAt_DD 0          Altura Final Aleta Desde Terreno Desague Izquierda
    PAt_DI 0          Altura Final Aleta Desde Terreno Desague Izquierda
-   PAC_ED 0             Tuncar Aleta Embocadura Derecha
-   PAC_EI 0             Tuncar Aleta Embocadura Derecha
-   PAC_DD 0             Tuncar Aleta Desague Izquierda
-   PAC_DI 0             Tuncar Aleta Desague Izquierda
-   PAR_ED  0.000          Longitud Residual Aleta Embocadura Derecha
-   PAR_EI  0.000          Longitud Residual Aleta Embocadura Derecha
-   PAR_DD  0.000          Longitud Residual Aleta Desague Izquierda
-   PAR_DI  0.000          Longitud Residual Aleta Desague Izquierda
+   PAC_ED 1             Tuncar Aleta Embocadura Derecha
+   PAC_EI 1             Tuncar Aleta Embocadura Derecha
+   PAC_DD 1             Tuncar Aleta Desague Izquierda
+   PAC_DI 1             Tuncar Aleta Desague Izquierda
+   PAR_ED  2.200          Longitud Residual Aleta Embocadura Derecha
+   PAR_EI  2.200          Longitud Residual Aleta Embocadura Derecha
+   PAR_DD  2.200          Longitud Residual Aleta Desague Izquierda
+   PAR_DI  2.200          Longitud Residual Aleta Desague Izquierda
    PAS_ED  0.000          Talud Trasdos  Aleta Embocadura Derecha
    PAS_EI  0.000          Talud Trasdos  Aleta Embocadura Derecha
    PAS_DD  0.000          Talud Trasdos  Aleta Desague Izquierda
