@@ -299,9 +299,41 @@ ISTRAM incluye la configuración para el dibujo de obras de arte y algunas obras
 española, sin embargo, no incluye ejemplos de obras de arte para Chile. Por ello, se generaron archivos para las obras de
 arte utilizadas en el proyecto Embalse Las Palmas y según lo especificado por manual de carreteras. 
 
-Cabe señalar que las Obras de Arte que es posible generar a partir del software ISTRAM **NO CUMPLEN** a cabalidad con lo expuesto en manual de carreteras, quedando al debe en detalles estructurales que, dependiendo del NDI o LOD BIM que se deba trabajar según el proyecto, deberán desarrollarse con otro software de modelación para cumplir con el NDI o LOD BIM estipulado.
+Cabe señalar que las Obras de Arte que es posible generar a partir del software ISTRAM **NO CUMPLEN** a cabalidad con lo 
+expuesto en manual de carreteras, quedando al debe en detalles estructurales que, dependiendo del NDI o LOD BIM que se deba 
+trabajar según el proyecto, deberán desarrollarse con otro software de modelación para cumplir con el NDI o LOD BIM estipulado.
 
-Se detalla el listado de obras de arte que incluye este repositorio:
+Entre los aspectos estructurales que ISTRAM **no contempla** para las obras de arte se encuentran:
+
+- Pendientes en mampostería: ISTRAM no considera pendientes a 3 aguas para mamposterías de salida o de entrada. Esta viene definido
+en Manual de Carreteras Chile.
+
+![PendientesMamposteria](/assets/PendientesMamposteria.png)
+
+- Quiebres en mampostería: ISTRAM no contempla la generación de quiebres en mampostería. Si bien esto no está contemplado
+en Manual de Carreteras Chile, en el proyecto para el cual se generó este repositorio, existen obras de arte con esta configuración,
+lo cual no fue posible replicar con ISTRAM.
+
+![QuiebreMamposteria](/assets/QuiebreMamposteria.png)
+
+- Imposta Inferior: ISTRAM no conntempla la generación del elemento estructural "imposta" inferior según detallan las imagenes. Al
+igual que el caso anterior, esto viene definido en Manual de Carreteras Chile. ISTRAM si contempla la imposta superior.
+
+![ImpostaInferior](/assets/ImpostaInferior.png)
+
+- Emplantillado: ISTRAM no contempla la generación de emplantillados para la estructura completa de las obras de arte. 
+Esto viene definido en Manual de Carreteras Chile.
+
+![Emplantillado](/assets/Emplantillado.png)
+
+- Zapatas Muros Ala: el manual de carreteras Chile contempla la generación de medias zapatas como fundación para los muros alas. Sin
+embargo, ISTRAM no contempla la generación de zapatas específicas como se muestra en la imagen de la izquierda, sino que sólo es posible
+lograr una configuración como muestra la imagen de la derecha.
+
+![zapatas](/assets/zapatas.png)
+
+
+Dejando claro lo anterior, se detalla el listado de obras de arte que incluye este repositorio:
 
 - OA Cajón Simple HA 100x100
 - OA Cajón Simple HA 120x120
