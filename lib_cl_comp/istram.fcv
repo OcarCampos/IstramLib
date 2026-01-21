@@ -1,0 +1,494 @@
+CLASIF_VERSION 3.70
+5
+0
+0
+Code
+Description
+tiposEntidadesIFC_EN_ES.csv
+istram2ifc4x3ptypes.csv
+#
+Istram class;Visible;IFC entity;IFC type;Color;Discipline;layer;Object type
+Bio_SI_4;1;IfcBuildingElementProxy;USERDEFINED;240,199,8;;Bio_SI_4;
+Bio_SI_4 (C3033);1;IfcBuildingElementProxy;USERDEFINED;116,180,191;;Bio_SI_4;
+Bio_SI_8;1;IfcBuildingElementProxy;USERDEFINED;135,61,179;;Bio_SI_8;
+Bio_SI_8 (C3031);1;IfcBuildingElementProxy;USERDEFINED;28,82,96;;Bio_SI_8;
+C_M.2.6b (L3160);1;IfcSurfaceFeature;LINEMARKING;100,252,68;;C_M.2.6b;
+CARTOGRAPHIC SURFACE;1;IfcBuildingElementProxy;USERDEFINED;6,217,189;;Layer0;
+Cells;1;IfcBuildingElementProxy;USERDEFINED;250,107,51;;Layer0;
+Cerco3D (L3177);1;IfcBuildingElementProxy;USERDEFINED;61,86,69;;Cerco3D;
+CRUCE_PEATONAL_PISO (C3188);1;IfcBuildingElementProxy;USERDEFINED;80,232,234;;CRUCE_PEATONAL_PISO;
+CUNETA R H CL;1;IfcBuildingElementProxy;USERDEFINED;180,182,173;Curb;Layer0;
+CUNETA REVES H;1;IfcBuildingElementProxy;USERDEFINED;198,198,198;Curb;Cun_TTR_15;
+CUT C.GROUND;1;IfcBuildingElementProxy;USERDEFINED;165,125,30;Excavation;D_Tierra;
+CUT SURFACE;1;IfcBuildingElementProxy;USERDEFINED;165,125,30;;Sup_Desmonte;
+D TIERRA;1;IfcEarthworksCut;CUT;71,126,63;;Layer0;
+DC-7a (C3416);1;IfcBuildingElementProxy;USERDEFINED;184,173,144;;DC-7a;
+DC-7b (C3417);1;IfcBuildingElementProxy;USERDEFINED;63,229,54;;DC-7b;
+DEM_LinDiscont+TachaBlanca (L3175);1;IfcBuildingElementProxy;USERDEFINED;177,3,35;;DEM_LinDiscont+TachaBlanca;
+EMBANKMENT;1;IfcBuildingElementProxy;USERDEFINED;136,170,0;Filling;Terraplen;
+ENTITY;1;IfcBuildingElementProxy;USERDEFINED;153,116,95;;Layer0;
+EXC TOT TUNEL;1;IfcBuildingElementProxy;USERDEFINED;173,60,63;;Layer0;
+EXC ZM TIERRA;1;IfcEarthworksCut;TRENCH;32,55,217;;Layer0;
+EXCAV. SURF;1;IfcBuildingElementProxy;USERDEFINED;170,170,0;;SUP.EXCAVADA;
+EXCAVA TUNEL;1;IfcEarthworksCut;EXCAVATION;190,111,199;;Layer0;
+Fill cones;1;IfcBuildingElementProxy;USERDEFINED;134,64,111;;Layer0;
+FIRME;1;IfcCourse;PAVEMENT;209,49,184;;Layer0;
+GuardRail_Double_LT (L3251);1;IfcBuildingElementProxy;USERDEFINED;168,21,73;;GuardRail_Double_LT;
+GuardRail_H3_LT (L3254);1;IfcBuildingElementProxy;USERDEFINED;14,196,44;;GuardRail_H3_LT;
+GuardRail_LT (L3250);1;IfcBuildingElementProxy;USERDEFINED;10,252,129;;GuardRail_LT;
+ID-2-Hectometro (C3437);1;IfcBuildingElementProxy;USERDEFINED;157,20,96;;ID-2-Hectometro;
+ID-2-Ruta-Km (C3438);1;IfcBuildingElementProxy;USERDEFINED;3,67,87;;ID-2-Ruta-Km;
+ID-EstacionCarditas (C3436);1;IfcBuildingElementProxy;USERDEFINED;252,229,209;;ID-EstacionCarditas;
+INADECUADO;1;IfcEarthworksCut;CUT;237,69,70;;Layer0;
+Labeling symbols;1;IfcBuildingElementProxy;USERDEFINED;238,127,9;;Layer0;
+LineaContinuaCL (L3174);1;IfcBuildingElementProxy;USERDEFINED;195,92,147;;LineaContinuaCL;
+LineaDisc-CL (L3173);1;IfcBuildingElementProxy;USERDEFINED;207,1,151;;LineaDisc-CL;
+MAP;1;IfcBuildingElementProxy;USERDEFINED;0,198,55;;Layer0;
+MUROS;1;IfcWall;RETAININGWALL;252,119,51;;Layer0;
+Panel_simple_D (C971);1;IfcSign;PICTORAL;163,33,174;;Panel_simple_D;
+Panel_simple_D (C981);1;IfcBuildingElementProxy;USERDEFINED;83,216,84;;Panel_simple_D;
+Panel_simple_I (C981);1;IfcSign;PICTORAL;126,202,176;;Panel_simple_I;
+PAVEMENT;1;IfcBuildingElementProxy;USERDEFINED;57,57,57;Pave.;Firme;
+PG-2a-PlacaInf (C3249);1;IfcBuildingElementProxy;USERDEFINED;208,182,53;;PG-2a-PlacaInf;
+PG-2b-PlacaInf (C3248);1;IfcBuildingElementProxy;USERDEFINED;243,180,29;;PG-2b-PlacaInf;
+PG-4a (C3256);1;IfcBuildingElementProxy;USERDEFINED;79,240,167;;PG-4a;
+PG-7b-PlacaInf (C3247);1;IfcBuildingElementProxy;USERDEFINED;77,253,171;;PG-7b-PlacaInf;
+PG-7d-PlacaInf (C3246);1;IfcBuildingElementProxy;USERDEFINED;44,129,94;;PG-7d-PlacaInf;
+PILAR;1;IfcColumn;PIERSTEM;220,132,148;;Layer0;
+Postes y Catenaria;1;IfcBuildingElementProxy;USERDEFINED;181,251,205;;Layer0;
+PROJECT;1;IfcProject;USERDEFINED;198,206,131;;Layer0;
+Punctual signaling;1;IfcBuildingElementProxy;USERDEFINED;39,192,152;;Layer0;
+REVESTIMIENTO;1;IfcWall;SOLIDWALL;166,151,108;;Layer0;
+Road Markers;1;IfcBuildingElementProxy;USERDEFINED;2,39,93;;Layer0;
+RoadMark_Cont (L401);1;IfcBuildingElementProxy;USERDEFINED;240,136,50;;RoadMark_Cont;
+RoadMark_Discon (L402);1;IfcBuildingElementProxy;USERDEFINED;19,201,53;;RoadMark_Discon;
+RR-1 (C3358);1;IfcBuildingElementProxy;USERDEFINED;115,120,19;;RR-1;
+RR-1(40)-<-60kms/h (C3184);1;IfcBuildingElementProxy;USERDEFINED;42,34,246;;RR-1(40)-<-60kms/h;
+RR-1(50)-<-60kms/h (C3185);1;IfcBuildingElementProxy;USERDEFINED;116,58,254;;RR-1(50)-<-60kms/h;
+RR-1(60)-<-60kms/h (C3186);1;IfcBuildingElementProxy;USERDEFINED;200,160,134;;RR-1(60)-<-60kms/h;
+SUP DESMONTE;1;IfcCovering;CLADDING;1,31,229;;Layer0;
+SUP TERRAPLEN;1;IfcBuildingElementProxy;USERDEFINED;51,255,0;;Sup_terraplen;
+SUPERFICIE;1;IfcGeographicElement;TERRAIN;220,25,198;;Layer0;
+SUPERFICIE CARTOGRÁFICA;1;IfcBuildingElementProxy;USERDEFINED;71,249,132;;Layer0;
+TABLERO;1;IfcSlab;FLOOR;120,136,17;;Layer0;
+TachaBlancaCL (C3576);1;IfcBuildingElementProxy;USERDEFINED;115,229,71;;TachaBlancaCL;
+TACHON (C3579);1;IfcBuildingElementProxy;USERDEFINED;208,92,106;;TACHON;
+TACHON-CL (C3579);1;IfcBuildingElementProxy;USERDEFINED;121,79,17;;TACHON-CL;
+TERM-BS-IZQ-FIN;1;IfcBuildingElementProxy;USERDEFINED;179,100,232;;TERM-BS-IZQ-FIN;
+TERM-BS-IZQ-INI;1;IfcBuildingElementProxy;USERDEFINED;227,96,220;;TERM-BS-IZQ-INI;
+TERRAPLEN;1;IfcEarthworksFill;EMBANKMENT;80,220,157;;Layer0;
+TERRENO TUNEL;1;IfcEarthworksFill;BACKFILL;196,25,74;;Layer0;
+TRIANGULATION;1;IfcGeographicElement;USERDEFINED;164,146,196;;Layer0;
+VEGETAL;1;IfcEarthworksCut;TOPSOILREMOVAL;238,96,161;;Layer0;
+ZAPATA MUROS;1;IfcFooting;STRIP_FOOTING;239,254,40;;Layer0;
+#
+#CLASIF.1
+ISTRAM
+1
+
+https://istram.net
+2024
+03/09/2024
+
+Buhodra Ingeniería S.A.
+Bio_SI_4;Bio_SI_4;1;0;0;-1;Bio_SI_4;;;;
+Bio_SI_4 (C3033);Bio_SI_4 (C3033);1;0;0;-1;Bio_SI_4 (C3033);;;;
+Bio_SI_8;Bio_SI_8;1;0;0;-1;Bio_SI_8;;;;
+Bio_SI_8 (C3031);Bio_SI_8 (C3031);1;0;0;-1;Bio_SI_8 (C3031);;;;
+C_M.2.6b (L3160);C_M.2.6b (L3160);1;0;0;-1;C_M.2.6b (L3160);;;;
+CARTOGRAPHIC SURFACE;CARTOGRAPHIC SURFACE;1;0;0;-1;CARTOGRAPHIC SURFACE;;;;
+Cells;Cells;1;0;29;39;Cells;;;;
+Cerco3D (L3177);Cerco3D (L3177);1;0;0;-1;Cerco3D (L3177);;;;
+CRUCE_PEATONAL_PISO (C3188);CRUCE_PEATONAL_PISO (C3188);1;0;0;-1;CRUCE_PEATONAL_PISO (C3188);;;;
+CUNETA R H CL;CUNETA R H CL;1;0;0;-1;CUNETA R H CL;;;;
+CUNETA REVES H;CUNETA REVES H;1;0;0;-1;CUNETA REVES H;;;;
+CUT C.GROUND;CUT C.GROUND;1;0;0;-1;CUT C.GROUND;;;;
+CUT SURFACE;CUT SURFACE;1;0;0;-1;CUT SURFACE;;;;
+D TIERRA;D TIERRA;1;0;0;-1;D TIERRA;;;;
+DC-7a (C3416);DC-7a (C3416);1;0;0;-1;DC-7a (C3416);;;;
+DC-7b (C3417);DC-7b (C3417);1;0;0;-1;DC-7b (C3417);;;;
+DEM_LinDiscont+TachaBlanca (L3175);DEM_LinDiscont+TachaBlanca (L3175);1;0;0;-1;DEM_LinDiscont+TachaBlanca (L3175);;;;
+EMBANKMENT;EMBANKMENT;1;0;0;-1;EMBANKMENT;;;;
+ENTITY;ENTITY;1;0;0;-1;ENTITY;;;;
+EXC TOT TUNEL;EXC TOT TUNEL;1;0;0;-1;EXC TOT TUNEL;;;;
+EXC ZM TIERRA;EXC ZM TIERRA;1;0;0;-1;EXC ZM TIERRA;;;;
+EXCAV. SURF;EXCAV. SURF;1;0;0;-1;EXCAV. SURF;;;;
+EXCAVA TUNEL;EXCAVA TUNEL;1;0;0;-1;EXCAVA TUNEL;;;;
+Fill cones;Fill cones;1;0;29;26;Fill cones;;;;
+FIRME;FIRME;1;0;0;-1;FIRME;;;;
+GuardRail_Double_LT (L3251);GuardRail_Double_LT (L3251);1;0;0;-1;GuardRail_Double_LT (L3251);;;;
+GuardRail_H3_LT (L3254);GuardRail_H3_LT (L3254);1;0;0;-1;GuardRail_H3_LT (L3254);;;;
+GuardRail_LT (L3250);GuardRail_LT (L3250);1;0;0;-1;GuardRail_LT (L3250);;;;
+ID-2-Hectometro (C3437);ID-2-Hectometro (C3437);1;0;0;-1;ID-2-Hectometro (C3437);;;;
+ID-2-Ruta-Km (C3438);ID-2-Ruta-Km (C3438);1;0;0;-1;ID-2-Ruta-Km (C3438);;;;
+ID-EstacionCarditas (C3436);ID-EstacionCarditas (C3436);1;0;0;-1;ID-EstacionCarditas (C3436);;;;
+INADECUADO;INADECUADO;1;0;0;-1;INADECUADO;;;;
+Labeling symbols;Labeling symbols;1;0;29;28;Labeling symbols;;;;
+LineaContinuaCL (L3174);LineaContinuaCL (L3174);1;0;0;-1;LineaContinuaCL (L3174);;;;
+LineaDisc-CL (L3173);LineaDisc-CL (L3173);1;0;0;-1;LineaDisc-CL (L3173);;;;
+MAP;MAP;1;0;0;-1;MAP;;;;
+MUROS;MUROS;1;0;0;-1;MUROS;;;;
+Panel_simple_D (C971);Panel_simple_D (C971);1;0;0;-1;Panel_simple_D (C971);;;;
+Panel_simple_D (C981);Panel_simple_D (C981);1;0;0;-1;Panel_simple_D (C981);;;;
+Panel_simple_I (C981);Panel_simple_I (C981);1;0;0;-1;Panel_simple_I (C981);;;;
+PAVEMENT;PAVEMENT;1;0;0;-1;PAVEMENT;;;;
+PG-2a-PlacaInf (C3249);PG-2a-PlacaInf (C3249);1;0;0;-1;PG-2a-PlacaInf (C3249);;;;
+PG-2b-PlacaInf (C3248);PG-2b-PlacaInf (C3248);1;0;0;-1;PG-2b-PlacaInf (C3248);;;;
+PG-4a (C3256);PG-4a (C3256);1;0;0;-1;PG-4a (C3256);;;;
+PG-7b-PlacaInf (C3247);PG-7b-PlacaInf (C3247);1;0;0;-1;PG-7b-PlacaInf (C3247);;;;
+PG-7d-PlacaInf (C3246);PG-7d-PlacaInf (C3246);1;0;0;-1;PG-7d-PlacaInf (C3246);;;;
+PILAR;PILAR;1;0;0;-1;PILAR;;;;
+Postes y Catenaria;Postes y Catenaria;1;0;29;38;Postes y Catenaria;;;;
+PROJECT;PROJECT;1;0;0;-1;PROJECT;;;;
+Punctual signaling;Punctual signaling;1;0;29;2;Punctual signaling;;;;
+REVESTIMIENTO;REVESTIMIENTO;1;0;0;-1;REVESTIMIENTO;;;;
+Road Markers;Road Markers;1;0;29;0;Road Markers;;;;
+RoadMark_Cont (L401);RoadMark_Cont (L401);1;0;0;-1;RoadMark_Cont (L401);;;;
+RoadMark_Discon (L402);RoadMark_Discon (L402);1;0;0;-1;RoadMark_Discon (L402);;;;
+RR-1 (C3358);RR-1 (C3358);1;0;0;-1;RR-1 (C3358);;;;
+RR-1(40)-<-60kms/h (C3184);RR-1(40)-<-60kms/h (C3184);1;0;0;-1;RR-1(40)-<-60kms/h (C3184);;;;
+RR-1(50)-<-60kms/h (C3185);RR-1(50)-<-60kms/h (C3185);1;0;0;-1;RR-1(50)-<-60kms/h (C3185);;;;
+RR-1(60)-<-60kms/h (C3186);RR-1(60)-<-60kms/h (C3186);1;0;0;-1;RR-1(60)-<-60kms/h (C3186);;;;
+SUP DESMONTE;SUP DESMONTE;1;0;0;-1;SUP DESMONTE;;;;
+SUP TERRAPLEN;SUP TERRAPLEN;1;0;0;-1;SUP TERRAPLEN;;;;
+SUPERFICIE;SUPERFICIE;1;0;0;-1;SUPERFICIE;;;;
+SUPERFICIE CARTOGRÁFICA;SUPERFICIE CARTOGRÁFICA;1;0;0;-1;SUPERFICIE CARTOGRÁFICA;;;;
+TABLERO;TABLERO;1;0;0;-1;TABLERO;;;;
+TachaBlancaCL (C3576);TachaBlancaCL (C3576);1;0;0;-1;TachaBlancaCL (C3576);;;;
+TACHON (C3579);TACHON (C3579);1;0;0;-1;TACHON (C3579);;;;
+TACHON-CL (C3579);TACHON-CL (C3579);1;0;0;-1;TACHON-CL (C3579);;;;
+TERM-BS-IZQ-FIN;TERM-BS-IZQ-FIN;1;0;0;-1;TERM-BS-IZQ-FIN;;;;
+TERM-BS-IZQ-INI;TERM-BS-IZQ-INI;1;0;0;-1;TERM-BS-IZQ-INI;;;;
+TERRAPLEN;TERRAPLEN;1;0;0;-1;TERRAPLEN;;;;
+TERRENO TUNEL;TERRENO TUNEL;1;0;0;-1;TERRENO TUNEL;;;;
+TRIANGULATION;TRIANGULATION;1;0;0;-1;TRIANGULATION;;;;
+VEGETAL;VEGETAL;1;0;0;-1;VEGETAL;;;;
+ZAPATA MUROS;ZAPATA MUROS;1;0;0;-1;ZAPATA MUROS;;;;
+#CLASIF.2
+Classif. 2
+0
+
+
+
+
+
+
+Bio_SI_4;Bio_SI_4;1;0;0;-1;Bio_SI_4;;;;
+Bio_SI_4 (C3033);Bio_SI_4 (C3033);1;0;0;-1;Bio_SI_4 (C3033);;;;
+Bio_SI_8;Bio_SI_8;1;0;0;-1;Bio_SI_8;;;;
+Bio_SI_8 (C3031);Bio_SI_8 (C3031);1;0;0;-1;Bio_SI_8 (C3031);;;;
+C_M.2.6b (L3160);C_M.2.6b (L3160);1;0;0;-1;C_M.2.6b (L3160);;;;
+CARTOGRAPHIC SURFACE;CARTOGRAPHIC SURFACE;1;0;0;-1;CARTOGRAPHIC SURFACE;;;;
+Cells;Cells;1;0;29;39;Cells;;;;
+Cerco3D (L3177);Cerco3D (L3177);1;0;0;-1;Cerco3D (L3177);;;;
+CRUCE_PEATONAL_PISO (C3188);CRUCE_PEATONAL_PISO (C3188);1;0;0;-1;CRUCE_PEATONAL_PISO (C3188);;;;
+CUNETA R H CL;CUNETA R H CL;1;0;0;-1;CUNETA R H CL;;;;
+CUNETA REVES H;CUNETA REVES H;1;0;0;-1;CUNETA REVES H;;;;
+CUT C.GROUND;CUT C.GROUND;1;0;0;-1;CUT C.GROUND;;;;
+CUT SURFACE;CUT SURFACE;1;0;0;-1;CUT SURFACE;;;;
+D TIERRA;D TIERRA;1;0;0;-1;;;;;
+DC-7a (C3416);DC-7a (C3416);1;0;0;-1;DC-7a (C3416);;;;
+DC-7b (C3417);DC-7b (C3417);1;0;0;-1;DC-7b (C3417);;;;
+DEM_LinDiscont+TachaBlanca (L3175);DEM_LinDiscont+TachaBlanca (L3175);1;0;0;-1;DEM_LinDiscont+TachaBlanca (L3175);;;;
+EMBANKMENT;EMBANKMENT;1;0;0;-1;EMBANKMENT;;;;
+ENTITY;ENTITY;1;0;0;-1;ENTITY;;;;
+EXC TOT TUNEL;EXC TOT TUNEL;1;0;0;-1;;;;;
+EXC ZM TIERRA;EXC ZM TIERRA;1;0;0;-1;;;;;
+EXCAV. SURF;EXCAV. SURF;1;0;0;-1;EXCAV. SURF;;;;
+EXCAVA TUNEL;EXCAVA TUNEL;1;0;0;-1;;;;;
+Fill cones;Fill cones;1;0;29;26;Fill cones;;;;
+FIRME;FIRME;1;0;0;-1;;;;;
+GuardRail_Double_LT (L3251);GuardRail_Double_LT (L3251);1;0;0;-1;GuardRail_Double_LT (L3251);;;;
+GuardRail_H3_LT (L3254);GuardRail_H3_LT (L3254);1;0;0;-1;GuardRail_H3_LT (L3254);;;;
+GuardRail_LT (L3250);GuardRail_LT (L3250);1;0;0;-1;GuardRail_LT (L3250);;;;
+ID-2-Hectometro (C3437);ID-2-Hectometro (C3437);1;0;0;-1;ID-2-Hectometro (C3437);;;;
+ID-2-Ruta-Km (C3438);ID-2-Ruta-Km (C3438);1;0;0;-1;ID-2-Ruta-Km (C3438);;;;
+ID-EstacionCarditas (C3436);ID-EstacionCarditas (C3436);1;0;0;-1;ID-EstacionCarditas (C3436);;;;
+INADECUADO;INADECUADO;1;0;0;-1;;;;;
+Labeling symbols;Labeling symbols;1;0;29;28;Labeling symbols;;;;
+LineaContinuaCL (L3174);LineaContinuaCL (L3174);1;0;0;-1;LineaContinuaCL (L3174);;;;
+LineaDisc-CL (L3173);LineaDisc-CL (L3173);1;0;0;-1;LineaDisc-CL (L3173);;;;
+MAP;MAP;1;0;0;-1;MAP;;;;
+MUROS;MUROS;1;0;0;-1;;;;;
+Panel_simple_D (C971);Panel_simple_D (C971);1;0;0;-1;Panel_simple_D (C971);;;;
+Panel_simple_D (C981);Panel_simple_D (C981);1;0;0;-1;Panel_simple_D (C981);;;;
+Panel_simple_I (C981);Panel_simple_I (C981);1;0;0;-1;Panel_simple_I (C981);;;;
+PAVEMENT;PAVEMENT;1;0;0;-1;PAVEMENT;;;;
+PG-2a-PlacaInf (C3249);PG-2a-PlacaInf (C3249);1;0;0;-1;PG-2a-PlacaInf (C3249);;;;
+PG-2b-PlacaInf (C3248);PG-2b-PlacaInf (C3248);1;0;0;-1;PG-2b-PlacaInf (C3248);;;;
+PG-4a (C3256);PG-4a (C3256);1;0;0;-1;PG-4a (C3256);;;;
+PG-7b-PlacaInf (C3247);PG-7b-PlacaInf (C3247);1;0;0;-1;PG-7b-PlacaInf (C3247);;;;
+PG-7d-PlacaInf (C3246);PG-7d-PlacaInf (C3246);1;0;0;-1;PG-7d-PlacaInf (C3246);;;;
+PILAR;PILAR;1;0;0;-1;;;;;
+Postes y Catenaria;Postes y Catenaria;1;0;29;38;Postes y Catenaria;;;;
+PROJECT;PROJECT;1;0;0;-1;PROJECT;;;;
+Punctual signaling;Punctual signaling;1;0;29;2;Punctual signaling;;;;
+REVESTIMIENTO;REVESTIMIENTO;1;0;0;-1;;;;;
+Road Markers;Road Markers;1;0;29;0;Road Markers;;;;
+RoadMark_Cont (L401);RoadMark_Cont (L401);1;0;0;-1;RoadMark_Cont (L401);;;;
+RoadMark_Discon (L402);RoadMark_Discon (L402);1;0;0;-1;RoadMark_Discon (L402);;;;
+RR-1 (C3358);RR-1 (C3358);1;0;0;-1;RR-1 (C3358);;;;
+RR-1(40)-<-60kms/h (C3184);RR-1(40)-<-60kms/h (C3184);1;0;0;-1;RR-1(40)-<-60kms/h (C3184);;;;
+RR-1(50)-<-60kms/h (C3185);RR-1(50)-<-60kms/h (C3185);1;0;0;-1;RR-1(50)-<-60kms/h (C3185);;;;
+RR-1(60)-<-60kms/h (C3186);RR-1(60)-<-60kms/h (C3186);1;0;0;-1;RR-1(60)-<-60kms/h (C3186);;;;
+SUP DESMONTE;SUP DESMONTE;1;0;0;-1;;;;;
+SUP TERRAPLEN;SUP TERRAPLEN;1;0;0;-1;SUP TERRAPLEN;;;;
+SUPERFICIE;SUPERFICIE;1;0;0;-1;;;;;
+SUPERFICIE CARTOGRÁFICA;SUPERFICIE CARTOGRÁFICA;1;0;0;-1;SUPERFICIE CARTOGRÁFICA;;;;
+TABLERO;TABLERO;1;0;0;-1;;;;;
+TachaBlancaCL (C3576);TachaBlancaCL (C3576);1;0;0;-1;TachaBlancaCL (C3576);;;;
+TACHON (C3579);TACHON (C3579);1;0;0;-1;TACHON (C3579);;;;
+TACHON-CL (C3579);TACHON-CL (C3579);1;0;0;-1;TACHON-CL (C3579);;;;
+TERM-BS-IZQ-FIN;TERM-BS-IZQ-FIN;1;0;0;-1;TERM-BS-IZQ-FIN;;;;
+TERM-BS-IZQ-INI;TERM-BS-IZQ-INI;1;0;0;-1;TERM-BS-IZQ-INI;;;;
+TERRAPLEN;TERRAPLEN;1;0;0;-1;;;;;
+TERRENO TUNEL;TERRENO TUNEL;1;0;0;-1;;;;;
+TRIANGULATION;TRIANGULATION;1;0;0;-1;TRIANGULATION;;;;
+VEGETAL;VEGETAL;1;0;0;-1;;;;;
+ZAPATA MUROS;ZAPATA MUROS;1;0;0;-1;;;;;
+#CLASIF.3
+Classif. 3
+0
+
+
+
+
+
+
+Bio_SI_4;Bio_SI_4;1;0;0;-1;Bio_SI_4;;;;
+Bio_SI_4 (C3033);Bio_SI_4 (C3033);1;0;0;-1;Bio_SI_4 (C3033);;;;
+Bio_SI_8;Bio_SI_8;1;0;0;-1;Bio_SI_8;;;;
+Bio_SI_8 (C3031);Bio_SI_8 (C3031);1;0;0;-1;Bio_SI_8 (C3031);;;;
+C_M.2.6b (L3160);C_M.2.6b (L3160);1;0;0;-1;C_M.2.6b (L3160);;;;
+CARTOGRAPHIC SURFACE;CARTOGRAPHIC SURFACE;1;0;0;-1;CARTOGRAPHIC SURFACE;;;;
+Cells;Cells;1;0;29;39;Cells;;;;
+Cerco3D (L3177);Cerco3D (L3177);1;0;0;-1;Cerco3D (L3177);;;;
+CRUCE_PEATONAL_PISO (C3188);CRUCE_PEATONAL_PISO (C3188);1;0;0;-1;CRUCE_PEATONAL_PISO (C3188);;;;
+CUNETA R H CL;CUNETA R H CL;1;0;0;-1;CUNETA R H CL;;;;
+CUNETA REVES H;CUNETA REVES H;1;0;0;-1;CUNETA REVES H;;;;
+CUT C.GROUND;CUT C.GROUND;1;0;0;-1;CUT C.GROUND;;;;
+CUT SURFACE;CUT SURFACE;1;0;0;-1;CUT SURFACE;;;;
+D TIERRA;D TIERRA;1;0;0;-1;;;;;
+DC-7a (C3416);DC-7a (C3416);1;0;0;-1;DC-7a (C3416);;;;
+DC-7b (C3417);DC-7b (C3417);1;0;0;-1;DC-7b (C3417);;;;
+DEM_LinDiscont+TachaBlanca (L3175);DEM_LinDiscont+TachaBlanca (L3175);1;0;0;-1;DEM_LinDiscont+TachaBlanca (L3175);;;;
+EMBANKMENT;EMBANKMENT;1;0;0;-1;EMBANKMENT;;;;
+ENTITY;ENTITY;1;0;0;-1;ENTITY;;;;
+EXC TOT TUNEL;EXC TOT TUNEL;1;0;0;-1;;;;;
+EXC ZM TIERRA;EXC ZM TIERRA;1;0;0;-1;;;;;
+EXCAV. SURF;EXCAV. SURF;1;0;0;-1;EXCAV. SURF;;;;
+EXCAVA TUNEL;EXCAVA TUNEL;1;0;0;-1;;;;;
+Fill cones;Fill cones;1;0;29;26;Fill cones;;;;
+FIRME;FIRME;1;0;0;-1;;;;;
+GuardRail_Double_LT (L3251);GuardRail_Double_LT (L3251);1;0;0;-1;GuardRail_Double_LT (L3251);;;;
+GuardRail_H3_LT (L3254);GuardRail_H3_LT (L3254);1;0;0;-1;GuardRail_H3_LT (L3254);;;;
+GuardRail_LT (L3250);GuardRail_LT (L3250);1;0;0;-1;GuardRail_LT (L3250);;;;
+ID-2-Hectometro (C3437);ID-2-Hectometro (C3437);1;0;0;-1;ID-2-Hectometro (C3437);;;;
+ID-2-Ruta-Km (C3438);ID-2-Ruta-Km (C3438);1;0;0;-1;ID-2-Ruta-Km (C3438);;;;
+ID-EstacionCarditas (C3436);ID-EstacionCarditas (C3436);1;0;0;-1;ID-EstacionCarditas (C3436);;;;
+INADECUADO;INADECUADO;1;0;0;-1;;;;;
+Labeling symbols;Labeling symbols;1;0;29;28;Labeling symbols;;;;
+LineaContinuaCL (L3174);LineaContinuaCL (L3174);1;0;0;-1;LineaContinuaCL (L3174);;;;
+LineaDisc-CL (L3173);LineaDisc-CL (L3173);1;0;0;-1;LineaDisc-CL (L3173);;;;
+MAP;MAP;1;0;0;-1;MAP;;;;
+MUROS;MUROS;1;0;0;-1;;;;;
+Panel_simple_D (C971);Panel_simple_D (C971);1;0;0;-1;Panel_simple_D (C971);;;;
+Panel_simple_D (C981);Panel_simple_D (C981);1;0;0;-1;Panel_simple_D (C981);;;;
+Panel_simple_I (C981);Panel_simple_I (C981);1;0;0;-1;Panel_simple_I (C981);;;;
+PAVEMENT;PAVEMENT;1;0;0;-1;PAVEMENT;;;;
+PG-2a-PlacaInf (C3249);PG-2a-PlacaInf (C3249);1;0;0;-1;PG-2a-PlacaInf (C3249);;;;
+PG-2b-PlacaInf (C3248);PG-2b-PlacaInf (C3248);1;0;0;-1;PG-2b-PlacaInf (C3248);;;;
+PG-4a (C3256);PG-4a (C3256);1;0;0;-1;PG-4a (C3256);;;;
+PG-7b-PlacaInf (C3247);PG-7b-PlacaInf (C3247);1;0;0;-1;PG-7b-PlacaInf (C3247);;;;
+PG-7d-PlacaInf (C3246);PG-7d-PlacaInf (C3246);1;0;0;-1;PG-7d-PlacaInf (C3246);;;;
+PILAR;PILAR;1;0;0;-1;;;;;
+Postes y Catenaria;Postes y Catenaria;1;0;29;38;Postes y Catenaria;;;;
+PROJECT;PROJECT;1;0;0;-1;PROJECT;;;;
+Punctual signaling;Punctual signaling;1;0;29;2;Punctual signaling;;;;
+REVESTIMIENTO;REVESTIMIENTO;1;0;0;-1;;;;;
+Road Markers;Road Markers;1;0;29;0;Road Markers;;;;
+RoadMark_Cont (L401);RoadMark_Cont (L401);1;0;0;-1;RoadMark_Cont (L401);;;;
+RoadMark_Discon (L402);RoadMark_Discon (L402);1;0;0;-1;RoadMark_Discon (L402);;;;
+RR-1 (C3358);RR-1 (C3358);1;0;0;-1;RR-1 (C3358);;;;
+RR-1(40)-<-60kms/h (C3184);RR-1(40)-<-60kms/h (C3184);1;0;0;-1;RR-1(40)-<-60kms/h (C3184);;;;
+RR-1(50)-<-60kms/h (C3185);RR-1(50)-<-60kms/h (C3185);1;0;0;-1;RR-1(50)-<-60kms/h (C3185);;;;
+RR-1(60)-<-60kms/h (C3186);RR-1(60)-<-60kms/h (C3186);1;0;0;-1;RR-1(60)-<-60kms/h (C3186);;;;
+SUP DESMONTE;SUP DESMONTE;1;0;0;-1;;;;;
+SUP TERRAPLEN;SUP TERRAPLEN;1;0;0;-1;SUP TERRAPLEN;;;;
+SUPERFICIE;SUPERFICIE;1;0;0;-1;;;;;
+SUPERFICIE CARTOGRÁFICA;SUPERFICIE CARTOGRÁFICA;1;0;0;-1;SUPERFICIE CARTOGRÁFICA;;;;
+TABLERO;TABLERO;1;0;0;-1;;;;;
+TachaBlancaCL (C3576);TachaBlancaCL (C3576);1;0;0;-1;TachaBlancaCL (C3576);;;;
+TACHON (C3579);TACHON (C3579);1;0;0;-1;TACHON (C3579);;;;
+TACHON-CL (C3579);TACHON-CL (C3579);1;0;0;-1;TACHON-CL (C3579);;;;
+TERM-BS-IZQ-FIN;TERM-BS-IZQ-FIN;1;0;0;-1;TERM-BS-IZQ-FIN;;;;
+TERM-BS-IZQ-INI;TERM-BS-IZQ-INI;1;0;0;-1;TERM-BS-IZQ-INI;;;;
+TERRAPLEN;TERRAPLEN;1;0;0;-1;;;;;
+TERRENO TUNEL;TERRENO TUNEL;1;0;0;-1;;;;;
+TRIANGULATION;TRIANGULATION;1;0;0;-1;TRIANGULATION;;;;
+VEGETAL;VEGETAL;1;0;0;-1;;;;;
+ZAPATA MUROS;ZAPATA MUROS;1;0;0;-1;;;;;
+#CLASIF.4
+Classif. 4
+0
+
+
+
+
+
+
+Bio_SI_4;Bio_SI_4;1;0;0;-1;Bio_SI_4;;;;
+Bio_SI_4 (C3033);Bio_SI_4 (C3033);1;0;0;-1;Bio_SI_4 (C3033);;;;
+Bio_SI_8;Bio_SI_8;1;0;0;-1;Bio_SI_8;;;;
+Bio_SI_8 (C3031);Bio_SI_8 (C3031);1;0;0;-1;Bio_SI_8 (C3031);;;;
+C_M.2.6b (L3160);C_M.2.6b (L3160);1;0;0;-1;C_M.2.6b (L3160);;;;
+CARTOGRAPHIC SURFACE;CARTOGRAPHIC SURFACE;1;0;0;-1;CARTOGRAPHIC SURFACE;;;;
+Cells;Cells;1;0;29;39;Cells;;;;
+Cerco3D (L3177);Cerco3D (L3177);1;0;0;-1;Cerco3D (L3177);;;;
+CRUCE_PEATONAL_PISO (C3188);CRUCE_PEATONAL_PISO (C3188);1;0;0;-1;CRUCE_PEATONAL_PISO (C3188);;;;
+CUNETA R H CL;CUNETA R H CL;1;0;0;-1;CUNETA R H CL;;;;
+CUNETA REVES H;CUNETA REVES H;1;0;0;-1;CUNETA REVES H;;;;
+CUT C.GROUND;CUT C.GROUND;1;0;0;-1;CUT C.GROUND;;;;
+CUT SURFACE;CUT SURFACE;1;0;0;-1;CUT SURFACE;;;;
+D TIERRA;D TIERRA;1;0;0;-1;;;;;
+DC-7a (C3416);DC-7a (C3416);1;0;0;-1;DC-7a (C3416);;;;
+DC-7b (C3417);DC-7b (C3417);1;0;0;-1;DC-7b (C3417);;;;
+DEM_LinDiscont+TachaBlanca (L3175);DEM_LinDiscont+TachaBlanca (L3175);1;0;0;-1;DEM_LinDiscont+TachaBlanca (L3175);;;;
+EMBANKMENT;EMBANKMENT;1;0;0;-1;EMBANKMENT;;;;
+ENTITY;ENTITY;1;0;0;-1;ENTITY;;;;
+EXC TOT TUNEL;EXC TOT TUNEL;1;0;0;-1;;;;;
+EXC ZM TIERRA;EXC ZM TIERRA;1;0;0;-1;;;;;
+EXCAV. SURF;EXCAV. SURF;1;0;0;-1;EXCAV. SURF;;;;
+EXCAVA TUNEL;EXCAVA TUNEL;1;0;0;-1;;;;;
+Fill cones;Fill cones;1;0;29;26;Fill cones;;;;
+FIRME;FIRME;1;0;0;-1;;;;;
+GuardRail_Double_LT (L3251);GuardRail_Double_LT (L3251);1;0;0;-1;GuardRail_Double_LT (L3251);;;;
+GuardRail_H3_LT (L3254);GuardRail_H3_LT (L3254);1;0;0;-1;GuardRail_H3_LT (L3254);;;;
+GuardRail_LT (L3250);GuardRail_LT (L3250);1;0;0;-1;GuardRail_LT (L3250);;;;
+ID-2-Hectometro (C3437);ID-2-Hectometro (C3437);1;0;0;-1;ID-2-Hectometro (C3437);;;;
+ID-2-Ruta-Km (C3438);ID-2-Ruta-Km (C3438);1;0;0;-1;ID-2-Ruta-Km (C3438);;;;
+ID-EstacionCarditas (C3436);ID-EstacionCarditas (C3436);1;0;0;-1;ID-EstacionCarditas (C3436);;;;
+INADECUADO;INADECUADO;1;0;0;-1;;;;;
+Labeling symbols;Labeling symbols;1;0;29;28;Labeling symbols;;;;
+LineaContinuaCL (L3174);LineaContinuaCL (L3174);1;0;0;-1;LineaContinuaCL (L3174);;;;
+LineaDisc-CL (L3173);LineaDisc-CL (L3173);1;0;0;-1;LineaDisc-CL (L3173);;;;
+MAP;MAP;1;0;0;-1;MAP;;;;
+MUROS;MUROS;1;0;0;-1;;;;;
+Panel_simple_D (C971);Panel_simple_D (C971);1;0;0;-1;Panel_simple_D (C971);;;;
+Panel_simple_D (C981);Panel_simple_D (C981);1;0;0;-1;Panel_simple_D (C981);;;;
+Panel_simple_I (C981);Panel_simple_I (C981);1;0;0;-1;Panel_simple_I (C981);;;;
+PAVEMENT;PAVEMENT;1;0;0;-1;PAVEMENT;;;;
+PG-2a-PlacaInf (C3249);PG-2a-PlacaInf (C3249);1;0;0;-1;PG-2a-PlacaInf (C3249);;;;
+PG-2b-PlacaInf (C3248);PG-2b-PlacaInf (C3248);1;0;0;-1;PG-2b-PlacaInf (C3248);;;;
+PG-4a (C3256);PG-4a (C3256);1;0;0;-1;PG-4a (C3256);;;;
+PG-7b-PlacaInf (C3247);PG-7b-PlacaInf (C3247);1;0;0;-1;PG-7b-PlacaInf (C3247);;;;
+PG-7d-PlacaInf (C3246);PG-7d-PlacaInf (C3246);1;0;0;-1;PG-7d-PlacaInf (C3246);;;;
+PILAR;PILAR;1;0;0;-1;;;;;
+Postes y Catenaria;Postes y Catenaria;1;0;29;38;Postes y Catenaria;;;;
+PROJECT;PROJECT;1;0;0;-1;PROJECT;;;;
+Punctual signaling;Punctual signaling;1;0;29;2;Punctual signaling;;;;
+REVESTIMIENTO;REVESTIMIENTO;1;0;0;-1;;;;;
+Road Markers;Road Markers;1;0;29;0;Road Markers;;;;
+RoadMark_Cont (L401);RoadMark_Cont (L401);1;0;0;-1;RoadMark_Cont (L401);;;;
+RoadMark_Discon (L402);RoadMark_Discon (L402);1;0;0;-1;RoadMark_Discon (L402);;;;
+RR-1 (C3358);RR-1 (C3358);1;0;0;-1;RR-1 (C3358);;;;
+RR-1(40)-<-60kms/h (C3184);RR-1(40)-<-60kms/h (C3184);1;0;0;-1;RR-1(40)-<-60kms/h (C3184);;;;
+RR-1(50)-<-60kms/h (C3185);RR-1(50)-<-60kms/h (C3185);1;0;0;-1;RR-1(50)-<-60kms/h (C3185);;;;
+RR-1(60)-<-60kms/h (C3186);RR-1(60)-<-60kms/h (C3186);1;0;0;-1;RR-1(60)-<-60kms/h (C3186);;;;
+SUP DESMONTE;SUP DESMONTE;1;0;0;-1;;;;;
+SUP TERRAPLEN;SUP TERRAPLEN;1;0;0;-1;SUP TERRAPLEN;;;;
+SUPERFICIE;SUPERFICIE;1;0;0;-1;;;;;
+SUPERFICIE CARTOGRÁFICA;SUPERFICIE CARTOGRÁFICA;1;0;0;-1;SUPERFICIE CARTOGRÁFICA;;;;
+TABLERO;TABLERO;1;0;0;-1;;;;;
+TachaBlancaCL (C3576);TachaBlancaCL (C3576);1;0;0;-1;TachaBlancaCL (C3576);;;;
+TACHON (C3579);TACHON (C3579);1;0;0;-1;TACHON (C3579);;;;
+TACHON-CL (C3579);TACHON-CL (C3579);1;0;0;-1;TACHON-CL (C3579);;;;
+TERM-BS-IZQ-FIN;TERM-BS-IZQ-FIN;1;0;0;-1;TERM-BS-IZQ-FIN;;;;
+TERM-BS-IZQ-INI;TERM-BS-IZQ-INI;1;0;0;-1;TERM-BS-IZQ-INI;;;;
+TERRAPLEN;TERRAPLEN;1;0;0;-1;;;;;
+TERRENO TUNEL;TERRENO TUNEL;1;0;0;-1;;;;;
+TRIANGULATION;TRIANGULATION;1;0;0;-1;TRIANGULATION;;;;
+VEGETAL;VEGETAL;1;0;0;-1;;;;;
+ZAPATA MUROS;ZAPATA MUROS;1;0;0;-1;;;;;
+#CLASIF.5
+Classif. 5
+0
+
+
+
+
+
+
+Bio_SI_4;Bio_SI_4;1;0;0;-1;Bio_SI_4;;;;
+Bio_SI_4 (C3033);Bio_SI_4 (C3033);1;0;0;-1;Bio_SI_4 (C3033);;;;
+Bio_SI_8;Bio_SI_8;1;0;0;-1;Bio_SI_8;;;;
+Bio_SI_8 (C3031);Bio_SI_8 (C3031);1;0;0;-1;Bio_SI_8 (C3031);;;;
+C_M.2.6b (L3160);C_M.2.6b (L3160);1;0;0;-1;C_M.2.6b (L3160);;;;
+CARTOGRAPHIC SURFACE;CARTOGRAPHIC SURFACE;1;0;0;-1;CARTOGRAPHIC SURFACE;;;;
+Cells;Cells;1;0;29;39;Cells;;;;
+Cerco3D (L3177);Cerco3D (L3177);1;0;0;-1;Cerco3D (L3177);;;;
+CRUCE_PEATONAL_PISO (C3188);CRUCE_PEATONAL_PISO (C3188);1;0;0;-1;CRUCE_PEATONAL_PISO (C3188);;;;
+CUNETA R H CL;CUNETA R H CL;1;0;0;-1;CUNETA R H CL;;;;
+CUNETA REVES H;CUNETA REVES H;1;0;0;-1;CUNETA REVES H;;;;
+CUT C.GROUND;CUT C.GROUND;1;0;0;-1;CUT C.GROUND;;;;
+CUT SURFACE;CUT SURFACE;1;0;0;-1;CUT SURFACE;;;;
+D TIERRA;D TIERRA;1;0;0;-1;;;;;
+DC-7a (C3416);DC-7a (C3416);1;0;0;-1;DC-7a (C3416);;;;
+DC-7b (C3417);DC-7b (C3417);1;0;0;-1;DC-7b (C3417);;;;
+DEM_LinDiscont+TachaBlanca (L3175);DEM_LinDiscont+TachaBlanca (L3175);1;0;0;-1;DEM_LinDiscont+TachaBlanca (L3175);;;;
+EMBANKMENT;EMBANKMENT;1;0;0;-1;EMBANKMENT;;;;
+ENTITY;ENTITY;1;0;0;-1;ENTITY;;;;
+EXC TOT TUNEL;EXC TOT TUNEL;1;0;0;-1;;;;;
+EXC ZM TIERRA;EXC ZM TIERRA;1;0;0;-1;;;;;
+EXCAV. SURF;EXCAV. SURF;1;0;0;-1;EXCAV. SURF;;;;
+EXCAVA TUNEL;EXCAVA TUNEL;1;0;0;-1;;;;;
+Fill cones;Fill cones;1;0;29;26;Fill cones;;;;
+FIRME;FIRME;1;0;0;-1;;;;;
+GuardRail_Double_LT (L3251);GuardRail_Double_LT (L3251);1;0;0;-1;GuardRail_Double_LT (L3251);;;;
+GuardRail_H3_LT (L3254);GuardRail_H3_LT (L3254);1;0;0;-1;GuardRail_H3_LT (L3254);;;;
+GuardRail_LT (L3250);GuardRail_LT (L3250);1;0;0;-1;GuardRail_LT (L3250);;;;
+ID-2-Hectometro (C3437);ID-2-Hectometro (C3437);1;0;0;-1;ID-2-Hectometro (C3437);;;;
+ID-2-Ruta-Km (C3438);ID-2-Ruta-Km (C3438);1;0;0;-1;ID-2-Ruta-Km (C3438);;;;
+ID-EstacionCarditas (C3436);ID-EstacionCarditas (C3436);1;0;0;-1;ID-EstacionCarditas (C3436);;;;
+INADECUADO;INADECUADO;1;0;0;-1;;;;;
+Labeling symbols;Labeling symbols;1;0;29;28;Labeling symbols;;;;
+LineaContinuaCL (L3174);LineaContinuaCL (L3174);1;0;0;-1;LineaContinuaCL (L3174);;;;
+LineaDisc-CL (L3173);LineaDisc-CL (L3173);1;0;0;-1;LineaDisc-CL (L3173);;;;
+MAP;MAP;1;0;0;-1;MAP;;;;
+MUROS;MUROS;1;0;0;-1;;;;;
+Panel_simple_D (C971);Panel_simple_D (C971);1;0;0;-1;Panel_simple_D (C971);;;;
+Panel_simple_D (C981);Panel_simple_D (C981);1;0;0;-1;Panel_simple_D (C981);;;;
+Panel_simple_I (C981);Panel_simple_I (C981);1;0;0;-1;Panel_simple_I (C981);;;;
+PAVEMENT;PAVEMENT;1;0;0;-1;PAVEMENT;;;;
+PG-2a-PlacaInf (C3249);PG-2a-PlacaInf (C3249);1;0;0;-1;PG-2a-PlacaInf (C3249);;;;
+PG-2b-PlacaInf (C3248);PG-2b-PlacaInf (C3248);1;0;0;-1;PG-2b-PlacaInf (C3248);;;;
+PG-4a (C3256);PG-4a (C3256);1;0;0;-1;PG-4a (C3256);;;;
+PG-7b-PlacaInf (C3247);PG-7b-PlacaInf (C3247);1;0;0;-1;PG-7b-PlacaInf (C3247);;;;
+PG-7d-PlacaInf (C3246);PG-7d-PlacaInf (C3246);1;0;0;-1;PG-7d-PlacaInf (C3246);;;;
+PILAR;PILAR;1;0;0;-1;;;;;
+Postes y Catenaria;Postes y Catenaria;1;0;29;38;Postes y Catenaria;;;;
+PROJECT;PROJECT;1;0;0;-1;PROJECT;;;;
+Punctual signaling;Punctual signaling;1;0;29;2;Punctual signaling;;;;
+REVESTIMIENTO;REVESTIMIENTO;1;0;0;-1;;;;;
+Road Markers;Road Markers;1;0;29;0;Road Markers;;;;
+RoadMark_Cont (L401);RoadMark_Cont (L401);1;0;0;-1;RoadMark_Cont (L401);;;;
+RoadMark_Discon (L402);RoadMark_Discon (L402);1;0;0;-1;RoadMark_Discon (L402);;;;
+RR-1 (C3358);RR-1 (C3358);1;0;0;-1;RR-1 (C3358);;;;
+RR-1(40)-<-60kms/h (C3184);RR-1(40)-<-60kms/h (C3184);1;0;0;-1;RR-1(40)-<-60kms/h (C3184);;;;
+RR-1(50)-<-60kms/h (C3185);RR-1(50)-<-60kms/h (C3185);1;0;0;-1;RR-1(50)-<-60kms/h (C3185);;;;
+RR-1(60)-<-60kms/h (C3186);RR-1(60)-<-60kms/h (C3186);1;0;0;-1;RR-1(60)-<-60kms/h (C3186);;;;
+SUP DESMONTE;SUP DESMONTE;1;0;0;-1;;;;;
+SUP TERRAPLEN;SUP TERRAPLEN;1;0;0;-1;SUP TERRAPLEN;;;;
+SUPERFICIE;SUPERFICIE;1;0;0;-1;;;;;
+SUPERFICIE CARTOGRÁFICA;SUPERFICIE CARTOGRÁFICA;1;0;0;-1;SUPERFICIE CARTOGRÁFICA;;;;
+TABLERO;TABLERO;1;0;0;-1;;;;;
+TachaBlancaCL (C3576);TachaBlancaCL (C3576);1;0;0;-1;TachaBlancaCL (C3576);;;;
+TACHON (C3579);TACHON (C3579);1;0;0;-1;TACHON (C3579);;;;
+TACHON-CL (C3579);TACHON-CL (C3579);1;0;0;-1;TACHON-CL (C3579);;;;
+TERM-BS-IZQ-FIN;TERM-BS-IZQ-FIN;1;0;0;-1;TERM-BS-IZQ-FIN;;;;
+TERM-BS-IZQ-INI;TERM-BS-IZQ-INI;1;0;0;-1;TERM-BS-IZQ-INI;;;;
+TERRAPLEN;TERRAPLEN;1;0;0;-1;;;;;
+TERRENO TUNEL;TERRENO TUNEL;1;0;0;-1;;;;;
+TRIANGULATION;TRIANGULATION;1;0;0;-1;TRIANGULATION;;;;
+VEGETAL;VEGETAL;1;0;0;-1;;;;;
+ZAPATA MUROS;ZAPATA MUROS;1;0;0;-1;;;;;

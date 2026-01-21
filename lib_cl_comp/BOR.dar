@@ -1,0 +1,15 @@
+# DEFINICION DE AREAS
+# File : BOR.dar
+ COM 1 Tabla para la medición de bordillos
+# (name started by '<' its value is neither listed nor drawn)
+# (name second character '+' its value is added to the previous one)
+# (name started by <s creates a surface by combining A1 and A2 and resulting in B1)
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# NOMBRE_DEL_AREA        D / T FA  A1    A2    FB  B1   B2 + / -RATIO D.MASAS ESTRUC COEF.GEO.TUB LIS LIN BIM LAD PROP DIS                              MATERIAL               ORDEN       COMENTARIO
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2510        CUNETA_R_H_CL   2  0  2924     0    0  2924     0     0  1.0000  0.0000 1  1.0000 0 1 1 2924 0   2    0.000   0.000   0.000   0.000 2  5 13 MAT_200\MAT_200_031.3dm      1 
+# ------------------------------------------------------
+# Separacion minima de tramos
+# ------------------------------------------------------
+ 3  200.000
+ 9

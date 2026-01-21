@@ -1,0 +1,36 @@
+#File of user BIM attributes schema
+#Version
+3.0
+#Number of PSETS
+3
+
+0 "SIC_NS PROPIEDADES DE PROYECTO" 8 
+0 "all" "SIC-NS" 1 
+ 0 "NONE" "TXT" " " " "
+0 "all" "SIC_NS_Via" 1 
+ 0 "NONE" "TXT" " " " "
+0 "all" "SIC_NS_Tramo" 1 
+ 0 "NONE" "TXT" " " " "
+0 "all" "SIC_NS_LADO" 1 
+ 0 "NONE" "TXT" " " " "
+0 "all" "SIC_NS_IdElemento" 1 
+ 0 "NONE" "TXT" " " " "
+0 "all" "SIC_NS_IdTipoElemento" 1 
+ 0 "NONE" "TXT" " " " "
+0 "all" "FichaTecnica" 1 
+ 0 "NONE" "TXT" " " " "
+0 "all" "SIC_NS_IdMacroUbicacion" 1 
+ 0 "NONE" "TXT" " " " "
+
+1 "SIC_NS PROPIEDADES COORD" 2 
+0 "all" "SIC_NS_CoordIni" 1 
+ 0 "NONE" "TXT" " " " "
+0 "all" "SIC_NS_CoordFin" 1 
+ 0 "NONE" "TXT" " " " "
+
+2 "SIC_NS PROPIEDADES EJE" 2 
+0 "all" "SIC_NS_DmIni" 1 
+ 0 "NONE" "TXT" " " " "
+0 "all" "SIC_NS_DmFin" 1 
+ 0 "NONE" "TXT" " " " "
+
