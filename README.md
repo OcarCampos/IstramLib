@@ -140,6 +140,7 @@ Se detallan a continuación los elementos de la librería complementaria:
 - L3157: Línea doble continua, LCD/10/12 para TR600.
 - L3173: Línea segmentada de separación, LSS/15/300/500 para TB800.
 - L3174: Línea continua LC/15. 
+- L3175: Línea segmentada de separación, LSS/15/300/500 con TB800.
 - L3177: Cerco línea expropiación
 - S3172: Símbolo para línea continua LC/15
 - S3173: Símbolo para línea continua LC/10
