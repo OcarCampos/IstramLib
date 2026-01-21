@@ -140,9 +140,13 @@ Se detallan a continuación los elementos de la librería complementaria:
 - L3157: Línea doble continua, LCD/10/12 para TR600.
 - L3173: Línea segmentada de separación, LSS/15/300/500 para TB800.
 - L3174: Línea continua LC/15. 
+- L3177: Cerco línea expropiación
 - S3172: Símbolo para línea continua LC/15
 - S3173: Símbolo para línea continua LC/10
 - S3176: Símbolo para línea segmentada, LSS/15/300/500
+- S3177: Símbolo para Cerco línea expropiación
+
+- 21/01/2026: Se modifican líneas para que geometría se adapte a peralte.
 
 ![LineasTachas](/assets/LineasTachas.png)
 
@@ -154,6 +158,15 @@ a esta librería complementaria son:
 - L3254: Barrera H3 Izquierda (símbolo plano s265)
 - L3255: Barrera H3 Derecha  (símbolo plano s265)
 
+- 21/01/2026: Se agregan terminaciones según normativa chilena (12 metros) para las barreras:
+    - C3035: Terminación inicio barrera derecha.
+    - C3036: Terminación fin barrera derecha.
+    - C3037: Terminación inicio barrera izquierda.
+    - C3038: Terminación fin barrera izquierda.
+
+Las terminaciones de barrera deben configurarse según requerimiento.
+
+
 ![BarreraH3](/assets/BarreraH3.png)
 
 ### Demarcaciones de piso
@@ -162,6 +175,7 @@ a esta librería complementaria son:
 - S3185: símbolo RR-1 máxima velocidad 50 kms\h para pista vel < 60 kms\h
 - S3186: símbolo RR-1 máxima velocidad 60 kms\h para pista vel < 60 kms\h
 - S3187: símbolo RR-1 máxima velocidad 70 kms\h para pista vel > 60 kms\h
+- S3188: símbolo cruce peatonal de piso. Forma Diamante. Persona cruzando. Agregado 21/01/2026.
 - S3150: flecha recta > 60kms\h
 - S3151: flecha recta < 60kms\h
 - S3170: flecha cambio pista hacia Derecha
@@ -169,6 +183,7 @@ a esta librería complementaria son:
 - C3576: Tacha Blanca (debe acompañarse con archivo ifc). 
 - C3577: Tacha Roja (debe acompañarse con archivo ifc).
 - C3578: Tacha Amarilla (debe acompañarse con archivo ifc).
+- C3579: Tachon Amarillo reflector rojo. Agregado 21/01/2026.
 
 ![SenalPiso](/assets/SenalPiso.png)
 
@@ -176,8 +191,10 @@ a esta librería complementaria son:
 
 ### Señales verticales
 
-- C971: DC-5a (usa S3695 como poste de 1.3m de lib principal)
-- C981: DC-5b (usa S3695 como poste de 1.3m de lib principal)
+- C971: DC-5a (usa S3695 como poste de 1.3m de lib principal). Corregida 21/01/2026
+- C972: DDD-1b Agregada 21/01/2026
+- C981: DC-5b (usa S3695 como poste de 1.3m de lib principal). Corregida 21/01/2026
+- C982: DDD-1a Agregada 21/01/2026
 - C3250: PG-1a
 - C3251: PG-1b
 - C3252: PG-2a (sin placa inferior)
@@ -205,7 +222,7 @@ a esta librería complementaria son:
 - C3275: PF-3b
 - C3276: PF-3c
 - C3358: RR-1 VEL. VARIABLE TEXTO
-- C3336: RPO-3
+- C3336: RPO-3 Símbolo corregido 21/01/2026
 - C3367: RR-9
 - C3374: RO-2a
 - C3375: RO-2b
